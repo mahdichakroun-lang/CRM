@@ -1,0 +1,110 @@
+\babel@toc {french}{}\relax 
+\thispagestyle {MyStyle}
+\contentsline {chapter}{LISTE DES FIGURES}{viii}{chapter*.5}%
+\contentsline {chapter}{LISTE DES TABLEAUX}{ix}{chapter*.6}%
+\contentsline {chapter}{LISTE DES ABRÉVIATIONS}{x}{chapter*.7}%
+\contentsline {chapter}{INTRODUCTION GÉNÉRALE}{xii}{chapter*.8}%
+\contentsline {chapter}{\numberline {1}Cadre Général du Projet}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Contexte du projet}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Présentation de l'organisme d'accueil}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Problématique}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Approche proposée}{4}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Fonctionnalités du CRM Web}{4}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Fonctionnalités de l'Application Mobile}{5}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Fonctionnalités du Chatbot IA}{5}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}Méthodologie}{5}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Méthodologie Agile Scrum}{5}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Méthodologie CRISP-DM}{6}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Organisation en sprints}{6}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}Architecture globale}{7}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Environnement technique}{8}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Conclusion}{10}{section.1.9}%
+\contentsline {chapter}{\numberline {2}Sprint 01 : Étude Préalable et Analyse}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Objectifs du Sprint}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Étude de l'existant}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Analyse des solutions CRM existantes}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Critique de l'existant}{14}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Identification des acteurs}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Analyse des besoins fonctionnels}{15}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Module Authentification et Sécurité}{15}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Module Leads (Prospects)}{16}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Module Accounts (Comptes Clients)}{16}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Module Contacts (Personnes)}{16}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Module Deals (Pipeline Commercial)}{16}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}Module Quotes (Devis)}{17}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.7}Module Tickets (Helpdesk)}{17}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {2.5.8}Module Activities (Suivi Commercial)}{17}{subsection.2.5.8}%
+\contentsline {subsection}{\numberline {2.5.9}Module Reporting et Audit}{17}{subsection.2.5.9}%
+\contentsline {subsection}{\numberline {2.5.10}Module Portail Client}{17}{subsection.2.5.10}%
+\contentsline {subsection}{\numberline {2.5.11}Module Application Mobile}{18}{subsection.2.5.11}%
+\contentsline {subsection}{\numberline {2.5.12}Module Chatbot IA (RAG)}{18}{subsection.2.5.12}%
+\contentsline {section}{\numberline {2.6}Besoins non fonctionnels}{18}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Modélisation UML --- Diagrammes de cas d'utilisation}{19}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Diagramme de cas d'utilisation global}{19}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Cas d'utilisation --- Gestion des Leads}{21}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Cas d'utilisation --- Gestion des Tickets}{21}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Cas d'utilisation --- Portail Client}{22}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}Cas d'utilisation --- Application Mobile}{24}{subsection.2.7.5}%
+\contentsline {subsection}{\numberline {2.7.6}Cas d'utilisation --- Chatbot IA}{25}{subsection.2.7.6}%
+\contentsline {section}{\numberline {2.8}Backlog produit}{25}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Résultats du Sprint}{26}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Conclusion}{26}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Sprint 02 : Conception du Système CRM}{28}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Objectifs du Sprint}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Diagramme de classes}{29}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Relations entre entités}{30}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Diagramme Entité-Relation (ERD)}{31}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Diagrammes de séquence}{31}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Séquence --- Authentification JWT}{31}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Séquence --- Conversion d'un Lead}{32}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Séquence --- Cycle de vie d'un Ticket}{32}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Séquence --- Chatbot documentaire (RAG)}{33}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Conception de l'architecture}{33}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Architecture backend --- FastAPI + organisation par domaines}{33}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Architecture frontend --- React SPA}{34}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Architecture mobile --- React Native}{34}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Architecture RAG --- Chatbot IA}{35}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Architecture Docker Compose}{35}{subsection.3.6.5}%
+\contentsline {section}{\numberline {3.7}Conception de l'API REST}{36}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Résultats du Sprint}{37}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Conclusion}{37}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Sprint 03 : Réalisation Technique}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{40}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Objectifs du Sprint}{40}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Réalisation du Backend (FastAPI)}{40}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Authentification JWT et RBAC}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Logique de conversion Lead}{41}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Système de messagerie Ticket}{41}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Journal d'audit et reporting}{41}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Notifications email}{42}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Réalisation du Frontend (React)}{42}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Pages principales}{42}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Portail Client}{44}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Fonctionnalités UX avancées}{44}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Réalisation de l'Application Mobile (React Native)}{45}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Technologies utilisées}{45}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Écrans de l'application}{45}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Réalisation du Chatbot IA (RAG)}{46}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Architecture RAG}{46}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Implémentation}{46}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Documents RAG}{47}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Déploiement Docker}{47}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Résultats du Sprint}{48}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Conclusion}{48}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Sprint 04 : Tests, Validation et Déploiement}{50}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Objectifs du Sprint}{51}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Tests fonctionnels}{51}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Dispositif de tests automatisés}{51}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Matrice de tests RBAC}{52}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Scénario de test end-to-end}{52}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Bugs identifiés et corrigés}{52}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Méthodologie de correction}{53}{subsection.5.4.1}%
+\contentsline {section}{\numberline {5.5}Validation du chatbot IA}{53}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Résultats du Sprint}{54}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Conclusion}{54}{section.5.7}%
+\contentsline {chapter}{CONCLUSION GÉNÉRALE}{56}{chapter*.63}%
+\contentsline {chapter}{BIBLIOGRAPHIE}{58}{chapter*.64}%

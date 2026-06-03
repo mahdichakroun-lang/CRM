@@ -1,0 +1,80 @@
+﻿crm_backend  | INFO:     127.0.0.1:39724 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:01:21 | INFO    | crm | GET /health ÔåÆ 200 (1.9ms)
+crm_backend  | 2026-03-19 02:01:26 | INFO    | crm | POST /api/v1/auth/login ÔåÆ 401 (42.0ms)
+crm_backend  | INFO:     172.18.0.4:32870 - "POST /api/v1/auth/login HTTP/1.0" 401 Unauthorized
+crm_backend  | 2026-03-19 02:01:32 | INFO    | crm | GET /health ÔåÆ 200 (3.9ms)
+crm_backend  | INFO:     127.0.0.1:60240 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:01:39 | INFO    | crm | POST /api/v1/auth/login ÔåÆ 401 (106.5ms)
+crm_backend  | INFO:     172.18.0.4:49854 - "POST /api/v1/auth/login HTTP/1.0" 401 Unauthorized
+crm_backend  | 2026-03-19 02:01:43 | INFO    | crm | GET /health ÔåÆ 200 (3.7ms)
+crm_backend  | INFO:     127.0.0.1:49074 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:01:53 | INFO    | crm | GET /health ÔåÆ 200 (4.9ms)
+crm_backend  | INFO:     127.0.0.1:60030 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:02:03 | INFO    | crm | GET /health ÔåÆ 200 (2.8ms)
+crm_backend  | INFO:     127.0.0.1:39128 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | INFO:     127.0.0.1:57906 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:02:12 | INFO    | crm | GET /health ÔåÆ 200 (2.2ms)
+crm_backend  | 2026-03-19 02:02:22 | INFO    | crm | GET /health ÔåÆ 200 (2.2ms)
+crm_backend  | INFO:     127.0.0.1:36810 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:02:31 | INFO    | crm | GET /health ÔåÆ 200 (2.7ms)
+crm_backend  | INFO:     127.0.0.1:41604 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:02:41 | INFO    | crm | GET /health ÔåÆ 200 (2.9ms)
+crm_backend  | INFO:     127.0.0.1:35384 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:02:51 | INFO    | crm | GET /health ÔåÆ 200 (3.4ms)
+crm_backend  | INFO:     127.0.0.1:41158 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | INFO:     127.0.0.1:33358 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:03:01 | INFO    | crm | GET /health ÔåÆ 200 (3.5ms)
+crm_backend  | 2026-03-19 02:03:12 | INFO    | crm | GET /health ÔåÆ 200 (3.2ms)
+crm_backend  | INFO:     127.0.0.1:36422 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:03:22 | INFO    | crm | GET /health ÔåÆ 200 (3.9ms)
+crm_backend  | INFO:     127.0.0.1:39768 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | INFO:     127.0.0.1:59474 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:03:31 | INFO    | crm | GET /health ÔåÆ 200 (1.5ms)
+crm_backend  | INFO:     127.0.0.1:40258 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:03:41 | INFO    | crm | GET /health ÔåÆ 200 (2.0ms)
+crm_backend  | 2026-03-19 02:03:50 | INFO    | crm | GET /health ÔåÆ 200 (2.0ms)
+crm_backend  | INFO:     127.0.0.1:47054 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:03:59 | INFO    | crm | GET /health ÔåÆ 200 (2.2ms)
+crm_backend  | INFO:     127.0.0.1:45018 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:04:09 | INFO    | crm | GET /health ÔåÆ 200 (5.2ms)
+crm_backend  | INFO:     127.0.0.1:47264 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:04:19 | INFO    | crm | GET /health ÔåÆ 200 (6.1ms)
+crm_backend  | INFO:     127.0.0.1:51010 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | INFO:     127.0.0.1:60756 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:04:30 | INFO    | crm | GET /health ÔåÆ 200 (2.8ms)
+crm_backend  | 2026-03-19 02:04:39 | INFO    | crm | GET /health ÔåÆ 200 (1.9ms)
+crm_backend  | INFO:     127.0.0.1:58992 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | INFO:     127.0.0.1:54644 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:04:49 | INFO    | crm | GET /health ÔåÆ 200 (2.6ms)
+crm_backend  | 2026-03-19 02:04:58 | INFO    | crm | GET /health ÔåÆ 200 (1.8ms)
+crm_backend  | INFO:     127.0.0.1:57246 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:05:08 | INFO    | crm | GET /health ÔåÆ 200 (3.2ms)
+crm_backend  | INFO:     127.0.0.1:44922 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:05:18 | INFO    | crm | GET /health ÔåÆ 200 (2.7ms)
+crm_backend  | INFO:     127.0.0.1:46398 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:05:28 | INFO    | crm | GET /health ÔåÆ 200 (4.0ms)
+crm_backend  | INFO:     127.0.0.1:49802 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | INFO:     127.0.0.1:59346 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:05:37 | INFO    | crm | GET /health ÔåÆ 200 (1.8ms)
+crm_backend  | 2026-03-19 02:05:47 | INFO    | crm | GET /health ÔåÆ 200 (3.6ms)
+crm_backend  | INFO:     127.0.0.1:33810 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:05:56 | INFO    | crm | GET /health ÔåÆ 200 (2.2ms)
+crm_backend  | INFO:     127.0.0.1:53360 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:06:06 | INFO    | crm | GET /health ÔåÆ 200 (4.6ms)
+crm_backend  | INFO:     127.0.0.1:43152 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:06:15 | INFO    | crm | GET /health ÔåÆ 200 (2.0ms)
+crm_backend  | INFO:     127.0.0.1:37944 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:06:25 | INFO    | crm | GET /health ÔåÆ 200 (2.5ms)
+crm_backend  | INFO:     127.0.0.1:54426 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:06:35 | INFO    | crm | GET /health ÔåÆ 200 (2.4ms)
+crm_backend  | INFO:     127.0.0.1:42960 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:06:44 | INFO    | crm | GET /health ÔåÆ 200 (1.4ms)
+crm_backend  | INFO:     127.0.0.1:59824 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:06:53 | INFO    | crm | GET /health ÔåÆ 200 (1.4ms)
+crm_backend  | INFO:     127.0.0.1:34326 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:07:02 | INFO    | crm | GET /health ÔåÆ 200 (1.7ms)
+crm_backend  | INFO:     127.0.0.1:58566 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:07:12 | INFO    | crm | GET /health ÔåÆ 200 (1.6ms)
+crm_backend  | INFO:     127.0.0.1:54760 - "GET /health HTTP/1.1" 200 OK
+crm_backend  | 2026-03-19 02:07:21 | INFO    | crm | GET /health ÔåÆ 200 (1.6ms)
+crm_backend  | INFO:     127.0.0.1:48592 - "GET /health HTTP/1.1" 200 OK

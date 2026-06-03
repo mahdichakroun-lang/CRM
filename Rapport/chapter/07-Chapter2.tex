@@ -1,0 +1,645 @@
+\chapter{Sprint 01 : Étude Préalable et Analyse}
+\minitoc
+\newpage
+
+\section{Introduction}
+Le premier sprint a été consacré à la compréhension du besoin, à l'étude de l'existant et à la structuration fonctionnelle du futur système. Cette phase est essentielle, car elle conditionne la qualité des choix de conception et limite les risques d'écart entre la solution développée et les attentes métier.
+
+\section{Objectifs du Sprint}
+\begin{itemize}
+    \item analyser les limites des pratiques actuelles et des solutions CRM du marché ;
+    \item identifier les acteurs impliqués dans le système ;
+    \item formaliser les besoins fonctionnels et non fonctionnels ;
+    \item modéliser les cas d'utilisation principaux ;
+    \item établir un backlog produit pour planifier les réalisations.
+\end{itemize}
+
+\section{Étude de l'existant}
+
+\subsection{Analyse des solutions CRM existantes}
+L'étude préalable a porté à la fois sur les outils utilisés habituellement par les entreprises de services et sur les solutions CRM généralistes disponibles sur le marché. Les plateformes majeures proposent des fonctionnalités avancées, mais elles s'accompagnent souvent d'un coût élevé, d'une logique de paramétrage complexe et d'une dépendance forte à un écosystème externe.\par
+\vspace{0.3cm}
+
+Dans le cadre de \textbf{FRS}, l'objectif n'était pas de concurrencer ces plateformes sur tous les plans, mais de concevoir une solution ciblée, réellement adaptée au cycle de vente, au support et à la relation client de l'entreprise.
+
+\begin{table}[H]
+\centering
+\caption{Comparaison synthétique entre solutions existantes et solution développée}
+\label{tab:comparaison_crm}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\hline
+\textbf{Critère} & \textbf{Salesforce} & \textbf{HubSpot} & \textbf{Solution développée} \\
+\hline
+Coût d'adoption & Élevé à très élevé & Modèle freemium puis abonnements croissants & Maîtrisé par l'entreprise, adaptable au contexte de démonstration ou de déploiement local \\
+\hline
+Personnalisation métier & Forte mais souvent complexe & Moyenne selon les offres & Totale au niveau du code, des rôles et des flux métier \\
+\hline
+Portail client spécifique & Souvent optionnel ou additionnel & Partiel selon les modules & Intégré nativement au projet \\
+\hline
+Maîtrise des données & Hébergement externe & Hébergement externe & Déploiement local conteneurisé possible \\
+\hline
+Intégration d'une assistance documentaire & Services additionnels & Variable selon l'offre & Module RAG intégré à la solution \\
+\hline
+Adéquation à un projet pédagogique ou expérimental & Faible & Moyenne & Très forte \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Critique de l'existant}
+L'analyse a mis en évidence plusieurs limites dans les approches existantes ou dans les pratiques dispersées habituellement observées :
+\begin{itemize}
+    \item centralisation insuffisante des informations commerciales ;
+    \item difficulté à relier la prospection, la négociation et le support dans un même référentiel ;
+    \item faible visibilité sur l'historique des interactions ;
+    \item absence d'un portail autonome pour les clients ;
+    \item coût élevé des solutions génériques lorsqu'un fort niveau de personnalisation est requis.
+\end{itemize}
+
+\section{Identification des acteurs}
+Le système CRM fait intervenir cinq acteurs principaux. Chacun dispose d'un périmètre fonctionnel distinct, ce qui justifie la mise en place d'une gestion des rôles et des permissions côté serveur.
+
+\begin{table}[H]
+\centering
+\caption{Acteurs du système et responsabilités associées}
+\label{tab:acteurs}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Acteur} & \textbf{Rôle technique} & \textbf{Responsabilités principales} \\
+\hline
+Administrateur & \texttt{admin} & Administration du système, création des utilisateurs, supervision globale, accès à l'audit et aux fonctions sensibles \\
+\hline
+Manager & \texttt{manager} & Supervision des équipes, lecture des rapports, suivi des indicateurs et contrôle des activités clés \\
+\hline
+Commercial & \texttt{commercial} & Prospection, qualification des leads, gestion des comptes, des contacts, des deals et des devis \\
+\hline
+Support & \texttt{support} & Traitement des tickets, réponses aux clients, suivi des échanges et gestion opérationnelle du helpdesk \\
+\hline
+Client & \texttt{client} & Accès au portail et au mobile pour consulter les devis, créer ou suivre les tickets, échanger avec le support et utiliser l'assistant documentaire \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Analyse des besoins fonctionnels}
+Les besoins fonctionnels ont été regroupés par domaines métier afin de faciliter la future conception du système. Cette structuration reflète directement les modules observés dans le backend et les parcours disponibles dans les interfaces.
+
+\subsection{Module Authentification et Sécurité}
+Le système doit garantir un accès sécurisé aux interfaces et une séparation claire des droits d'utilisation :
+\begin{itemize}
+    \item authentification par email et mot de passe ;
+    \item émission d'un jeton JWT pour sécuriser les appels à l'API ;
+    \item gestion des rôles \texttt{admin}, \texttt{manager}, \texttt{commercial}, \texttt{support} et \texttt{client} ;
+    \item consultation et mise à jour du profil utilisateur ;
+    \item redirection vers l'espace adapté selon le rôle.
+\end{itemize}
+
+\subsection{Module Leads (Prospects)}
+Le module leads doit couvrir le cycle de qualification commerciale :
+\begin{itemize}
+    \item création et mise à jour de fiches prospects ;
+    \item suivi des statuts \textit{new}, \textit{contacted}, \textit{qualified}, \textit{unqualified} et \textit{converted} ;
+    \item filtrage par source, statut, responsable et recherche textuelle ;
+    \item conversion d'un lead qualifié en compte, contact et opportunité commerciale.
+\end{itemize}
+
+\subsection{Module Accounts (Comptes Clients)}
+Le compte client représente l'entité pivot des relations commerciales et support :
+\begin{itemize}
+    \item centralisation des informations d'entreprise ;
+    \item rattachement aux contacts, deals et tickets ;
+    \item visibilité transversale pour les équipes commerciales et support ;
+    \item administration des fiches comptes par les rôles internes.
+\end{itemize}
+
+\subsection{Module Contacts (Personnes)}
+Le système doit permettre de gérer les interlocuteurs liés aux entreprises clientes :
+\begin{itemize}
+    \item création et modification des contacts ;
+    \item rattachement obligatoire à un compte ;
+    \item recherche par identité, coordonnées et société liée ;
+    \item conservation des informations de poste et de contexte métier.
+\end{itemize}
+
+\subsection{Module Deals (Pipeline Commercial)}
+Le pipeline commercial doit fournir une vision opérationnelle des opportunités :
+\begin{itemize}
+    \item gestion des opportunités par compte ;
+    \item suivi des étapes \textit{qualification}, \textit{proposal}, \textit{negotiation}, \textit{won} et \textit{lost} ;
+    \item mise à jour des montants, probabilités et dates de clôture ;
+    \item journalisation des changements de stage.
+\end{itemize}
+
+\subsection{Module Quotes (Devis)}
+Le module devis doit permettre de cadrer les propositions commerciales :
+\begin{itemize}
+    \item création de devis liés à un deal ;
+    \item suivi des statuts \textit{draft}, \textit{sent}, \textit{accepted} et \textit{rejected} ;
+    \item conservation de la référence, du montant et du support PDF éventuel ;
+    \item notification du client lors de la création d'un nouveau devis.
+\end{itemize}
+
+\subsection{Module Tickets (Helpdesk)}
+Le module support doit structurer le traitement des demandes clients :
+\begin{itemize}
+    \item création de tickets par les équipes internes ou par les clients via le portail ;
+    \item suivi des priorités et des catégories ;
+    \item gestion des statuts \textit{open}, \textit{in\_progress}, \textit{waiting\_customer}, \textit{resolved} et \textit{closed} ;
+    \item messagerie associée avec distinction entre réponses publiques et notes internes ;
+    \item assignation à des agents internes.
+\end{itemize}
+
+\subsection{Module Activities (Suivi Commercial)}
+Le système doit conserver une trace des interactions commerciales significatives :
+\begin{itemize}
+    \item enregistrement d'appels, d'emails, de réunions ou de notes ;
+    \item liaison aux comptes, contacts ou deals ;
+    \item affichage chronologique des actions effectuées ;
+    \item exploitation dans une logique de relance et de suivi commercial.
+\end{itemize}
+
+\subsection{Module Reporting et Audit}
+Le projet doit offrir des fonctions d'analyse et de traçabilité :
+\begin{itemize}
+    \item indicateurs de vente : répartition des leads, pipeline, valeur gagnée, taux de conversion ;
+    \item indicateurs support : tickets ouverts, tickets en retard, temps moyen de résolution ;
+    \item audit des opérations sensibles pour conserver un historique exploitable.
+\end{itemize}
+
+\subsection{Module Portail Client}
+Le portail client répond à un besoin fort d'autonomie et de transparence :
+\begin{itemize}
+    \item consultation des tickets et de leurs réponses publiques ;
+    \item création de tickets depuis l'espace client ;
+    \item consultation des devis liés au compte ;
+    \item accès aux informations de profil ;
+    \item isolement strict des données par compte client.
+\end{itemize}
+
+\subsection{Module Application Mobile}
+L'application mobile reprend l'essentiel du portail client dans une logique d'usage nomade :
+\begin{itemize}
+    \item authentification client sécurisée ;
+    \item tableau de bord synthétique ;
+    \item suivi des tickets et ajout de messages ;
+    \item consultation des devis ;
+    \item accès à l'assistant documentaire ;
+    \item message de blocage pour les rôles internes non prévus sur mobile.
+\end{itemize}
+
+\subsection{Module Chatbot IA (RAG)}
+Le module d'assistance a pour objectif de faciliter l'accès à l'information métier et documentaire :
+\begin{itemize}
+    \item interrogation en langage naturel de documents d'entreprise ;
+    \item restitution d'une réponse synthétique et contextualisée ;
+    \item affichage des sources utilisées pour construire la réponse ;
+    \item fonctionnement même en mode dégradé lorsque le fournisseur LLM n'est pas disponible.
+\end{itemize}
+
+\section{Besoins non fonctionnels}
+Au-delà des fonctionnalités, le système doit respecter plusieurs exigences transverses qui influencent directement les choix techniques.
+
+\begin{table}[H]
+\centering
+\caption{Principaux besoins non fonctionnels}
+\label{tab:besoins_nf}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Exigence} & \textbf{Description attendue} \\
+\hline
+Sécurité & Authentification robuste, contrôle d'accès par rôles, filtrage serveur des données visibles par chaque profil \\
+\hline
+Maintenabilité & Structuration modulaire du code, séparation des responsabilités et lisibilité des composants métier \\
+\hline
+Traçabilité & Journalisation des actions importantes pour faciliter la supervision et l'analyse postérieure \\
+\hline
+Portabilité & Possibilité d'exécuter localement le système et ses dépendances via Docker Compose \\
+\hline
+Ergonomie & Interfaces claires pour les usages internes et clients, adaptées au web et au mobile \\
+\hline
+Internationalisation & Support de plusieurs langues sur les interfaces web, avec une base FR/EN existante \\
+\hline
+Évolutivité & Capacité à ajouter de nouveaux modules, écrans ou sources documentaires sans remise à plat de l'architecture \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Modélisation UML --- Diagrammes de cas d'utilisation}
+Les diagrammes de cas d'utilisation permettent de relier les acteurs identifiés aux services attendus du système. Ils jouent un rôle important dans la clarification du périmètre fonctionnel avant le passage à la conception détaillée.
+
+%% ─────────────────────────────────────────────────────────
+%% 2.7.1  Diagramme de cas d'utilisation global
+%% ─────────────────────────────────────────────────────────
+\subsection{Diagramme de cas d'utilisation global}
+Le diagramme global représente la vision d'ensemble du système avec ses cinq acteurs et ses principaux blocs fonctionnels. Chaque acteur est relié uniquement aux cas d'utilisation relevant de son périmètre de responsabilité.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[node distance=0.6cm and 1.2cm]
+
+  %% ── Use cases ──
+  \node[usecase] (auth)    {S'authentifier};
+  \node[usecase, below=0.5cm of auth]  (users)   {Gérer les\\utilisateurs};
+  \node[usecase, below=0.5cm of users] (audit)   {Consulter\\l'audit};
+  \node[usecase, below=0.5cm of audit] (dash)    {Consulter le\\dashboard};
+  \node[usecase, below=0.5cm of dash]  (leads)   {Gérer les\\leads};
+  \node[usecase, below=0.5cm of leads] (accounts){Gérer les\\comptes};
+  \node[usecase, below=0.5cm of accounts](contacts){Gérer les\\contacts};
+  \node[usecase, below=0.5cm of contacts](deals) {Gérer les\\deals};
+  \node[usecase, below=0.5cm of deals] (quotes)  {Gérer les\\devis};
+  \node[usecase, below=0.5cm of quotes](activ)   {Enregistrer les\\activités};
+  \node[usecase, below=0.5cm of activ] (tickets) {Gérer les\\tickets};
+  \node[usecase, below=0.5cm of tickets](portail){Accéder au\\portail client};
+  \node[usecase, below=0.5cm of portail](mobile) {Utiliser l'app\\mobile};
+  \node[usecase, below=0.5cm of mobile](chatbot) {Interroger le\\chatbot IA};
+
+  %% ── System boundary ──
+  \begin{scope}[on background layer]
+    \node[systemboundary, fit=(auth)(users)(audit)(dash)(leads)(accounts)
+          (contacts)(deals)(quotes)(activ)(tickets)(portail)(mobile)(chatbot),
+          label={[font=\large\bfseries]above:Système CRM}] (sys) {};
+  \end{scope}
+
+  %% ── Actors LEFT ──
+  \umlactor{admin}{-6, -0.5}{Administrateur}
+  \umlactor{manager}{-6, -3.8}{Manager}
+  \umlactor{commercial}{-6, -8}{Commercial}
+
+  %% ── Actors RIGHT ──
+  \umlactor{support}{6, -6.5}{Support}
+  \umlactor{client}{6, -11}{Client}
+
+  %% ── Associations ──
+  % Admin
+  \draw[assoc] (admin) -- (auth);
+  \draw[assoc] (admin) -- (users);
+  \draw[assoc] (admin) -- (audit);
+  \draw[assoc] (admin) -- (dash);
+
+  % Manager
+  \draw[assoc] (manager) -- (auth);
+  \draw[assoc] (manager) -- (dash);
+  \draw[assoc] (manager) -- (leads);
+  \draw[assoc] (manager) -- (deals);
+
+  % Commercial
+  \draw[assoc] (commercial) -- (auth);
+  \draw[assoc] (commercial) -- (leads);
+  \draw[assoc] (commercial) -- (accounts);
+  \draw[assoc] (commercial) -- (contacts);
+  \draw[assoc] (commercial) -- (deals);
+  \draw[assoc] (commercial) -- (quotes);
+  \draw[assoc] (commercial) -- (activ);
+
+  % Support
+  \draw[assoc] (support) -- (auth);
+  \draw[assoc] (support) -- (tickets);
+
+  % Client
+  \draw[assoc] (client) -- (auth);
+  \draw[assoc] (client) -- (portail);
+  \draw[assoc] (client) -- (mobile);
+  \draw[assoc] (client) -- (chatbot);
+
+\end{tikzpicture}%
+}
+\caption{Diagramme de cas d'utilisation global du système CRM}
+\label{fig:uc_global}
+\end{figure}
+
+%% ─────────────────────────────────────────────────────────
+%% 2.7.2  Cas d'utilisation — Gestion des Leads
+%% ─────────────────────────────────────────────────────────
+\subsection{Cas d'utilisation --- Gestion des Leads}
+Ce diagramme met en évidence le cycle d'acquisition commerciale, de la création d'un lead jusqu'à sa conversion en compte, contact et deal.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.92\textwidth}{!}{%
+\begin{tikzpicture}[node distance=0.55cm and 1cm]
+
+  %% ── Use cases principaux ──
+  \node[usecase] (creer)     {Créer un lead};
+  \node[usecase, below=of creer]   (modifier)  {Modifier un lead};
+  \node[usecase, below=of modifier](consulter) {Consulter les leads};
+  \node[usecase, below=of consulter](filtrer)  {Filtrer les leads};
+  \node[usecase, below=of filtrer] (qualifier) {Qualifier un lead};
+  \node[usecase, below=of qualifier](convertir){Convertir un lead};
+  \node[usecase, below=of convertir](supprimer){Supprimer un lead};
+
+  %% ── Use cases inclus (conversion) ──
+  \node[usecaseSmall, right=3cm of convertir, yshift=1.2cm]  (cAccount) {Créer un\\compte};
+  \node[usecaseSmall, right=3cm of convertir]                (cContact) {Créer un\\contact};
+  \node[usecaseSmall, right=3cm of convertir, yshift=-1.2cm] (cDeal)    {Créer un\\deal};
+
+  %% ── System boundary ──
+  \begin{scope}[on background layer]
+    \node[systemboundary,
+          fit=(creer)(modifier)(consulter)(filtrer)(qualifier)(convertir)(supprimer)
+              (cAccount)(cContact)(cDeal),
+          label={[font=\large\bfseries]above:Module Leads}] (sys) {};
+  \end{scope}
+
+  %% ── Actors ──
+  \umlactor{commercial}{-5.5, -3.2}{Commercial}
+  \umlactor{manager}{-5.5, -6.5}{Manager}
+
+  %% ── Associations — Commercial ──
+  \draw[assoc] (commercial) -- (creer);
+  \draw[assoc] (commercial) -- (modifier);
+  \draw[assoc] (commercial) -- (consulter);
+  \draw[assoc] (commercial) -- (filtrer);
+  \draw[assoc] (commercial) -- (qualifier);
+  \draw[assoc] (commercial) -- (convertir);
+  \draw[assoc] (commercial) -- (supprimer);
+
+  %% ── Associations — Manager ──
+  \draw[assoc] (manager) -- (consulter);
+  \draw[assoc] (manager) -- (filtrer);
+
+  %% ── Include arrows ──
+  \draw[include] (convertir) -- node[above, font=\footnotesize, sloped] {\guillemotleft include\guillemotright} (cAccount);
+  \draw[include] (convertir) -- node[above, font=\footnotesize, sloped] {\guillemotleft include\guillemotright} (cContact);
+  \draw[include] (convertir) -- node[above, font=\footnotesize, sloped] {\guillemotleft include\guillemotright} (cDeal);
+
+\end{tikzpicture}%
+}
+\caption{Cas d'utilisation du module Leads}
+\label{fig:uc_leads}
+\end{figure}
+
+%% ─────────────────────────────────────────────────────────
+%% 2.7.3  Cas d'utilisation — Gestion des Tickets
+%% ─────────────────────────────────────────────────────────
+\subsection{Cas d'utilisation --- Gestion des Tickets}
+Le module support fait intervenir plusieurs interactions entre le client, les agents internes et les responsables de supervision.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.92\textwidth}{!}{%
+\begin{tikzpicture}[node distance=0.55cm and 1cm]
+
+  %% ── Use cases ──
+  \node[usecase] (creerT)   {Créer un ticket};
+  \node[usecase, below=of creerT]   (consultT) {Consulter les tickets};
+  \node[usecase, below=of consultT] (assignT)  {Assigner un ticket};
+  \node[usecase, below=of assignT]  (statutT)  {Changer le statut};
+  \node[usecase, below=of statutT]  (repondreT){Répondre\\(message public)};
+  \node[usecase, below=of repondreT](noteT)    {Ajouter une\\note interne};
+  \node[usecase, below=of noteT]    (cloreT)   {Clôturer un ticket};
+  \node[usecase, below=of cloreT]   (filtrerT) {Filtrer par\\priorité / statut};
+
+  %% ── System boundary ──
+  \begin{scope}[on background layer]
+    \node[systemboundary,
+          fit=(creerT)(consultT)(assignT)(statutT)(repondreT)(noteT)(cloreT)(filtrerT),
+          label={[font=\large\bfseries]above:Module Tickets}] (sys) {};
+  \end{scope}
+
+  %% ── Actors LEFT ──
+  \umlactor{clientT}{-5.5, -1.5}{Client}
+  \umlactor{supportT}{-5.5, -5.5}{Support}
+
+  %% ── Actors RIGHT ──
+  \umlactor{managerT}{5.5, -2.5}{Manager}
+  \umlactor{adminT}{5.5, -6}{Administrateur}
+
+  %% ── Associations — Client ──
+  \draw[assoc] (clientT) -- (creerT);
+  \draw[assoc] (clientT) -- (consultT);
+  \draw[assoc] (clientT) -- (repondreT);
+
+  %% ── Associations — Support ──
+  \draw[assoc] (supportT) -- (consultT);
+  \draw[assoc] (supportT) -- (assignT);
+  \draw[assoc] (supportT) -- (statutT);
+  \draw[assoc] (supportT) -- (repondreT);
+  \draw[assoc] (supportT) -- (noteT);
+  \draw[assoc] (supportT) -- (cloreT);
+  \draw[assoc] (supportT) -- (filtrerT);
+
+  %% ── Associations — Manager ──
+  \draw[assoc] (managerT) -- (consultT);
+  \draw[assoc] (managerT) -- (assignT);
+  \draw[assoc] (managerT) -- (filtrerT);
+
+  %% ── Associations — Admin ──
+  \draw[assoc] (adminT) -- (consultT);
+
+\end{tikzpicture}%
+}
+\caption{Cas d'utilisation du module Tickets}
+\label{fig:uc_tickets}
+\end{figure}
+
+%% ─────────────────────────────────────────────────────────
+%% 2.7.4  Cas d'utilisation — Portail Client
+%% ─────────────────────────────────────────────────────────
+\subsection{Cas d'utilisation --- Portail Client}
+Le portail client reste volontairement ciblé sur l'autonomie, la consultation et la communication avec le support.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.82\textwidth}{!}{%
+\begin{tikzpicture}[node distance=0.55cm and 1cm]
+
+  %% ── Use cases ──
+  \node[usecase] (connecter) {Se connecter};
+  \node[usecase, below=of connecter] (dashP)    {Consulter le\\dashboard};
+  \node[usecase, below=of dashP]     (ticketsP) {Consulter ses\\tickets};
+  \node[usecase, below=of ticketsP]  (creerTP)  {Créer un ticket};
+  \node[usecase, below=of creerTP]   (repondP)  {Répondre à\\un ticket};
+  \node[usecase, below=of repondP]   (devisP)   {Consulter ses\\devis};
+  \node[usecase, below=of devisP]    (profilP)  {Consulter son\\profil};
+  \node[usecase, below=of profilP]   (modifP)   {Modifier son\\profil};
+  \node[usecase, below=of modifP]    (chatP)    {Interroger le\\chatbot IA};
+
+  %% ── System boundary ──
+  \begin{scope}[on background layer]
+    \node[systemboundary,
+          fit=(connecter)(dashP)(ticketsP)(creerTP)(repondP)(devisP)(profilP)(modifP)(chatP),
+          label={[font=\large\bfseries]above:Portail Client}] (sys) {};
+  \end{scope}
+
+  %% ── Actor ──
+  \umlactor{clientP}{-5.5, -5}{Client}
+
+  %% ── Associations ──
+  \draw[assoc] (clientP) -- (connecter);
+  \draw[assoc] (clientP) -- (dashP);
+  \draw[assoc] (clientP) -- (ticketsP);
+  \draw[assoc] (clientP) -- (creerTP);
+  \draw[assoc] (clientP) -- (repondP);
+  \draw[assoc] (clientP) -- (devisP);
+  \draw[assoc] (clientP) -- (profilP);
+  \draw[assoc] (clientP) -- (modifP);
+  \draw[assoc] (clientP) -- (chatP);
+
+\end{tikzpicture}%
+}
+\caption{Cas d'utilisation du portail client}
+\label{fig:uc_portail}
+\end{figure}
+
+%% ─────────────────────────────────────────────────────────
+%% 2.7.5  Cas d'utilisation — Application Mobile
+%% ─────────────────────────────────────────────────────────
+\subsection{Cas d'utilisation --- Application Mobile}
+L'application mobile prolonge les usages du portail client dans un contexte d'accès nomade. Les rôles internes reçoivent un message de blocage les invitant à utiliser l'interface web.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.88\textwidth}{!}{%
+\begin{tikzpicture}[node distance=0.55cm and 1cm]
+
+  %% ── Use cases ──
+  \node[usecase] (authM)    {S'authentifier};
+  \node[usecase, below=of authM]    (dashM)    {Consulter le\\dashboard};
+  \node[usecase, below=of dashM]    (ticketsM) {Consulter ses\\tickets};
+  \node[usecase, below=of ticketsM] (msgM)     {Ajouter un message\\à un ticket};
+  \node[usecase, below=of msgM]     (devisM)   {Consulter ses\\devis};
+  \node[usecase, below=of devisM]   (profilM)  {Gérer son\\profil};
+  \node[usecase, below=of profilM]  (chatM)    {Interroger le\\chatbot IA};
+  \node[usecase, below=of chatM]    (blocM)    {Recevoir un\\message de blocage};
+
+  %% ── System boundary ──
+  \begin{scope}[on background layer]
+    \node[systemboundary,
+          fit=(authM)(dashM)(ticketsM)(msgM)(devisM)(profilM)(chatM)(blocM),
+          label={[font=\large\bfseries]above:Application Mobile}] (sys) {};
+  \end{scope}
+
+  %% ── Actors ──
+  \umlactor{clientM}{-5.5, -4}{Client}
+  \umlactor{intM}{5.5, -5.5}{Utilisateur interne}
+
+  %% ── Associations — Client ──
+  \draw[assoc] (clientM) -- (authM);
+  \draw[assoc] (clientM) -- (dashM);
+  \draw[assoc] (clientM) -- (ticketsM);
+  \draw[assoc] (clientM) -- (msgM);
+  \draw[assoc] (clientM) -- (devisM);
+  \draw[assoc] (clientM) -- (profilM);
+  \draw[assoc] (clientM) -- (chatM);
+
+  %% ── Associations — Utilisateur interne ──
+  \draw[assoc] (intM) -- (authM);
+  \draw[assoc] (intM) -- (blocM);
+
+\end{tikzpicture}%
+}
+\caption{Cas d'utilisation de l'application mobile}
+\label{fig:uc_mobile}
+\end{figure}
+
+%% ─────────────────────────────────────────────────────────
+%% 2.7.6  Cas d'utilisation — Chatbot IA (RAG)
+%% ─────────────────────────────────────────────────────────
+\subsection{Cas d'utilisation --- Chatbot IA}
+Le module d'assistance peut être représenté comme un service transverse permettant à l'utilisateur authentifié d'interroger la base documentaire et d'obtenir une réponse contextualisée.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.88\textwidth}{!}{%
+\begin{tikzpicture}[node distance=0.7cm and 1.2cm]
+
+  %% ── Use cases ──
+  \node[usecase] (question) {Poser une question\\en langage naturel};
+  \node[usecase, below right=1cm and 3cm of question] (recherche) {Rechercher dans\\la base documentaire};
+  \node[usecase, below=1cm of recherche] (reponse) {Générer une réponse\\contextualisée};
+  \node[usecase, below=1cm of reponse]   (sources) {Afficher les\\sources utilisées};
+  \node[usecase, right=2.5cm of reponse]   (degrade) {Gérer le mode\\dégradé};
+
+  %% ── System boundary ──
+  \begin{scope}[on background layer]
+    \node[systemboundary,
+          fit=(question)(recherche)(reponse)(sources)(degrade),
+          label={[font=\large\bfseries]above:Module Chatbot IA (RAG)}] (sys) {};
+  \end{scope}
+
+  %% ── Actors ──
+  \umlactor{userC}{-5.5, -1}{Utilisateur authentifié}
+
+  %% ── Actor système (rectangle) ──
+  \node[draw, rectangle, minimum width=1.6cm, minimum height=1.2cm,
+        font=\small\bfseries, align=center] (rag) at (12, -3.5) {Système\\RAG};
+
+  %% ── Associations ──
+  \draw[assoc] (userC) -- (question);
+
+  %% ── Include arrows ──
+  \draw[include] (question) -- node[above, font=\footnotesize, sloped] {\guillemotleft include\guillemotright} (recherche);
+  \draw[include] (recherche) -- node[right, font=\footnotesize] {\guillemotleft include\guillemotright} (reponse);
+  \draw[include] (reponse) -- node[right, font=\footnotesize] {\guillemotleft include\guillemotright} (sources);
+
+  %% ── Extend arrow ──
+  \draw[extend] (degrade) -- node[above, font=\footnotesize, sloped] {\guillemotleft extend\guillemotright} (reponse);
+
+  %% ── Système RAG associations ──
+  \draw[assoc] (rag) -- (recherche);
+  \draw[assoc] (rag) -- (reponse);
+
+\end{tikzpicture}%
+}
+\caption{Cas d'utilisation du chatbot documentaire (RAG)}
+\label{fig:uc_chatbot}
+\end{figure}
+
+\section{Backlog produit}
+Le backlog suivant synthétise les besoins prioritaires identifiés au terme de l'analyse. Il a servi de base à la planification des sprints techniques.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Backlog produit synthétique}
+\label{tab:backlog}
+\begin{tabularx}{\textwidth}{|c|X|c|c|}
+\hline
+\textbf{ID} & \textbf{User Story} & \textbf{Priorité} & \textbf{Sprint cible} \\
+\hline
+US01 & En tant que commercial, je veux créer, qualifier et suivre un lead afin d'organiser la prospection & Haute & Sprint 03 \\
+\hline
+US02 & En tant que commercial, je veux convertir un lead qualifié en compte, contact et deal afin de réduire la ressaisie & Haute & Sprint 03 \\
+\hline
+US03 & En tant que commercial ou manager, je veux piloter le pipeline des deals pour suivre la maturité des opportunités & Haute & Sprint 03 \\
+\hline
+US04 & En tant que support, je veux gérer des tickets avec réponses publiques et notes internes afin de structurer le helpdesk & Haute & Sprint 03 \\
+\hline
+US05 & En tant que client, je veux consulter mes tickets et mes devis dans un portail dédié afin de gagner en autonomie & Haute & Sprint 03 \\
+\hline
+US06 & En tant qu'administrateur, je veux gérer les utilisateurs et les rôles afin de sécuriser l'accès au système & Haute & Sprint 03 \\
+\hline
+US07 & En tant que manager, je veux consulter des indicateurs de vente et de support afin de piloter l'activité & Haute & Sprint 03 \\
+\hline
+US08 & En tant qu'utilisateur interne, je veux enregistrer des activités commerciales afin de conserver l'historique des interactions & Moyenne & Sprint 03 \\
+\hline
+US09 & En tant que client, je veux accéder à mon espace depuis un mobile afin de suivre mes demandes en mobilité & Moyenne & Sprint 03 \\
+\hline
+US10 & En tant qu'utilisateur authentifié, je veux interroger la base documentaire via un assistant conversationnel afin d'obtenir rapidement une information métier & Moyenne & Sprint 03 \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Résultats du Sprint}
+\begin{table}[H]
+\centering
+\caption{Livrables du Sprint 01}
+\label{tab:livrables_s1}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\textbf{Livrable} & \textbf{Statut} \\
+\hline
+Étude comparative et critique de l'existant & $\checkmark$ \\
+\hline
+Identification des acteurs et des responsabilités & $\checkmark$ \\
+\hline
+Formalisation des besoins fonctionnels et non fonctionnels & $\checkmark$ \\
+\hline
+Préparation des cas d'utilisation du système & $\checkmark$ \\
+\hline
+Élaboration d'un backlog produit structuré & $\checkmark$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+Le premier sprint a permis de poser les fondations du projet. L'étude de l'existant a justifié la pertinence d'une solution sur mesure, l'identification des acteurs a clarifié le périmètre d'utilisation, et l'analyse des besoins a fourni un cadre précis pour la conception détaillée. Le chapitre suivant s'appuie sur ces résultats pour présenter les modèles, les diagrammes et l'architecture de la solution.

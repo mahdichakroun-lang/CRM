@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Résumé CRM Internal - FRS</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:#1e293b;line-height:1.6;padding:40px 60px;max-width:900px;margin:0 auto}
+@media print{body{padding:20px 40px;font-size:11px}h1{font-size:22px!important}.page-break{page-break-before:always}}
+h1{font-size:28px;font-weight:800;text-align:center;color:#4f46e5;margin-bottom:5px}
+h2{font-size:18px;font-weight:700;color:#4f46e5;margin:25px 0 10px;padding-bottom:5px;border-bottom:2px solid #e0e7ff}
+h3{font-size:14px;font-weight:700;color:#334155;margin:12px 0 6px}
+.subtitle{text-align:center;color:#64748b;margin-bottom:30px;font-size:13px}
+table{width:100%;border-collapse:collapse;margin:8px 0 15px;font-size:12px}
+th{background:#4f46e5;color:#fff;padding:8px 10px;text-align:left;font-weight:600}
+td{padding:7px 10px;border-bottom:1px solid #e2e8f0}
+tr:nth-child(even){background:#f8fafc}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;color:#fff}
+.bg-green{background:#10b981}.bg-blue{background:#3b82f6}.bg-orange{background:#f59e0b}.bg-red{background:#ef4444}.bg-purple{background:#8b5cf6}
+.box{background:#f0f4ff;border-left:4px solid #4f46e5;padding:12px 15px;margin:10px 0;border-radius:0 8px 8px 0;font-size:12px}
+.flow{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px 15px;margin:10px 0;border-radius:0 8px 8px 0;font-size:12px}
+ul{padding-left:20px;font-size:12px}li{margin:3px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.card{border:1px solid #e2e8f0;border-radius:8px;padding:12px;background:#fff}
+.card h3{margin-top:0;color:#4f46e5}
+.check{color:#10b981;font-weight:700}
+.logo{text-align:center;margin-bottom:10px}
+.logo span{font-size:40px;font-weight:800;color:#4f46e5}
+.score{text-align:center;background:#4f46e5;color:#fff;padding:15px;border-radius:12px;font-size:20px;font-weight:700;margin:20px 0}
+</style>
+</head>
+<body>
+
+<div class="logo"><span>FRS</span></div>
+<h1>CRM Internal — Résumé des Fonctionnalités</h1>
+<p class="subtitle">Application de Gestion de la Relation Client | Version 1.0.0<br>Stack : FastAPI · React · MySQL 8 · Docker | Avril 2026</p>
+
+<h2>🏗️ 1. Présentation Générale</h2>
+<p style="font-size:13px">CRM Internal est une plateforme unifiée de gestion commerciale et de support client, développée pour une SSII (FRS). Elle couvre le cycle de vente complet (Leads → Deals → Devis) et un helpdesk intégré (Tickets), avec un portail client dédié et un chatbot IA.</p>
+
+<div class="box">
+<strong>Architecture :</strong> Frontend React (Vite + TailwindCSS) → API REST FastAPI → MySQL 8, le tout orchestré par Docker Compose (3 conteneurs : frontend, backend, db).
+</div>
+
+<h2>🔑 2. Authentification & Rôles (RBAC)</h2>
+<p style="font-size:12px">Authentification par JWT (JSON Web Token) avec expiration de 60 minutes. 5 rôles avec permissions différentes :</p>
+<table>
+<tr><th>Rôle</th><th>Accès</th><th>Restrictions</th></tr>
+<tr><td><span class="badge bg-purple">Admin</span></td><td>Accès total à toutes les fonctionnalités</td><td>Aucune</td></tr>
+<tr><td><span class="badge bg-blue">Manager</span></td><td>CRM complet + gestion utilisateurs</td><td>—</td></tr>
+<tr><td><span class="badge bg-green">Commercial</span></td><td>Leads, Accounts, Contacts, Deals, Quotes, Activities</td><td>Pas d'accès à la gestion des utilisateurs</td></tr>
+<tr><td><span class="badge bg-orange">Support</span></td><td>Tickets, Activities + lecture entités commerciales</td><td>Pas de modification des données commerciales</td></tr>
+<tr><td><span class="badge bg-red">Client</span></td><td>Portail Client uniquement (ses tickets, ses devis)</td><td>Accès limité à son propre compte</td></tr>
+</table>
+
+<h2>📊 3. Dashboard (Tableau de Bord)</h2>
+<p style="font-size:12px">Page d'accueil après connexion. Affiche les KPIs en temps réel et des graphiques interactifs :</p>
+
+<h3>KPIs (Indicateurs Clés)</h3>
+<table>
+<tr><th>KPI</th><th>Description</th><th>Exemple</th></tr>
+<tr><td>💰 Pipeline Total</td><td>Somme des deals actifs (hors Won/Lost)</td><td>643 450 DT</td></tr>
+<tr><td>🎯 Taux de Conversion</td><td>% de leads convertis en deals</td><td>87.5%</td></tr>
+<tr><td>🎫 Tickets Ouverts</td><td>Nombre de tickets non résolus</td><td>2</td></tr>
+<tr><td>⏱️ Délai Résolution</td><td>Temps moyen de résolution des tickets</td><td>0h</td></tr>
+</table>
+
+<h3>Graphiques</h3>
+<ul>
+<li><strong>Pipeline par étape</strong> — BarChart vertical (qualification, proposal, won)</li>
+<li><strong>Sources des leads</strong> — Donut chart (website, phone, email, referral...)</li>
+<li><strong>Activité Commerciale</strong> — AreaChart (courbes leads/deals/tickets sur 6 mois)</li>
+<li><strong>Revenus Gagnés</strong> — AreaChart des revenus mensuels en DT</li>
+<li><strong>Tickets par statut</strong> — BarChart horizontal</li>
+<li><strong>Tickets par priorité</strong> — PieChart (low, medium, high, urgent)</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>🎯 4. Module Leads (Prospects)</h2>
+<div class="box"><strong>But :</strong> Capturer et qualifier les prospects avant de les convertir en opportunités commerciales.</div>
+
+<h3>Fonctionnalités CRUD</h3>
+<table>
+<tr><th>Action</th><th>Détail</th></tr>
+<tr><td><span class="check">✅</span> Lister</td><td>Tableau avec filtrage par statut, recherche par nom</td></tr>
+<tr><td><span class="check">✅</span> Créer</td><td>Formulaire : nom contact, entreprise, email, téléphone, source, statut, valeur estimée</td></tr>
+<tr><td><span class="check">✅</span> Modifier</td><td>Édition de tous les champs</td></tr>
+<tr><td><span class="check">✅</span> Supprimer</td><td>Avec dialogue de confirmation</td></tr>
+<tr><td><span class="check">✅</span> Convertir</td><td>Transforme un lead qualifié en : Account + Contact + Deal</td></tr>
+</table>
+
+<div class="flow">
+<strong>Cycle de vie :</strong> NEW → CONTACTED → QUALIFIED → CONVERTED (ou UNQUALIFIED)<br>
+<strong>Sources :</strong> Website | Phone | Email | Referral | Trade Show | Social Media
+</div>
+
+<h2>🏢 5. Module Accounts (Comptes / Entreprises)</h2>
+<div class="box"><strong>But :</strong> Gérer les entreprises clientes avec leurs informations et relations.</div>
+<table>
+<tr><th>Action</th><th>Détail</th></tr>
+<tr><td><span class="check">✅</span> Lister</td><td>Tableau : nom, secteur (badge coloré), industrie, ville, téléphone, email</td></tr>
+<tr><td><span class="check">✅</span> Créer</td><td>Formulaire complet avec secteur, industrie, adresse</td></tr>
+<tr><td><span class="check">✅</span> Modifier / Supprimer</td><td>CRUD complet</td></tr>
+<tr><td><span class="check">✅</span> Relations</td><td>Voir les contacts, deals et activités liés au compte</td></tr>
+</table>
+
+<h2>👥 6. Module Contacts</h2>
+<div class="box"><strong>But :</strong> Gérer les personnes de contact au sein des entreprises clientes.</div>
+<table>
+<tr><th>Champ</th><th>Description</th></tr>
+<tr><td>Prénom / Nom</td><td>Identité du contact</td></tr>
+<tr><td>Email / Téléphone</td><td>Coordonnées</td></tr>
+<tr><td>Poste</td><td>Fonction dans l'entreprise (DSI, Chef de projet...)</td></tr>
+<tr><td>Compte lié</td><td>Entreprise associée (relation many-to-one)</td></tr>
+</table>
+
+<h2>💰 7. Module Deals / Pipeline Commercial</h2>
+<div class="box"><strong>But :</strong> Suivre les opportunités commerciales à travers un pipeline de vente en 5 étapes.</div>
+
+<h3>Pipeline (5 étapes)</h3>
+<div class="flow">
+<strong>QUALIFICATION</strong> → <strong>PROPOSAL</strong> → <strong>NEGOTIATION</strong> → <strong>WON ✅</strong> / <strong>LOST ❌</strong>
+</div>
+
+<table>
+<tr><th>Action</th><th>Détail</th></tr>
+<tr><td><span class="check">✅</span> Vue Pipeline</td><td>5 cards avec compteur + valeur totale par étape</td></tr>
+<tr><td><span class="check">✅</span> Créer un Deal</td><td>Nom, compte, étape, montant (DT), probabilité (%), date clôture</td></tr>
+<tr><td><span class="check">✅</span> Changer l'étape</td><td>Bouton ⚡ → Modal avec sélection d'étape + raison si perdu</td></tr>
+<tr><td><span class="check">✅</span> Barre de probabilité</td><td>Vert ≥70% | Jaune ≥40% | Rouge &lt;40%</td></tr>
+<tr><td><span class="check">✅</span> Filtrer / Rechercher</td><td>Par étape et par nom</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>📄 8. Module Devis (Quotes)</h2>
+<div class="box"><strong>But :</strong> Créer et suivre les devis liés aux deals.</div>
+<table>
+<tr><th>Champ</th><th>Description</th></tr>
+<tr><td>Référence</td><td>Code unique (ex: DEV-2026-001)</td></tr>
+<tr><td>Montant</td><td>Valeur en DT</td></tr>
+<tr><td>Deal associé</td><td>Lié à un deal du pipeline</td></tr>
+<tr><td>Statut</td><td>DRAFT → SENT → ACCEPTED / REJECTED</td></tr>
+</table>
+
+<h2>🎫 9. Module Tickets / Helpdesk</h2>
+<div class="box"><strong>But :</strong> Gérer le support client avec un système de tickets complet incluant messagerie.</div>
+
+<table>
+<tr><th>Fonctionnalité</th><th>Détail</th></tr>
+<tr><td><span class="check">✅</span> Liste avec filtres</td><td>Filtrage par priorité et statut, recherche par sujet</td></tr>
+<tr><td><span class="check">✅</span> Créer un ticket</td><td>Sujet, description, catégorie, priorité, compte, contact, assigné</td></tr>
+<tr><td><span class="check">✅</span> Messagerie</td><td>Fil de discussion sur chaque ticket</td></tr>
+<tr><td><span class="check">✅</span> Notes internes</td><td>Messages visibles uniquement par l'équipe (cachés du client)</td></tr>
+<tr><td><span class="check">✅</span> Notification email</td><td>Envoi d'email SMTP lors de mise à jour</td></tr>
+</table>
+
+<div class="flow">
+<strong>Priorités :</strong> LOW (vert) | MEDIUM (jaune) | HIGH (orange) | URGENT (rouge)<br>
+<strong>Statuts :</strong> OPEN → IN_PROGRESS → WAITING_CUSTOMER → RESOLVED → CLOSED<br>
+<strong>Catégories :</strong> BUG | INCIDENT | SUPPORT | FEATURE_REQUEST
+</div>
+
+<h2>📅 10. Module Activités</h2>
+<div class="box"><strong>But :</strong> Planifier et suivre les interactions avec les clients.</div>
+<table>
+<tr><th>Type</th><th>Icône</th><th>Usage</th></tr>
+<tr><td>CALL</td><td>📞</td><td>Appels téléphoniques</td></tr>
+<tr><td>MEETING</td><td>🤝</td><td>Réunions et rendez-vous</td></tr>
+<tr><td>EMAIL</td><td>✉️</td><td>Emails envoyés</td></tr>
+<tr><td>NOTE</td><td>📝</td><td>Notes et remarques internes</td></tr>
+</table>
+<p style="font-size:12px">Chaque activité peut être liée à un compte, un contact et/ou un deal.</p>
+
+<h2>📜 11. Journal d'Audit</h2>
+<div class="box"><strong>But :</strong> Tracer toutes les actions effectuées dans le système pour la conformité et le suivi.</div>
+<table>
+<tr><th>Colonne</th><th>Description</th></tr>
+<tr><td>Date</td><td>Horodatage de l'action</td></tr>
+<tr><td>Utilisateur</td><td>Qui a effectué l'action</td></tr>
+<tr><td>Action</td><td>CREATE, UPDATE, DELETE, CONVERT, ADD_MESSAGE</td></tr>
+<tr><td>Entité</td><td>lead, deal, account, contact, activity, quote, ticket, user</td></tr>
+<tr><td>ID</td><td>Identifiant de l'objet concerné</td></tr>
+<tr><td>Description</td><td>Détail (ex: "Converted to account=11, deal=11")</td></tr>
+</table>
+
+<h2>👤 12. Gestion Utilisateurs & Profil</h2>
+<table>
+<tr><th>Fonctionnalité</th><th>Détail</th></tr>
+<tr><td>Liste des utilisateurs</td><td>Nom, email, rôle (badge coloré), téléphone — Admin/Manager uniquement</td></tr>
+<tr><td>Créer un utilisateur</td><td>Nom, email, mot de passe, rôle, téléphone</td></tr>
+<tr><td>Modifier / Supprimer</td><td>CRUD complet avec confirmation</td></tr>
+<tr><td>Mon Profil</td><td>Avatar, infos, modification du nom/téléphone, changement de mot de passe</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>🏢 13. Portail Client</h2>
+<div class="box"><strong>But :</strong> Offrir aux clients un espace dédié pour suivre leurs tickets et devis, avec un chatbot IA.</div>
+<table>
+<tr><th>Page</th><th>Contenu</th></tr>
+<tr><td>My Space (Dashboard)</td><td>KPIs : tickets ouverts/résolus, devis reçus, valeur totale + messages d'aide</td></tr>
+<tr><td>My Tickets</td><td>Créer et suivre ses tickets de support, envoyer des messages</td></tr>
+<tr><td>My Quotes</td><td>Consulter les devis reçus avec statut et montant</td></tr>
+<tr><td>My Profile</td><td>Modifier son profil et changer son mot de passe</td></tr>
+<tr><td>Chatbot IA</td><td>Widget flottant avec assistant virtuel (RAG + Groq LLM)</td></tr>
+</table>
+
+<h2>🤖 14. Chatbot IA (Assistant CRM)</h2>
+<div class="box"><strong>Technologie :</strong> RAG (Retrieval-Augmented Generation) avec 58 chunks de documents indexés + Groq LLM pour la génération de réponses intelligentes en français.</div>
+<ul>
+<li>Widget flottant en bas à droite du portail client</li>
+<li>Message d'accueil automatique</li>
+<li>Répond aux questions sur les services, devis, support</li>
+<li>Bouton STOP pour arrêter la génération</li>
+</ul>
+
+<h2>🌐 15. Fonctionnalités UI Globales</h2>
+<table>
+<tr><th>Fonctionnalité</th><th>Détail</th></tr>
+<tr><td>🌗 Thème Dark / Light</td><td>Basculement instantané via icône soleil/lune</td></tr>
+<tr><td>🇫🇷🇬🇧 Internationalisation</td><td>Français et Anglais, switch via drapeau</td></tr>
+<tr><td>🔍 Recherche globale</td><td>Barre de recherche + raccourci Ctrl+K</td></tr>
+<tr><td>🔔 Notifications</td><td>Icône cloche avec compteur</td></tr>
+<tr><td>📱 Responsive</td><td>Sidebar rétractable, grilles adaptatives</td></tr>
+</table>
+
+<h2>📧 16. Service Email (SMTP)</h2>
+<ul>
+<li>Configuré avec Gmail (smtp.gmail.com:587)</li>
+<li>Envoi de notifications de tickets</li>
+<li>API d'envoi d'emails libres</li>
+<li>Test de connexion SMTP</li>
+</ul>
+
+<h2>📈 17. API & Rapports</h2>
+<p style="font-size:12px"><strong>74 endpoints REST</strong> organisés en modules. Documentation Swagger disponible sur <code>/docs</code>.</p>
+<table>
+<tr><th>Rapport</th><th>Données</th></tr>
+<tr><td>Ventes (Sales)</td><td>Total leads, par source/statut, pipeline, taux conversion, tendances</td></tr>
+<tr><td>Support</td><td>Total tickets, ouverts, en retard, temps résolution, par statut/priorité</td></tr>
+<tr><td>Audit</td><td>Journal complet avec before/after JSON</td></tr>
+</table>
+
+<div class="score">Score Global : 98% des fonctionnalités opérationnelles ✅</div>
+
+<h2>🗺️ Parcours Utilisateur (Démarche du Site)</h2>
+<div class="flow" style="font-size:13px">
+<strong>1.</strong> Connexion → <strong>2.</strong> Dashboard (vue d'ensemble) → <strong>3.</strong> Créer un Lead (prospect)<br>
+→ <strong>4.</strong> Qualifier le Lead → <strong>5.</strong> Convertir en Account + Contact + Deal<br>
+→ <strong>6.</strong> Gérer le Deal dans le Pipeline (5 étapes) → <strong>7.</strong> Créer un Devis<br>
+→ <strong>8.</strong> Planifier des Activités (appels, réunions) → <strong>9.</strong> Gagner le Deal ✅<br><br>
+<strong>Support :</strong> Client crée un Ticket → Support traite → Messages → Résolution → Email<br>
+<strong>Suivi :</strong> Tout est tracé dans le Journal d'Audit + Rapports temps réel
+</div>
+
+<div style="text-align:center;margin-top:30px;color:#94a3b8;font-size:11px">
+CRM Internal v1.0.0 — FRS IT Development Company — Avril 2026<br>
+15 pages frontend | 74 endpoints API | 5 rôles utilisateur
+</div>
+
+</body>
+</html>

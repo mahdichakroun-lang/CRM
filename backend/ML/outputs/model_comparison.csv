@@ -1,0 +1,4 @@
+Modele,Accuracy,F1,AUC
+Elastic Net (L1+L2),0.8633,0.8877,0.9531
+Random Forest,0.8233,0.8564,0.9278
+XGBoost,0.89,0.9091,0.9626

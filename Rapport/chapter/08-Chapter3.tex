@@ -1,0 +1,289 @@
+\chapter{Sprint 02 : Conception du Système CRM}
+\minitoc
+\newpage
+
+\section{Introduction}
+Ce chapitre présente le deuxième sprint, consacré à la conception détaillée du système. À partir des besoins identifiés précédemment, il s'agit ici de structurer les modèles métier, de préciser le schéma de données, de décrire les flux critiques du système et de définir une architecture capable de supporter les interfaces web, client, mobile et documentaire.
+
+\section{Objectifs du Sprint}
+\begin{itemize}
+    \item modéliser les entités métier et leurs relations ;
+    \item élaborer le schéma relationnel de la base de données ;
+    \item formaliser les séquences de fonctionnement essentielles ;
+    \item définir l'architecture technique du backend, du frontend, du mobile et du module RAG ;
+    \item spécifier les principaux endpoints de l'API REST.
+\end{itemize}
+
+\section{Diagramme de classes}
+Le diagramme de classes permet de représenter les objets métiers manipulés par le système ainsi que leurs liens. Dans le cas du CRM réalisé, la modélisation tourne autour de deux grands axes : le cycle commercial et le cycle de support. À ces deux axes s'ajoutent des éléments transverses comme l'utilisateur, les activités, l'audit et les rôles.
+
+\begin{table}[H]
+\centering
+\caption{Entités principales du diagramme de classes}
+\label{tab:classes}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Classe métier} & \textbf{Rôle dans le système} \\
+\hline
+User & Représente un utilisateur authentifié du système, interne ou client, avec un rôle et un périmètre d'accès \\
+\hline
+Account & Porte les informations de l'entreprise cliente et sert d'entité pivot pour les contacts, deals et tickets \\
+\hline
+Contact & Représente l'interlocuteur rattaché à un compte client \\
+\hline
+Lead & Représente un prospect avant sa conversion en éléments structurés du CRM \\
+\hline
+Deal & Représente une opportunité commerciale suivie dans le pipeline \\
+\hline
+Quote & Représente un devis associé à une opportunité commerciale \\
+\hline
+Ticket & Représente une demande de support liée à un compte client \\
+\hline
+TicketMessage & Représente un message public ou une note interne dans le cycle de vie d'un ticket \\
+\hline
+Activity & Représente une interaction commerciale liée à un compte, un contact ou un deal \\
+\hline
+AuditLog & Conserve l'historique des opérations sensibles pour assurer la traçabilité \\
+\hline
+\end{tabularx}
+\end{table}
+
+\PlaceholderFigure{0.92\textwidth}{6.5cm}{Diagramme de classes du système CRM}{Espace réservé à l'insertion du diagramme de classes final, incluant les entités User, Account, Contact, Lead, Deal, Quote, Ticket, TicketMessage, Activity et AuditLog.}{fig:diag_classes}
+
+\subsection{Relations entre entités}
+Les relations entre classes structurent le comportement global du système. Les plus importantes sont résumées ci-dessous.
+
+\begin{table}[H]
+\centering
+\caption{Principales relations métier du système}
+\label{tab:relations_classes}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Relation} & \textbf{Interprétation métier} \\
+\hline
+Account --- Contact & Un compte regroupe plusieurs interlocuteurs métiers \\
+\hline
+Account --- Deal & Une entreprise cliente peut faire l'objet de plusieurs opportunités commerciales \\
+\hline
+Deal --- Quote & Une opportunité peut donner lieu à plusieurs versions ou états de devis \\
+\hline
+Account --- Ticket & Les demandes de support sont rattachées à l'entreprise cliente concernée \\
+\hline
+Ticket --- TicketMessage & Chaque ticket conserve l'historique chronologique des échanges associés \\
+\hline
+Lead --- Account / Contact / Deal & La conversion d'un lead crée les entités commerciales structurées et mémorise les références correspondantes \\
+\hline
+User --- Account & Un utilisateur client peut être lié à un compte ; un utilisateur interne peut être propriétaire d'un compte, d'un deal ou d'un lead \\
+\hline
+Activity --- Account / Contact / Deal & Une activité commerciale peut être liée à une ou plusieurs entités métier suivies \\
+\hline
+AuditLog --- User & Chaque action auditée est rattachée, quand cela est possible, à son acteur \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Diagramme Entité-Relation (ERD)}
+Le schéma de base de données traduit le modèle objet en structure relationnelle. Le projet s'appuie sur une base \textbf{MySQL} contenant dix tables principales. Ces tables couvrent l'authentification, les objets métiers du cycle commercial, le helpdesk et l'audit. Les relations sont implémentées par des clés étrangères assurant la cohérence entre les comptes, les contacts, les deals, les devis, les tickets et les utilisateurs.\par
+\vspace{0.3cm}
+
+La conception du schéma a été pensée pour répondre à deux exigences : d'une part, conserver des relations simples à comprendre et à exploiter côté ORM ; d'autre part, permettre l'évolution des modules sans remettre en cause la structure générale du système.
+
+\PlaceholderFigure{0.92\textwidth}{6.5cm}{Diagramme Entité-Relation de la base CRM}{Espace réservé à l'insertion du diagramme ERD final montrant les dix tables principales, leurs clés primaires, leurs clés étrangères et leurs cardinalités.}{fig:erd}
+
+\section{Diagrammes de séquence}
+Les diagrammes de séquence décrivent les interactions dynamiques entre les interfaces, l'API et les couches métier du backend. Ils mettent en évidence les étapes de traitement des scénarios critiques.
+
+\subsection{Séquence --- Authentification JWT}
+Le scénario d'authentification repose sur la soumission des identifiants, la vérification du mot de passe, la génération d'un jeton JWT et la récupération du profil courant. Ce flux conditionne l'accès à tous les autres modules du système.
+
+\PlaceholderFigure{0.88\textwidth}{5.8cm}{Diagramme de séquence de l'authentification JWT}{Espace réservé à l'insertion du diagramme représentant l'utilisateur, l'interface cliente, l'API d'authentification, le service métier, la couche de sécurité et la base de données.}{fig:seq_auth}
+
+\subsection{Séquence --- Conversion d'un Lead}
+La conversion d'un lead est l'un des scénarios métier les plus importants. Elle illustre la manière dont une opération unique aboutit à la création de plusieurs entités corrélées : compte, contact et deal. Ce flux doit rester transactionnel et cohérent.
+
+\PlaceholderFigure{0.9\textwidth}{5.8cm}{Diagramme de séquence de conversion d'un lead}{Espace réservé à l'insertion du diagramme montrant la récupération du lead qualifié, la création de l'Account, du Contact et du Deal, puis la mise à jour du statut du lead.}{fig:seq_conversion}
+
+\subsection{Séquence --- Cycle de vie d'un Ticket}
+Le traitement d'un ticket implique plusieurs participants : le client, le portail ou l'espace interne, l'API support, les services métier, la base de données et le système de notification. La séquence doit montrer la distinction entre message public et note interne ainsi que la mise à jour du statut du ticket.
+
+\PlaceholderFigure{0.9\textwidth}{5.8cm}{Diagramme de séquence du cycle de vie d'un ticket}{Espace réservé à l'insertion du diagramme illustrant la création du ticket, l'assignation, l'ajout de messages, la notification du client et la résolution.}{fig:seq_ticket}
+
+\subsection{Séquence --- Chatbot documentaire (RAG)}
+Le flux du module d'assistance repose sur une logique documentaire : l'utilisateur soumet une question, le backend recherche les fragments les plus pertinents dans la base vectorielle, puis renvoie une réponse contextualisée avec ses sources. Le LLM externe intervient uniquement lorsqu'il est configuré ; sinon, le système retourne une réponse de secours basée sur la recherche locale.
+
+\PlaceholderFigure{0.84\textwidth}{5.8cm}{Diagramme de séquence du chatbot documentaire}{Espace réservé à l'insertion du diagramme représentant l'utilisateur, l'API chatbot, la chaîne RAG, la base vectorielle ChromaDB et le fournisseur LLM optionnel.}{fig:seq_rag}
+
+\section{Conception de l'architecture}
+
+\subsection{Architecture backend --- FastAPI + organisation par domaines}
+Le backend est conçu comme une API REST structurée par domaines métier. Chaque domaine rassemble les modèles, schémas, repositories et services correspondant à une responsabilité fonctionnelle précise. Cette organisation facilite la lisibilité, limite le couplage et rend les évolutions plus prévisibles.
+
+\begin{table}[H]
+\centering
+\caption{Organisation logique du backend}
+\label{tab:arch_backend}
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{Couche} & \textbf{Responsabilité} & \textbf{Exemples dans le projet} \\
+\hline
+API & Exposer les endpoints, valider les dépendances et orchestrer les services & routeurs \texttt{auth}, \texttt{leads}, \texttt{tickets}, \texttt{client}, \texttt{chatbot}, \texttt{email} \\
+\hline
+Domaines métier & Encapsuler les règles métier et la logique applicative & services de conversion de lead, gestion des tickets, reporting, audit \\
+\hline
+Persistance & Accéder à la base relationnelle via l'ORM & repositories SQLAlchemy et modèles métier \\
+\hline
+Composants partagés & Fournir sécurité, pagination, exceptions et services transverses & JWT, pagination, email, base repository \\
+\hline
+Composants documentaires & Gérer l'indexation, la recherche et la génération de réponse documentaire & vector store, chaîne RAG, client LLM \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Architecture frontend --- React SPA}
+Le frontend web est pensé comme une application SPA séparant les parcours internes et les parcours clients. L'espace interne s'appuie sur un layout dédié pour les modules CRM, tandis que le portail client dispose de son propre layout et d'une logique de navigation distincte. La communication avec le backend est centralisée dans un service Axios, complété par un contexte d'authentification et un contexte de thème.\par
+\vspace{0.3cm}
+
+Cette séparation apporte plusieurs avantages :
+\begin{itemize}
+    \item clarté des parcours selon les profils ;
+    \item réutilisation d'un même backend pour plusieurs interfaces ;
+    \item mise en place de comportements transverses comme l'authentification, l'internationalisation et le mode sombre ;
+    \item intégration d'un widget de chat documentaire dans l'espace client.
+\end{itemize}
+
+\subsection{Architecture mobile --- React Native}
+L'application mobile reprend la logique du portail client dans un contexte natif léger. Elle repose sur une navigation de type \textbf{Native Stack}, sur un contexte d'authentification et sur un stockage sécurisé du jeton via \textbf{Expo Secure Store}. Le choix d'une application dédiée au rôle \texttt{client} simplifie les flux et limite les risques d'incohérence avec les parcours internes.
+
+\begin{table}[H]
+\centering
+\caption{Principes de conception de l'application mobile}
+\label{tab:arch_mobile}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Bloc} & \textbf{Description} \\
+\hline
+Navigation & Enchaînement des écrans login, tableau de bord client, tickets, devis, chatbot et profil \\
+\hline
+Authentification & Gestion du jeton et récupération du profil via un contexte React Native \\
+\hline
+Sécurité locale & Stockage du jeton JWT dans Expo Secure Store \\
+\hline
+Services & Centralisation des appels API via Axios \\
+\hline
+Restriction métier & Blocage explicite des rôles internes, redirigés vers la version web \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Architecture RAG --- Chatbot IA}
+Le module d'assistance adopte une architecture documentaire simple et robuste :
+\begin{enumerate}
+    \item préparation d'un ensemble de documents métier rédigés en Markdown ;
+    \item découpage de ces documents en fragments exploitables ;
+    \item indexation de ces fragments dans une base vectorielle locale ;
+    \item recherche des passages les plus pertinents pour une question donnée ;
+    \item génération d'une réponse contextualisée à partir des résultats obtenus ;
+    \item repli sur une réponse documentaire simplifiée lorsque le LLM externe n'est pas disponible.
+\end{enumerate}
+
+\PlaceholderFigure{0.86\textwidth}{5.8cm}{Architecture du module RAG}{Espace réservé à l'insertion du diagramme montrant les documents Markdown, l'indexation, ChromaDB, la recherche contextuelle, le LLM optionnel et la réponse finale.}{fig:arch_rag}
+
+\subsection{Architecture Docker Compose}
+Le projet est conçu pour être exécuté localement dans un environnement conteneurisé. La pile principale comprend une base de données MySQL, un backend FastAPI et un frontend servi par Nginx. Des services supplémentaires dédiés aux campagnes de test sont définis dans le fichier \texttt{docker-compose.yml}.
+
+\begin{table}[H]
+\centering
+\caption{Services définis dans l'architecture Docker Compose}
+\label{tab:docker_arch}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Service} & \textbf{Port principal} & \textbf{Rôle} \\
+\hline
+\texttt{db} & 3307 sur l'hôte & Base MySQL du projet \\
+\hline
+\texttt{backend} & 8000 & API FastAPI et logique métier \\
+\hline
+\texttt{frontend} & 3000 & Application web servie via Nginx avec reverse proxy API \\
+\hline
+\texttt{backend\_unit\_tests} & --- & Exécution des tests unitaires backend \\
+\hline
+\texttt{backend\_integration\_tests} & --- & Exécution des tests d'intégration API \\
+\hline
+\texttt{frontend\_tests} & --- & Exécution des tests frontend \\
+\hline
+\texttt{mobile\_tests} & --- & Exécution des tests mobile \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Conception de l'API REST}
+La conception de l'API REST s'appuie sur une logique de routes métier versionnées en \texttt{/api/v1}. Les endpoints couvrent l'authentification, la gestion des entités commerciales, le helpdesk, le portail client, les rapports, les notifications email et le module d'assistance.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Extrait des principaux endpoints de l'API REST}
+\label{tab:api}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Méthode} & \textbf{Endpoint} & \textbf{Description} \\
+\hline
+POST & /api/v1/auth/login & Authentification et retour d'un jeton JWT \\
+\hline
+GET & /api/v1/auth/me & Récupération du profil utilisateur connecté \\
+\hline
+GET / POST & /api/v1/leads & Consultation et création des leads \\
+\hline
+POST & /api/v1/leads/\{id\}/convert & Conversion d'un lead qualifié en compte, contact et deal \\
+\hline
+GET / POST & /api/v1/deals & Consultation et création des opportunités commerciales \\
+\hline
+PATCH & /api/v1/deals/\{id\}/stage & Mise à jour du stage d'un deal dans le pipeline \\
+\hline
+GET / POST & /api/v1/quotes & Consultation et création des devis \\
+\hline
+GET / POST & /api/v1/tickets/\{id\}/messages & Consultation et ajout de messages sur un ticket interne \\
+\hline
+GET & /api/v1/reports/sales & Indicateurs de performance commerciale \\
+\hline
+GET & /api/v1/reports/support & Indicateurs du support client \\
+\hline
+GET & /api/v1/reports/audit-logs & Consultation du journal d'audit \\
+\hline
+GET / POST & /api/v1/client/tickets & Consultation et création de tickets côté client \\
+\hline
+GET & /api/v1/client/quotes & Consultation des devis liés au compte client \\
+\hline
+POST & /api/v1/chatbot & Envoi d'une question au module d'assistance documentaire \\
+\hline
+GET & /api/v1/chatbot/status & Consultation de l'état du module RAG \\
+\hline
+GET / POST & /api/v1/email/... & Vérification et envoi de notifications email \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Résultats du Sprint}
+\begin{table}[H]
+\centering
+\caption{Livrables du Sprint 02}
+\label{tab:livrables_s2}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\textbf{Livrable} & \textbf{Statut} \\
+\hline
+Modèle de classes métier et relations principales & $\checkmark$ \\
+\hline
+Schéma relationnel et principes ERD & $\checkmark$ \\
+\hline
+Séquences des scénarios critiques & $\checkmark$ \\
+\hline
+Architecture technique backend, frontend, mobile et RAG & $\checkmark$ \\
+\hline
+Spécification synthétique de l'API REST & $\checkmark$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+Le deuxième sprint a permis de transformer les besoins du chapitre précédent en une vision structurée de la solution. Les modèles de données, les flux dynamiques et l'architecture technique sont désormais clarifiés. Cette conception sert de référence pour la phase suivante, consacrée à la réalisation concrète des différentes composantes du système.

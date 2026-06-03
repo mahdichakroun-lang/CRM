@@ -1,0 +1,158 @@
+% Package pour \checkmark
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{pifont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TikZ — UML Use Case Diagram styles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, fit, calc, backgrounds}
+
+% Use case ellipse
+\tikzset{
+  usecase/.style={
+    draw, ellipse, align=center, font=\small,
+    inner xsep=4pt, inner ysep=2pt,
+    minimum width=2.6cm, minimum height=1cm,
+    text width=2.4cm
+  },
+  usecaseSmall/.style={
+    draw, ellipse, align=center, font=\footnotesize,
+    inner xsep=3pt, inner ysep=2pt,
+    minimum width=2.2cm, minimum height=0.85cm,
+    text width=2cm
+  },
+  % System boundary
+  systemboundary/.style={
+    draw, rectangle, rounded corners=3pt,
+    inner sep=12pt, thick, fill=blue!3
+  },
+  % Include / Extend arrows
+  include/.style={
+    ->, dashed, >=Stealth,
+    shorten >=2pt, shorten <=2pt
+  },
+  extend/.style={
+    ->, dashed, >=Stealth,
+    shorten >=2pt, shorten <=2pt
+  },
+  % Association line
+  assoc/.style={
+    -, shorten >=2pt, shorten <=2pt
+  },
+}
+
+% Stick figure command: \umlactor{node name}{x,y}{label}
+\newcommand{\umlactor}[3]{%
+  \begin{scope}[shift={(#2)}]
+    \draw[thick] (0,0.6) circle (0.18);          % head
+    \draw[thick] (0,0.42) -- (0,0);              % body
+    \draw[thick] (-0.25,0.32) -- (0,0.18) -- (0.25,0.32);  % arms
+    \draw[thick] (-0.2,-0.3) -- (0,0) -- (0.2,-0.3);       % legs
+    \node[below, font=\small\bfseries] at (0,-0.35) {#3};
+    \coordinate (#1) at (0,0.18);
+  \end{scope}
+}
+
+% Config listings
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{green!50!black},
+    commentstyle=\color{gray}\itshape,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!5},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    tabsize=2,
+    showstringspaces=false,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MÉTADONNÉES DU RAPPORT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\reportAuthor}{%
+  Mahdi \textsc{CHAKROUN}%
+}
+
+\newcommand{\reportTitle}{%
+   Conception et Développement d'un Système CRM Full-Stack \\ 
+   avec Portail Client, Application Mobile et Chatbot IA%
+}
+
+\newcommand{\reportSubject}{%
+   Rapport de Stage de Fin d'Études%
+}
+
+\newcommand{\dateSoutenance}{%
+  2026%
+}
+
+\newcommand{\studyDepartment}{%
+  Génie Logiciel et Informatique Décisionnelle%
+}
+
+\newcommand{\ENETCOM}{%
+  Institut Polytechnique Privé des Sciences Avancées de Sfax%
+}
+
+\newcommand{\codePFE}{%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% JURY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\juryPresident}{%
+  Mr [Nom] \textsc{[Prénom]}%
+}
+\newcommand{\juryPresidentDesc}{%
+  Président%
+}
+
+\newcommand{\juryMemberOne}{%
+  Mr Ahmed \textsc{KHARAT}%
+}
+\newcommand{\juryMemberOneDesc}{%
+  Encadrant académique%
+}
+
+\newcommand{\juryMemberTwo}{%
+  Mr [Nom] \textsc{[Prénom]}%
+}
+\newcommand{\juryMemberTwoDesc}{%
+  Rapporteur%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMMANDES UTILITAIRES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\specialcell}[1]{%
+  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
+}
+
+\newcommand{\PlaceholderFigure}[5]{%
+  \begin{figure}[H]
+    \centering
+    \fbox{%
+      \begin{minipage}[c][#2][c]{#1}
+        \centering
+        \textbf{#3}\par
+        \vspace{0.3cm}
+        \small #4
+      \end{minipage}
+    }
+    \caption{#3}
+    \label{#5}
+  \end{figure}
+}
+
+\newcommand{\MyCommand}{%
+  Does nothing really%
+}

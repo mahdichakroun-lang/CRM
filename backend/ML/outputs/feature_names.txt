@@ -1,0 +1,30 @@
+estimated_value
+has_email
+has_phone
+days_in_pipeline
+activities_count
+calls
+emails_sent
+meetings
+contact_score
+activity_intensity
+meeting_ratio
+is_high_value
+is_fresh
+log_value
+has_activities
+source_email
+source_other
+source_phone
+source_referral
+source_social_media
+source_trade_show
+source_website
+sector_Commerce / Retail
+sector_Finance / Banque
+sector_IT / Digital
+sector_Immobilier
+sector_Industrie / Fabrication
+sector_Santé
+sector_Tourisme / Hôtellerie
+sector_Éducation

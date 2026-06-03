@@ -1,0 +1,181 @@
+\chapter{Sprint 04 : Tests, Validation et Déploiement}
+\minitoc
+\newpage
+
+\section{Introduction}
+Ce dernier sprint est consacré à la consolidation du système. Après la phase de réalisation, il devient nécessaire de vérifier la cohérence fonctionnelle des modules, de confirmer la séparation des droits selon les rôles, de corriger les anomalies de stabilisation et de préparer une exécution locale reproductible de l'ensemble de la solution.
+
+\section{Objectifs du Sprint}
+\begin{itemize}
+    \item vérifier les parcours métier essentiels sur les différents modules ;
+    \item contrôler la cohérence des permissions RBAC ;
+    \item stabiliser les interactions entre backend, frontend, portail client et mobile ;
+    \item valider le comportement du module d'assistance documentaire ;
+    \item préparer une exécution locale reproductible via Docker Compose.
+\end{itemize}
+
+\section{Tests fonctionnels}
+
+\subsection{Dispositif de tests automatisés}
+Le projet intègre plusieurs niveaux de test afin de couvrir les couches principales du système :
+
+\begin{table}[H]
+\centering
+\caption{Stratégie de tests du projet}
+\label{tab:strategie_tests}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Niveau} & \textbf{Outil} & \textbf{Couverture visée} \\
+\hline
+Backend unitaire & Pytest & Authentification, logique métier et scénarios principaux du CRM \\
+\hline
+Backend intégration & Pytest + HTTP & Vérification de l'API, santé de l'application et parcours d'intégration \\
+\hline
+Frontend & Vitest & Comportements de composants, services et contextes web \\
+\hline
+Mobile & Jest & Vérification des services et comportements clés côté application mobile \\
+\hline
+Orchestration & Docker Compose + script PowerShell & Lancement coordonné de la pile d'exécution et des campagnes de tests \\
+\hline
+\end{tabularx}
+\end{table}
+
+En complément des tests automatisés, des scénarios fonctionnels ont été revus manuellement pour valider les flux multi-rôles les plus sensibles.
+
+\subsection{Matrice de tests RBAC}
+La matrice suivante synthétise les autorisations principales observées dans l'implémentation actuelle du système.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Synthèse des permissions RBAC}
+\label{tab:rbac}
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+\hline
+\textbf{Opération} & \textbf{Admin} & \textbf{Manager} & \textbf{Comm.} & \textbf{Support} & \textbf{Client} \\
+\hline
+Connexion et accès au profil & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\hline
+Accès au CRM interne & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ \\
+\hline
+Création / mise à jour des leads & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ \\
+\hline
+Conversion d'un lead qualifié & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ & $\times$ \\
+\hline
+Gestion des comptes, contacts et activités & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ \\
+\hline
+Création d'un ticket interne & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\times$ \\
+\hline
+Création d'un ticket via portail client & $\times$ & $\times$ & $\times$ & $\times$ & $\checkmark$ \\
+\hline
+Consultation des rapports ventes & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ & $\times$ \\
+\hline
+Consultation des rapports support & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\times$ \\
+\hline
+Consultation du journal d'audit & $\checkmark$ & $\checkmark$ & $\times$ & $\times$ & $\times$ \\
+\hline
+Gestion des utilisateurs & $\checkmark$ & $\times$ & $\times$ & $\times$ & $\times$ \\
+\hline
+Utilisation du chatbot documentaire & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Scénario de test end-to-end}
+Pour vérifier la cohérence globale du système, un scénario transverse a été retenu :
+\begin{enumerate}
+    \item un administrateur crée les utilisateurs internes nécessaires et rattache un utilisateur client à un compte ;
+    \item un commercial crée un lead, le qualifie puis le convertit en compte, contact et deal ;
+    \item un commercial crée un devis lié au deal ;
+    \item le client consulte le devis depuis son portail ;
+    \item le client ouvre un ticket de support ;
+    \item un agent support ajoute une note interne puis une réponse publique ;
+    \item le client visualise uniquement les réponses publiques et peut ajouter un nouveau message ;
+    \item un manager consulte les rapports de vente et de support ;
+    \item un administrateur vérifie la trace des opérations dans l'audit ;
+    \item le client utilise l'assistant documentaire pour poser une question relative au support ou aux services.
+\end{enumerate}
+
+\section{Bugs identifiés et corrigés}
+La phase de stabilisation a permis d'identifier plusieurs points d'amélioration concrets, touchant à la sécurité, à l'ergonomie et à la cohérence entre interface et API.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Exemples d'anomalies de stabilisation traitées}
+\label{tab:bugs}
+\begin{tabularx}{\textwidth}{|c|l|X|X|c|}
+\hline
+\textbf{ID} & \textbf{Zone} & \textbf{Symptôme observé} & \textbf{Correction apportée} & \textbf{Statut} \\
+\hline
+BUG-1 & Utilisateurs & Un utilisateur authentifié pouvait consulter un autre profil sans contrôle suffisant & Restriction de l'accès au profil de l'utilisateur lui-même ou aux rôles de supervision autorisés & $\checkmark$ \\
+\hline
+BUG-2 & Tickets / Frontend & Les agents support ne disposaient pas d'une liste exploitable des utilisateurs assignables & Ajout d'un endpoint dédié aux utilisateurs assignables et raccordement du formulaire de ticket & $\checkmark$ \\
+\hline
+BUG-3 & Tickets / UI & Le formulaire de création proposait des champs non cohérents avec l'API de création & Alignement du comportement du formulaire avec la logique backend selon création ou modification & $\checkmark$ \\
+\hline
+BUG-4 & Tickets / Messagerie & Le nom de l'auteur n'était pas correctement restitué dans l'affichage des messages & Enrichissement de la réponse API pour inclure l'auteur lisible côté interface & $\checkmark$ \\
+\hline
+BUG-5 & Reporting support & Le calcul du temps moyen de résolution dépendait d'une fonction SQL spécifique au moteur MySQL & Remplacement par un calcul portable au niveau applicatif afin d'améliorer la robustesse des tests et des exécutions & $\checkmark$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Méthodologie de correction}
+Pour chaque anomalie identifiée, une même démarche a été appliquée :
+\begin{enumerate}
+    \item reproduction du problème sur l'interface ou via l'API ;
+    \item isolement de la cause dans la couche concernée ;
+    \item correction locale en privilégiant la cohérence avec l'architecture existante ;
+    \item vérification fonctionnelle du comportement corrigé ;
+    \item contrôle rapide des modules adjacents afin de limiter les régressions.
+\end{enumerate}
+
+\section{Validation du chatbot IA}
+Le module d'assistance a été évalué sur des questions cohérentes avec la nature documentaire de sa base de connaissances.
+
+\begin{table}[H]
+\centering
+\caption{Validation fonctionnelle du module d'assistance documentaire}
+\label{tab:test_chatbot}
+\begin{tabularx}{\textwidth}{|X|X|c|}
+\hline
+\textbf{Question posée} & \textbf{Type de réponse attendue} & \textbf{Validation} \\
+\hline
+Quels services propose FRS ? & Présentation synthétique des offres de l'entreprise & $\checkmark$ \\
+\hline
+Comment fonctionne le support client ? & Rappel des principes du guide support et du portail & $\checkmark$ \\
+\hline
+Quels sont les documents ou références de projets disponibles ? & Restitution des références et projets mis en avant & $\checkmark$ \\
+\hline
+Quelles informations trouve-t-on dans les conditions générales ? & Réponse orientée vers le document contractuel correspondant & $\checkmark$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Résultats du Sprint}
+\begin{table}[H]
+\centering
+\caption{Livrables du Sprint 04}
+\label{tab:livrables_s4}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\textbf{Livrable} & \textbf{Statut} \\
+\hline
+Dispositif de tests automatisés backend, frontend et mobile structuré & $\checkmark$ \\
+\hline
+Matrice RBAC revue sur les parcours principaux & $\checkmark$ \\
+\hline
+Anomalies de stabilisation corrigées & $\checkmark$ \\
+\hline
+Validation du portail client et des flux tickets & $\checkmark$ \\
+\hline
+Validation du chatbot documentaire sur des cas d'usage réalistes & $\checkmark$ \\
+\hline
+Configuration de déploiement local Docker Compose finalisée & $\checkmark$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+Le quatrième sprint a permis de consolider le projet et de le rendre plus robuste. La revue fonctionnelle a confirmé la cohérence des grands flux, la vérification RBAC a clarifié le périmètre de chaque rôle, et la phase de stabilisation a amélioré la sécurité ainsi que la cohérence entre interfaces et API. Le projet dispose désormais d'une base documentaire, technique et fonctionnelle nettement plus solide pour une démonstration ou une poursuite de développement.

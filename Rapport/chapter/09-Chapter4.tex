@@ -1,0 +1,275 @@
+\chapter{Sprint 03 : Réalisation Technique}
+\minitoc
+\newpage
+
+\section{Introduction}
+Ce chapitre présente la phase de réalisation technique du projet. Après la conception détaillée menée au sprint précédent, l'objectif de ce sprint est de transformer les modèles et les choix d'architecture en composants opérationnels : backend, interfaces web, portail client, application mobile, assistant documentaire et infrastructure d'exécution locale.
+
+\section{Objectifs du Sprint}
+\begin{itemize}
+    \item implémenter le backend FastAPI et les modules métier du CRM ;
+    \item développer l'interface web interne et le portail client ;
+    \item réaliser l'application mobile client avec React Native ;
+    \item intégrer le module d'assistance documentaire basé sur RAG ;
+    \item préparer l'exécution locale conteneurisée de l'ensemble.
+\end{itemize}
+
+\section{Réalisation du Backend (FastAPI)}
+Le backend constitue la colonne vertébrale du système. Il concentre la logique métier, les contrôles d'accès, l'accès aux données, les mécanismes de reporting, l'audit et les composants transverses tels que les notifications email et l'assistance documentaire.
+
+\subsection{Authentification JWT et RBAC}
+L'authentification repose sur un flux simple et sécurisé : l'utilisateur soumet ses identifiants, l'API vérifie le mot de passe chiffré, puis génère un jeton JWT utilisé pour les requêtes suivantes. Cette logique est complétée par une gestion fine des permissions, avec cinq rôles distincts (\texttt{admin}, \texttt{manager}, \texttt{commercial}, \texttt{support}, \texttt{client}).\par
+\vspace{0.3cm}
+
+Le contrôle d'accès est centralisé dans des dépendances FastAPI réutilisées par les routeurs. Ce choix permet de sécuriser les endpoints sans dupliquer la logique d'autorisation dans chaque module. Il facilite également la maintenance de la politique RBAC à mesure que le projet évolue.
+
+\begin{table}[H]
+\centering
+\caption{Principes de réalisation du module d'authentification}
+\label{tab:auth_backend}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Composant} & \textbf{Rôle} \\
+\hline
+JWT & Authentification stateless pour les clients web et mobile \\
+\hline
+bcrypt / passlib & Hachage et vérification sécurisée des mots de passe \\
+\hline
+Dependencies FastAPI & Contrôle d'accès par rôles et filtrage des utilisateurs internes ou clients \\
+\hline
+AuthService & Centralisation de la logique de connexion, profil et gestion des utilisateurs \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Logique de conversion Lead}
+La conversion d'un lead est l'un des mécanismes métier les plus sensibles du CRM. Lorsqu'un prospect atteint l'état \textit{qualified}, le service de conversion crée un compte client, un contact et un deal dans une même séquence de traitement. Le lead est ensuite marqué comme \textit{converted} et conserve la référence vers les objets générés.\par
+\vspace{0.3cm}
+
+Cette logique répond à un besoin important : éviter la ressaisie des données et assurer une continuité fonctionnelle entre prospection et suivi commercial. Le backend a donc été conçu pour porter explicitement cette transition métier dans un service dédié plutôt que de laisser l'utilisateur reconstruire manuellement les informations sur plusieurs écrans.
+
+\subsection{Système de messagerie Ticket}
+Le module ticketing prend en charge deux types d'échanges : les réponses publiques, visibles par le client, et les notes internes, réservées aux agents. Cette séparation est importante pour préserver un espace de coordination interne sans exposer au client des éléments techniques ou organisationnels non pertinents.\par
+\vspace{0.3cm}
+
+Le backend gère également la relation entre tickets, comptes, contacts et utilisateurs assignés. Le portail client applique un filtrage strict sur le périmètre du compte connecté et n'expose jamais les notes internes. L'ensemble permet de maintenir une cohérence entre espace interne et espace client tout en respectant les règles de visibilité.
+
+\subsection{Journal d'audit et reporting}
+Les opérations critiques du système sont historisées dans un journal d'audit. Les actions de création, mise à jour, suppression ou changement d'état peuvent ainsi être tracées avec un acteur, un type d'entité, un identifiant métier et, selon les cas, un état avant/après.\par
+\vspace{0.3cm}
+
+En parallèle, un module de reporting agrège les données commerciales et support pour produire des indicateurs de pilotage : répartition des leads par source, synthèse du pipeline, valeur gagnée, nombre de tickets ouverts, tickets en retard et temps moyen de résolution. Cette logique a été pensée comme un service transverse de synthèse plutôt que comme une simple vue d'interface.
+
+\subsection{Notifications email}
+Le backend intègre également un mécanisme de notifications SMTP. Celui-ci est utilisé pour prévenir le client lors de certains événements clés, notamment la création d'un devis ou l'ajout d'un message public sur un ticket. Ce choix renforce la continuité de service et évite au client de dépendre exclusivement d'une consultation active du portail.
+
+\section{Réalisation du Frontend (React)}
+Le frontend web a été développé sous forme d'application SPA avec React et Vite. L'interface a été structurée autour de deux espaces distincts : un espace interne destiné aux utilisateurs métiers et un portail dédié aux clients. Cette séparation s'exprime à la fois dans la navigation, dans la présentation et dans la logique d'accès.
+
+\subsection{Pages principales}
+L'application interne regroupe les pages nécessaires au pilotage commercial, au support et à l'administration. Le portail client web fournit quant à lui un ensemble plus restreint, centré sur la consultation, les interactions de support et l'accès au profil.
+
+\begin{table}[H]
+\centering
+\caption{Organisation fonctionnelle du frontend web}
+\label{tab:web_pages}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Espace} & \textbf{Pages et fonctionnalités principales} \\
+\hline
+CRM interne & Tableau de bord, comptes, contacts, leads, deals, devis, tickets, activités, audit, utilisateurs, profil \\
+\hline
+Portail client web & Tableau de bord client, tickets, devis, profil, assistant conversationnel intégré \\
+\hline
+\end{tabularx}
+\end{table}
+
+\PlaceholderFigure{0.88\textwidth}{5.8cm}{Capture d'écran --- Page de connexion}{Espace réservé à l'insertion de la capture de l'écran de connexion avec email, mot de passe et profils de démonstration.}{fig:web_login}
+
+\PlaceholderFigure{0.88\textwidth}{5.8cm}{Capture d'écran --- Tableau de bord interne}{Espace réservé à l'insertion de la capture du tableau de bord affichant les KPI commerciaux et support.}{fig:web_dashboard}
+
+\PlaceholderFigure{0.88\textwidth}{5.8cm}{Capture d'écran --- Module Leads / Deals}{Espace réservé à l'insertion d'une capture mettant en avant la gestion des leads, la conversion et le pipeline des deals.}{fig:web_sales}
+
+\PlaceholderFigure{0.88\textwidth}{5.8cm}{Capture d'écran --- Module Tickets}{Espace réservé à l'insertion d'une capture illustrant le helpdesk, la liste des tickets et la messagerie associée.}{fig:web_tickets}
+
+\subsection{Portail Client}
+Le portail client bénéficie d'un layout spécifique distinct du CRM interne. Il reprend l'identité générale de l'application tout en simplifiant les parcours autour des besoins essentiels : consultation des tickets, accès aux devis, consultation du profil et assistance documentaire.\par
+\vspace{0.3cm}
+
+Cette séparation présente plusieurs avantages. Elle réduit la charge cognitive pour le client, renforce la sécurité en limitant les routes disponibles et rend plus explicite la frontière entre les usages internes et les usages externes. Le portail intègre également un widget conversationnel permettant au client d'interroger la base documentaire sans quitter son espace.
+
+\PlaceholderFigure{0.88\textwidth}{5.8cm}{Capture d'écran --- Portail client web}{Espace réservé à l'insertion d'une capture de l'espace client montrant la navigation dédiée, les tickets et le widget d'assistance.}{fig:web_portal}
+
+\subsection{Fonctionnalités UX avancées}
+Le frontend ne se limite pas à la restitution des données métier. Plusieurs éléments ont été mis en place pour améliorer l'expérience utilisateur :
+\begin{itemize}
+    \item gestion d'un mode clair / sombre ;
+    \item prise en charge de l'internationalisation FR/EN ;
+    \item recherche rapide dans la navigation interne ;
+    \item chargement différé des pages principales ;
+    \item composant de chatbot avec conversation persistante à l'écran ;
+    \item support de la saisie vocale dans le widget d'assistance web lorsque le navigateur le permet.
+\end{itemize}
+
+\section{Réalisation de l'Application Mobile (React Native)}
+L'application mobile a été conçue comme une extension du portail client. Elle reprend les principaux parcours utiles en mobilité tout en restant volontairement plus compacte que le CRM web.
+
+\subsection{Technologies utilisées}
+\begin{itemize}
+    \item \textbf{React Native} + \textbf{Expo} pour le développement multiplateforme ;
+    \item \textbf{React Navigation} avec navigation \textit{Native Stack} ;
+    \item \textbf{Axios} pour les appels API ;
+    \item \textbf{Expo Secure Store} pour le stockage sécurisé du jeton ;
+    \item \textbf{Context API} pour l'authentification et le thème.
+\end{itemize}
+
+\subsection{Écrans de l'application}
+L'application mobile expose six écrans fonctionnels principaux, auxquels s'ajoute un écran de blocage pour les rôles internes non autorisés à utiliser cette interface.
+
+\begin{table}[H]
+\centering
+\caption{Écrans principaux de l'application mobile}
+\label{tab:mobile_screens}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Écran} & \textbf{Description} \\
+\hline
+LoginScreen & Connexion de l'utilisateur client avec récupération du profil \\
+\hline
+ClientDashboardScreen & Vue synthétique du compte, des tickets et des devis \\
+\hline
+ClientTicketsScreen & Consultation, création et suivi des tickets du compte client \\
+\hline
+ClientQuotesScreen & Consultation des devis associés au compte \\
+\hline
+ClientChatbotScreen & Interrogation de l'assistant documentaire depuis le mobile \\
+\hline
+ProfileScreen & Consultation et mise à jour des informations de profil \\
+\hline
+NotClientScreen & Message d'information pour les rôles internes invités à utiliser la version web \\
+\hline
+\end{tabularx}
+\end{table}
+
+\PlaceholderFigure{0.82\textwidth}{7cm}{Captures d'écran --- Application mobile}{Espace réservé à l'insertion d'un montage mobile présentant les écrans Login, Dashboard client, Tickets, Devis et Assistant documentaire.}{fig:mobile}
+
+\section{Réalisation du Chatbot IA (RAG)}
+Le module d'assistance ne s'appuie pas sur des requêtes directes vers la base métier. Il repose sur une architecture documentaire orientée RAG, ce qui permet de fournir des réponses sur des contenus d'entreprise sans exposer directement la base transactionnelle.
+
+\subsection{Architecture RAG}
+Le fonctionnement du module peut être résumé en cinq étapes :
+\begin{enumerate}
+    \item constitution d'une base documentaire métier en Markdown ;
+    \item indexation de cette base dans une collection vectorielle locale ;
+    \item recherche sémantique des passages les plus pertinents pour une question ;
+    \item génération d'une réponse contextualisée lorsque le fournisseur LLM est disponible ;
+    \item repli sur une réponse documentaire synthétique sinon.
+\end{enumerate}
+
+\subsection{Implémentation}
+L'implémentation repose sur plusieurs composants complémentaires :
+
+\begin{table}[H]
+\centering
+\caption{Composants techniques du module RAG}
+\label{tab:rag_components}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Composant} & \textbf{Responsabilité} \\
+\hline
+\texttt{chatbot\_router.py} & Exposer les endpoints d'interrogation et d'état du module \\
+\hline
+\texttt{rag\_chain.py} & Orchestrer la recherche documentaire et la construction de la réponse \\
+\hline
+\texttt{vector\_store.py} & Gérer la collection ChromaDB et la recherche par similarité \\
+\hline
+\texttt{llm\_client.py} & Dialoguer avec le fournisseur LLM lorsqu'il est configuré \\
+\hline
+\texttt{rag\_documents/} & Héberger les documents sources de la base de connaissances \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Documents RAG}
+La base documentaire du chatbot est composée de documents métiers ciblés, destinés à couvrir les informations les plus fréquemment utiles pour les utilisateurs.
+
+\begin{table}[H]
+\centering
+\caption{Documents utilisés par la base de connaissances documentaire}
+\label{tab:rag_docs}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Document} & \textbf{Rôle} \\
+\hline
+\texttt{01\_presentation\_frs.md} & Présentation générale de l'entreprise et de son positionnement \\
+\hline
+\texttt{02\_services\_et\_offres.md} & Catalogue synthétique des services et offres proposés \\
+\hline
+\texttt{03\_faq\_clients.md} & Réponses aux questions fréquentes côté client \\
+\hline
+\texttt{04\_conditions\_generales.md} & Informations de cadrage contractuel et conditions générales \\
+\hline
+\texttt{05\_guide\_support.md} & Procédures et bonnes pratiques liées au support \\
+\hline
+\texttt{06\_references\_projets.md} & Exemples de réalisations et références de projets \\
+\hline
+\end{tabularx}
+\end{table}
+
+\PlaceholderFigure{0.88\textwidth}{5.8cm}{Capture d'écran --- Assistant documentaire}{Espace réservé à l'insertion d'une capture montrant le chatbot dans le portail web ou sur mobile, avec la réponse contextualisée et les sources.}{fig:chatbot}
+
+\section{Déploiement Docker}
+L'exécution locale du système repose sur Docker Compose. La configuration de déploiement assemble trois services principaux : la base de données MySQL, le backend FastAPI et le frontend servi par Nginx. Des profils supplémentaires sont prévus pour lancer les campagnes de tests backend, frontend et mobile.\par
+\vspace{0.3cm}
+
+Ce choix présente un double intérêt. D'une part, il facilite la démonstration du projet dans un environnement reproductible. D'autre part, il prépare une industrialisation ultérieure en séparant clairement les responsabilités des conteneurs et les variables d'environnement utilisées.
+
+\begin{table}[H]
+\centering
+\caption{Services de l'infrastructure Docker Compose}
+\label{tab:docker_runtime}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Service} & \textbf{Port} & \textbf{Rôle} \\
+\hline
+\texttt{db} & 3307:3306 & Base de données MySQL du CRM \\
+\hline
+\texttt{backend} & 8000:8000 & API REST, logique métier et initialisation des composants RAG \\
+\hline
+\texttt{frontend} & 3000:80 & Interface React construite et servie par Nginx \\
+\hline
+\texttt{backend\_unit\_tests} & --- & Exécution des tests unitaires backend \\
+\hline
+\texttt{backend\_integration\_tests} & --- & Exécution des tests d'intégration \\
+\hline
+\texttt{frontend\_tests} & --- & Exécution des tests frontend \\
+\hline
+\texttt{mobile\_tests} & --- & Exécution des tests mobile \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Résultats du Sprint}
+\begin{table}[H]
+\centering
+\caption{Livrables du Sprint 03}
+\label{tab:livrables_s3}
+\begin{tabularx}{\textwidth}{|X|c|}
+\hline
+\textbf{Livrable} & \textbf{Statut} \\
+\hline
+Backend métier structuré et API REST opérationnelle & $\checkmark$ \\
+\hline
+Frontend web interne et portail client développés & $\checkmark$ \\
+\hline
+Application mobile client réalisée & $\checkmark$ \\
+\hline
+Module d'assistance documentaire intégré & $\checkmark$ \\
+\hline
+Infrastructure locale conteneurisée préparée & $\checkmark$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+Le troisième sprint a concrétisé les choix de conception du chapitre précédent. Le backend, le frontend, le mobile, le portail client, les notifications et le module d'assistance sont désormais réalisés et intégrés dans une même architecture. Le chapitre suivant porte sur la validation de ces réalisations, la revue des permissions, les tests et la phase de stabilisation du projet.

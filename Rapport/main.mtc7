@@ -1,0 +1,19 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Introduction}{\reset@font\mtcSfont 29}{section.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Objectifs du Sprint}{\reset@font\mtcSfont 29}{section.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Diagramme de classes}{\reset@font\mtcSfont 29}{section.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Relations entre entités}{\reset@font\mtcSSfont 30}{subsection.3.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Diagramme Entité-Relation (ERD)}{\reset@font\mtcSfont 31}{section.3.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Diagrammes de séquence}{\reset@font\mtcSfont 31}{section.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.1}Séquence --- Authentification JWT}{\reset@font\mtcSSfont 31}{subsection.3.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.2}Séquence --- Conversion d'un Lead}{\reset@font\mtcSSfont 32}{subsection.3.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.3}Séquence --- Cycle de vie d'un Ticket}{\reset@font\mtcSSfont 32}{subsection.3.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.5.4}Séquence --- Chatbot documentaire (RAG)}{\reset@font\mtcSSfont 33}{subsection.3.5.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.6}Conception de l'architecture}{\reset@font\mtcSfont 33}{section.3.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.1}Architecture backend --- FastAPI + organisation par domaines}{\reset@font\mtcSSfont 33}{subsection.3.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.2}Architecture frontend --- React SPA}{\reset@font\mtcSSfont 34}{subsection.3.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.3}Architecture mobile --- React Native}{\reset@font\mtcSSfont 34}{subsection.3.6.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.4}Architecture RAG --- Chatbot IA}{\reset@font\mtcSSfont 35}{subsection.3.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.5}Architecture Docker Compose}{\reset@font\mtcSSfont 35}{subsection.3.6.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.7}Conception de l'API REST}{\reset@font\mtcSfont 36}{section.3.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.8}Résultats du Sprint}{\reset@font\mtcSfont 37}{section.3.8}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.9}Conclusion}{\reset@font\mtcSfont 37}{section.3.9}}

@@ -1,0 +1,144 @@
+% =========================================================
+% Rapport PFE/Stage - IIT (Template ENET'COM)
+% Projet CRM Full-Stack + Mobile + IA Chatbot
+% =========================================================
+
+\documentclass[12pt,oneside,a4paper]{Enetcom-PFE-Report-dissertation}
+\graphicspath{{images/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{Commands}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CAPTIONS TABLEAUX EN HAUT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{caption}
+\captionsetup[table]{position=above}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% JUSTIFICATION PARFAITE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{microtype}
+\microtypesetup{protrusion=true,expansion=true}
+
+\usepackage{ragged2e}
+\AtBeginDocument{\justifying}
+
+\tolerance=1000
+\emergencystretch=1em
+\hyphenpenalty=50
+\exhyphenpenalty=50
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fix langue FR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addto\captionsfrench{%
+  \renewcommand{\chaptername}{Chapitre}%
+  \renewcommand{\contentsname}{TABLE DES MATIÈRES}%
+  \renewcommand{\listfigurename}{LISTE DES FIGURES}%
+  \renewcommand{\listtablename}{LISTE DES TABLEAUX}%
+  \renewcommand{\figurename}{Figure}%
+  \renewcommand{\tablename}{Tableau}%
+}
+
+\providecommand{\mtcname}{}
+\providecommand{\mtcSname}{}
+\renewcommand{\mtcname}{Sommaire}
+\renewcommand{\mtcSname}{Sommaire}
+\mtcselectlanguage{french}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PDF metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{%
+  pdftitle={\reportTitle~-~\reportSubject},%
+  pdfauthor={\reportAuthor},%
+  pdfsubject={\reportSubject},%
+  pdfkeywords={CRM}{React}{FastAPI}{Docker}{Mobile}{IA}{RAG}%
+}
+
+\dominitoc
+
+\begin{document}
+
+\makeatletter
+\let\oldraggedright\raggedright
+\renewcommand{\raggedright}{\justifying}
+\let\RaggedRight\justifying
+\makeatother
+\justifying
+
+\setstretch{1.2}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1.2em}
+
+% ------------------------------------------------------------
+% Couverture
+% ------------------------------------------------------------
+\input{chapter/00-CoverPage}
+
+\pagenumbering{roman}
+
+\input{chapter/01-Dedication}
+\input{chapter/02-Acknowledgement}
+
+% Résumé / Abstract
+\input{chapter/03-Resume}
+
+% Table des matières + listes
+\addtocontents{toc}{\protect\thispagestyle{MyStyle}}
+\begin{spacing}{1}
+\tableofcontents
+\end{spacing}
+
+\addtocontents{lof}{\protect\thispagestyle{MyStyle}}
+\begin{spacing}{1}
+\listoffigures
+\end{spacing}
+\addcontentsline{toc}{chapter}{\listfigurename}
+\adjustmtc
+
+\addtocontents{lot}{\protect\thispagestyle{MyStyle}}
+\begin{spacing}{1}
+\listoftables
+\end{spacing}
+\addcontentsline{toc}{chapter}{\listtablename}
+\adjustmtc
+
+% Liste des abréviations
+\input{chapter/04-ListOfAbr}
+
+% INTRODUCTION GÉNÉRALE
+\input{chapter/sep_introduction}
+\input{chapter/05-GeneralIntroduction}
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+% CHAPITRE 1 — Cadre Général du Projet
+\input{chapter/06-Chapter1}
+
+% SPRINT 01 — Étude préalable et analyse
+\input{chapter/sep_sprint01}
+\input{chapter/07-Chapter2}
+
+% SPRINT 02 — Conception du système CRM
+\input{chapter/sep_sprint02}
+\input{chapter/08-Chapter3}
+
+% SPRINT 03 — Réalisation technique
+\input{chapter/sep_sprint03}
+\input{chapter/09-Chapter4}
+
+% SPRINT 04 — Tests, validation et déploiement
+\input{chapter/sep_sprint04}
+\input{chapter/10-Chapter5}
+
+% CONCLUSION
+\input{chapter/sep_conclusion}
+\input{chapter/11-GeneralConclusion}
+
+% BIBLIOGRAPHIE
+\input{chapter/12-Bibliography}
+
+\end{document}

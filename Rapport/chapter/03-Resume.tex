@@ -1,0 +1,31 @@
+\chapter*{RÉSUMÉ}
+\thispagestyle{MyStyle}
+
+Ce rapport présente le travail réalisé dans le cadre d'un stage de fin d'études effectué au sein de l'entreprise \textbf{FRS}. Le projet consiste à concevoir et développer un système CRM complet destiné à centraliser les activités commerciales et le support client au sein d'une même plateforme. L'objectif principal est de proposer une solution cohérente, moderne et adaptable, couvrant la gestion des prospects, des comptes, des contacts, des opportunités commerciales, des devis, des tickets de support et du suivi des activités.\par
+\vspace{0.3cm}
+
+La solution livrée s'articule autour de plusieurs composantes complémentaires. Une application web constitue le coeur du CRM interne pour les rôles administratifs, commerciaux, support et managériaux. Un portail client sécurisé permet aux clients de consulter leurs devis et leurs tickets. Une application mobile, développée avec React Native et Expo, étend ce portail sur smartphone afin d'offrir un accès nomade aux fonctionnalités essentielles côté client. En complément, un assistant conversationnel basé sur la technique \textbf{RAG} facilite l'accès à l'information métier à partir d'une base documentaire dédiée regroupant la présentation de l'entreprise, les services, la FAQ, les conditions générales, le guide support et des références projets.\par
+\vspace{0.3cm}
+
+Sur le plan technique, le système repose sur un backend \textbf{FastAPI} structuré par domaines métier, une base de données relationnelle \textbf{MySQL}, un frontend \textbf{React} construit avec \textbf{Vite}, ainsi qu'une application mobile \textbf{React Native}. L'authentification est assurée par JWT et la séparation des responsabilités s'appuie sur un mécanisme RBAC à cinq rôles. Le module d'assistance utilise \textbf{ChromaDB} comme base vectorielle et peut s'appuyer sur un LLM externe lorsque celui-ci est configuré. L'ensemble du projet est orchestré via \textbf{Docker Compose}, ce qui facilite les phases de démonstration, de test et de déploiement local.\par
+\vspace{0.3cm}
+
+\textbf{Mots-clés :} CRM, FastAPI, React, React Native, MySQL, Docker Compose, RAG, ChromaDB, Portail Client, Support Client.\par
+
+\vspace{1.5cm}
+
+\begin{center}
+{\Large \textbf{ABSTRACT}}
+\end{center}
+\vspace{0.5cm}
+
+This report presents the work carried out during a final-year internship at \textbf{FRS}. The project focuses on the design and implementation of a complete CRM platform intended to centralize sales management and customer support within a single information system. The main objective is to provide a consistent and extensible solution covering lead management, customer accounts, contacts, business opportunities, quotations, support tickets and activity tracking.\par
+\vspace{0.3cm}
+
+The delivered solution is composed of several complementary parts. A web application serves as the internal CRM for administrative, managerial, sales and support teams. A secured customer portal allows clients to access their quotations and support tickets. A mobile application built with React Native and Expo extends this portal on smartphones in order to provide mobile access to essential client-side features. In addition, a conversational assistant based on the \textbf{RAG} approach helps users retrieve business information from a dedicated document base including company presentation, service catalog, FAQ, terms and conditions, support guide and project references.\par
+\vspace{0.3cm}
+
+From a technical perspective, the system relies on a \textbf{FastAPI} backend organized by business domains, a \textbf{MySQL} relational database, a \textbf{React} frontend built with \textbf{Vite}, and a \textbf{React Native} mobile application. Authentication is handled through JWT and access control is enforced with a five-role RBAC model. The assistant uses \textbf{ChromaDB} as a vector store and can leverage an external LLM when configured. The whole project is orchestrated with \textbf{Docker Compose}, which simplifies local deployment, testing and demonstration.\par
+\vspace{0.3cm}
+
+\textbf{Keywords:} CRM, FastAPI, React, React Native, MySQL, Docker Compose, RAG, ChromaDB, Customer Portal, Customer Support.\par

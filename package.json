@@ -1,0 +1,10 @@
+{
+  "name": "crm-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "npm --prefix frontend run lint",
+    "test:all": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run_docker_tests.ps1",
+    "test:all:build": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run_docker_tests.ps1 -Build"
+  }
+}

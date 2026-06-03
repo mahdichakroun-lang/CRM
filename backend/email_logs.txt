@@ -1,0 +1,7 @@
+INFO:     172.18.0.4:39944 - "POST /api/v1/email/ticket/32/notify HTTP/1.0" 200 OK
+INFO:     172.18.0.4:54860 - "POST /api/v1/email/ticket/33/notify HTTP/1.0" 200 OK
+2026-03-09 00:48:32 | INFO    | crm.email | 📧 Email envoyé avec succès à karim@sonatrach.dz — Sujet: 💬 Nouveau message sur le ticket #32 — ProblÃ¨me de connexion au portail client
+2026-03-09 00:48:43 | INFO    | crm.email | 📧 Email envoyé avec succès à karim@sonatrach.dz — Sujet: À propos de votre ticket #32 — ProblÃ¨me de connexion au portail client
+2026-03-09 00:48:43 | INFO    | crm | POST /api/v1/email/ticket/32/notify → 200 (-450.0ms)
+2026-03-09 00:51:15 | INFO    | crm.email | 📧 Email envoyé avec succès à karim@sonatrach.dz — Sujet: À propos de votre ticket #33 — probleme
+2026-03-09 00:51:15 | INFO    | crm | POST /api/v1/email/ticket/33/notify → 200 (1544.7ms)

@@ -1,0 +1,37 @@
+\babel@toc {french}{}\relax 
+\thispagestyle {MyStyle}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Cadre Général du Projet}{1}{chapter.1}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Impact d'une gestion dispersée de la relation client}}{2}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Logo de l'entreprise FRS}}{3}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Cycle général de la méthodologie Scrum}}{6}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Cycle CRISP-DM mobilisé pour la préparation de la base documentaire}}{6}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Architecture globale du système CRM}}{7}{figure.caption.16}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Sprint 01 : Étude Préalable et Analyse}{12}{chapter.2}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de cas d'utilisation global du système CRM}}{20}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Cas d'utilisation du module Leads}}{21}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Cas d'utilisation du module Tickets}}{22}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Cas d'utilisation du portail client}}{23}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Cas d'utilisation de l'application mobile}}{24}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Cas d'utilisation du chatbot documentaire (RAG)}}{25}{figure.caption.27}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Sprint 02 : Conception du Système CRM}{28}{chapter.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme de classes du système CRM}}{30}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme Entité-Relation de la base CRM}}{31}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramme de séquence de l'authentification JWT}}{32}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramme de séquence de conversion d'un lead}}{32}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagramme de séquence du cycle de vie d'un ticket}}{33}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagramme de séquence du chatbot documentaire}}{33}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Architecture du module RAG}}{35}{figure.caption.40}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Sprint 03 : Réalisation Technique}{39}{chapter.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Capture d'écran --- Page de connexion}}{43}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Capture d'écran --- Tableau de bord interne}}{43}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Capture d'écran --- Module Leads / Deals}}{43}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Capture d'écran --- Module Tickets}}{44}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Capture d'écran --- Portail client web}}{44}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Captures d'écran --- Application mobile}}{46}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Capture d'écran --- Assistant documentaire}}{47}{figure.caption.55}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Sprint 04 : Tests, Validation et Déploiement}{50}{chapter.5}%

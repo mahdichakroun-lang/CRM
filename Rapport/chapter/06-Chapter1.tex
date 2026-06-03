@@ -1,0 +1,269 @@
+\chapter{Cadre Général du Projet}
+\minitoc
+\newpage
+
+\section{Introduction}
+Ce chapitre présente le cadre général du projet de stage. Il introduit le contexte métier dans lequel s'inscrit la réalisation du CRM, décrit l'organisme d'accueil, formalise la problématique rencontrée, expose l'approche retenue, précise la méthodologie adoptée et synthétise l'environnement technique mobilisé pour la mise en oeuvre du système.
+
+\section{Contexte du projet}
+La gestion de la relation client constitue aujourd'hui un facteur déterminant de compétitivité pour les entreprises de services numériques. Dans une structure comme \textbf{FRS}, l'activité quotidienne repose sur des échanges constants avec des prospects, des clients, des responsables métiers et des équipes techniques. Chaque interaction commerciale, chaque demande de support et chaque devis produit génèrent des informations qu'il devient nécessaire de centraliser afin d'éviter la perte de contexte et de renforcer la qualité de service.\par
+\vspace{0.3cm}
+
+Dans de nombreuses organisations, ces informations restent encore dispersées entre des feuilles de calcul, des boîtes email, des documents bureautiques et des échanges informels. Une telle situation ralentit la prise de décision, réduit la visibilité sur le pipeline commercial et complique la coordination entre les équipes.\par
+\vspace{0.3cm}
+
+Les principaux effets observés dans ce type d'organisation sont les suivants :
+\begin{itemize}
+    \item difficulté à conserver une vision consolidée des prospects et des clients ;
+    \item faible traçabilité des étapes commerciales et des relances effectuées ;
+    \item manque de continuité entre le suivi commercial et le support après-vente ;
+    \item absence d'espace client autonome pour consulter les tickets et les devis ;
+    \item difficulté à exploiter rapidement la documentation métier et les procédures internes ;
+    \item manque d'indicateurs opérationnels fiables pour piloter l'activité.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{dispersion_donnees.png}
+    \caption{Impact d'une gestion dispersée de la relation client}
+    \label{fig:problematique}
+\end{figure}
+
+\section{Présentation de l'organisme d'accueil}
+
+\textbf{FRS} (\textit{FRS --- IT Development Company}) est une société de services et d'ingénierie informatique installée à Tunis. L'entreprise intervient dans la conception et le développement de solutions logicielles sur mesure, l'intégration de services numériques, l'accompagnement applicatif et le support technique. Son positionnement repose sur une proximité métier avec ses clients et sur la capacité à proposer des solutions adaptées plutôt que des outils génériques difficilement maîtrisables.\par
+\vspace{0.3cm}
+
+Le projet de stage s'inscrit dans cette logique. Il vise à doter l'entreprise d'un système unifié de suivi commercial et de support, capable de servir à la fois les équipes internes et les clients externes, tout en restant suffisamment souple pour évoluer avec les besoins futurs.
+
+\begin{table}[H]
+\centering
+\caption{Fiche signalétique de l'organisme d'accueil}
+\label{tab:fiche_entreprise}
+\begin{tabularx}{0.95\textwidth}{|l|X|}
+\hline
+\textbf{Raison sociale} & FRS --- IT Development Company \\
+\hline
+\textbf{Secteur d'activité} & Services et ingénierie informatique, développement logiciel sur mesure \\
+\hline
+\textbf{Siège} & Tunis, Tunisie \\
+\hline
+\textbf{Année de création} & 2018 \\
+\hline
+\textbf{Site web} & \url{www.frs.tn} \\
+\hline
+\textbf{Effectif} & Environ 25 à 50 collaborateurs \\
+\hline
+\textbf{Services principaux} & Développement web et mobile, API et backend, solutions cloud, support applicatif, accompagnement numérique \\
+\hline
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{FRS_logo.jpg}
+    \caption{Logo de l'entreprise FRS}
+    \label{fig:logo_entreprise}
+\end{figure}
+
+\section{Problématique}
+L'analyse du contexte a mis en évidence un ensemble de besoins convergents. L'entreprise a besoin d'un outil unique pour structurer la prospection, transformer les opportunités commerciales en dossiers clients exploitables, suivre les interactions de support et offrir aux clients un canal de consultation autonome.\par
+\vspace{0.3cm}
+
+La problématique peut être résumée ainsi : \textit{comment concevoir une plateforme CRM cohérente, sécurisée et évolutive, capable de centraliser les données commerciales et support, tout en proposant une expérience adaptée aux utilisateurs internes et aux clients externes ?}\par
+\vspace{0.3cm}
+
+Plus précisément, les difficultés à résoudre sont les suivantes :
+\begin{enumerate}
+    \item absence d'un référentiel unique pour les leads, comptes, contacts et opportunités ;
+    \item manque de continuité entre la qualification d'un prospect et sa transformation en client suivi ;
+    \item faible structuration du support client et de l'historique des échanges ;
+    \item absence de portail client pour la consultation des tickets et des devis ;
+    \item visibilité insuffisante sur les indicateurs de vente et de support ;
+    \item absence de journal d'audit pour tracer les actions sensibles ;
+    \item accès difficile à l'information métier et documentaire en situation de travail.
+\end{enumerate}
+
+\section{Approche proposée}
+Pour répondre à cette problématique, une approche en plusieurs composantes a été retenue. L'idée n'est pas de produire une simple interface de gestion, mais un écosystème cohérent articulant les besoins internes, l'accès client et l'assistance informationnelle.
+
+\begin{table}[H]
+\centering
+\caption{Composantes fonctionnelles de la solution proposée}
+\label{tab:volets}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Composante} & \textbf{Rôle dans la solution} \\
+\hline
+CRM web interne & Gestion des données commerciales et support par les équipes internes : leads, comptes, contacts, deals, devis, tickets, activités, utilisateurs, audit et reporting \\
+\hline
+Portail client web & Consultation sécurisée des tickets, messages, devis et informations de profil par les clients \\
+\hline
+Application mobile client & Accès nomade aux principales fonctions du portail client : tableau de bord, tickets, devis, profil et assistant conversationnel \\
+\hline
+Assistant conversationnel & Accès guidé à l'information métier à partir d'une base documentaire RAG regroupant présentation, services, FAQ, conditions générales, support et références projets \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Fonctionnalités du CRM Web}
+Le CRM web constitue le coeur fonctionnel du projet. Il rassemble les modules nécessaires au pilotage commercial et au traitement du support dans une même application :
+\begin{itemize}
+    \item authentification, gestion du profil et contrôle d'accès par rôles ;
+    \item gestion des leads avec qualification et conversion ;
+    \item gestion des comptes clients et des contacts associés ;
+    \item pilotage du pipeline commercial et des devis ;
+    \item gestion des tickets, des échanges publics et des notes internes ;
+    \item suivi des activités commerciales et journalisation des actions ;
+    \item tableaux de bord de vente et de support ;
+    \item administration des utilisateurs et consultation de l'audit.
+\end{itemize}
+
+\subsection{Fonctionnalités de l'Application Mobile}
+L'application mobile n'a pas vocation à reproduire l'ensemble du CRM interne. Elle est conçue comme une extension du portail client, orientée consultation et interaction :
+\begin{itemize}
+    \item connexion sécurisée pour les utilisateurs de rôle \texttt{client} ;
+    \item consultation du tableau de bord client ;
+    \item suivi et création de tickets ;
+    \item consultation des devis liés au compte client ;
+    \item accès à un assistant conversationnel pour obtenir des informations documentaires ;
+    \item consultation et mise à jour du profil.
+\end{itemize}
+
+\subsection{Fonctionnalités du Chatbot IA}
+Le module d'assistance s'appuie sur une logique documentaire. Il ne remplace pas les modules CRM, mais vient compléter le système en facilitant l'accès aux informations métier :
+\begin{itemize}
+    \item réponse en langage naturel à partir d'une base documentaire structurée ;
+    \item interrogation de contenus liés à l'entreprise, aux services, à la FAQ et au support ;
+    \item restitution d'une réponse contextualisée accompagnée de sources ;
+    \item intégration dans le portail client web et dans l'application mobile ;
+    \item fonctionnement dégradé possible lorsque le LLM externe n'est pas configuré.
+\end{itemize}
+
+\section{Méthodologie}
+
+\subsection{Méthodologie Agile Scrum}
+Le déroulement du projet a été structuré selon une logique \textbf{Agile Scrum}. Ce choix méthodologique permet d'avancer par itérations successives, de clarifier les objectifs à court terme et de réduire le risque de dérive entre le besoin exprimé et la solution développée. Chaque sprint est associé à un ensemble d'objectifs précis, depuis l'analyse jusqu'à la stabilisation finale du produit.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{scrum.png}
+    \caption{Cycle général de la méthodologie Scrum}
+    \label{fig:scrum}
+\end{figure}
+
+\subsection{Méthodologie CRISP-DM}
+Pour le volet documentaire et conversationnel, une adaptation légère de la démarche \textbf{CRISP-DM} a été mobilisée. Elle a servi à structurer la sélection des documents, leur préparation, leur découpage, leur indexation et leur validation avant intégration dans la chaîne RAG. L'objectif n'était pas de réaliser un projet complet de data mining, mais d'utiliser une démarche méthodique pour constituer une base de connaissances exploitable et cohérente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{crisp_dm.png}
+    \caption{Cycle CRISP-DM mobilisé pour la préparation de la base documentaire}
+    \label{fig:crisp_dm}
+\end{figure}
+
+\subsection{Organisation en sprints}
+L'organisation temporelle du projet a été répartie en quatre sprints successifs, chacun associé à une finalité clairement identifiée.
+
+\begin{table}[H]
+\centering
+\caption{Organisation du projet en sprints}
+\label{tab:sprints}
+\begin{tabularx}{\textwidth}{|c|X|c|}
+\hline
+\textbf{Sprint} & \textbf{Finalité principale} & \textbf{Durée} \\
+\hline
+Sprint 01 & Étude préalable, analyse des besoins, identification des acteurs et élaboration du backlog & 2 semaines \\
+\hline
+Sprint 02 & Conception UML, modélisation des données, architecture technique et conception de l'API & 2 semaines \\
+\hline
+Sprint 03 & Réalisation du backend, du frontend, du portail client, du mobile et du module d'assistance & 2 semaines \\
+\hline
+Sprint 04 & Validation fonctionnelle, revue RBAC, corrections de stabilisation et préparation du déploiement local & 2 semaines \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Architecture globale}
+L'architecture retenue s'appuie sur une logique \textbf{trois tiers} enrichie par des composants périphériques. Les interfaces web et mobile communiquent avec une API centralisée exposée par le backend FastAPI. Cette API accède à la base relationnelle MySQL pour les données métier, sollicite une base vectorielle locale pour l'assistant documentaire, et peut déclencher des notifications email via SMTP. Le frontend web est servi par Nginx dans une configuration intégrée à Docker Compose.\par
+\vspace{0.3cm}
+
+Cette organisation présente plusieurs avantages :
+\begin{itemize}
+    \item séparation claire entre présentation, logique métier et persistance ;
+    \item réutilisation d'une même API par le web, le portail client et le mobile ;
+    \item facilité de déploiement local grâce à la conteneurisation ;
+    \item possibilité d'étendre ultérieurement le système par de nouveaux modules ou services.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.78\textwidth]{architecture_globale.png}
+    \caption{Architecture globale du système CRM}
+    \label{fig:architecture}
+\end{figure}
+
+La planification temporelle de notre projet est réalisée selon la méthode de Gantt, comme illustré dans le Tableau 1.4. Elle met en évidence les différentes phases du projet, à savoir l’analyse et le recueil des besoins, la conception UML et l’architecture, le développement des composantes, ainsi que les étapes de validation, de test et de stabilisation, jusqu’à la rédaction du rapport final.
+\begin{table}[H]
+\centering
+\caption{Planification simplifiée du projet}
+\label{tab:gantt}
+\begin{tabularx}{\textwidth}{|l|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Phase} & \textbf{S1} & \textbf{S2} & \textbf{S3} & \textbf{S4} & \textbf{S5} & \textbf{S6} & \textbf{S7} & \textbf{S8} \\
+\hline
+Analyse et recueil des besoins & $\bullet$ & $\bullet$ & & & & & & \\
+\hline
+Conception UML et architecture & & & $\bullet$ & $\bullet$ & & & & \\
+\hline
+Développement des composantes & & & & & $\bullet$ & $\bullet$ & & \\
+\hline
+Validation, tests et stabilisation & & & & & & & $\bullet$ & $\bullet$ \\
+\hline
+Rédaction du rapport & & & & & & & $\bullet$ & $\bullet$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Environnement technique}
+L'environnement technique du projet a été sélectionné de manière à concilier rapidité de développement, lisibilité du code et cohérence d'intégration entre les différentes couches du système.
+
+\begin{table}[H]
+\centering
+\caption{Environnement technique du projet}
+\label{tab:techno}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Catégorie} & \textbf{Technologie} & \textbf{Utilisation dans le projet} \\
+\hline
+Frontend web & React 19 + Vite & Construction de l'application SPA interne et du portail client web \\
+\hline
+Frontend web & Tailwind CSS + composants Radix UI & Mise en forme de l'interface, composants réutilisables et cohérence visuelle \\
+\hline
+Frontend web & Axios + i18next & Appels API, intercepteurs d'authentification et support multilingue FR/EN \\
+\hline
+Mobile & React Native + Expo & Développement de l'application mobile client multiplateforme \\
+\hline
+Mobile & React Navigation + Expo Secure Store & Navigation mobile et stockage sécurisé du jeton JWT \\
+\hline
+Backend & FastAPI & Exposition de l'API REST et structuration des routes métier \\
+\hline
+Backend & SQLAlchemy + Pydantic & Mapping ORM, validation des schémas et sérialisation des données \\
+\hline
+Sécurité & JWT + bcrypt/passlib & Authentification, vérification des mots de passe et contrôle d'accès RBAC \\
+\hline
+Base de données & MySQL 8.0 & Stockage relationnel des données métier du CRM \\
+\hline
+Assistant documentaire & ChromaDB + LLM Groq optionnel & Indexation vectorielle locale et génération de réponses contextualisées \\
+\hline
+Infrastructure & Docker Compose + Nginx & Orchestration locale, reverse proxy frontend et exécution conteneurisée \\
+\hline
+Tests & Pytest, Vitest, Jest & Validation backend, frontend et mobile \\
+\hline
+Outils de développement & Git + Visual Studio Code & Gestion de version et environnement de développement \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+Ce chapitre a permis de situer le projet dans son contexte métier, d'identifier la problématique à résoudre et de présenter les grandes lignes de la solution proposée. Il a également clarifié l'organisation méthodologique, l'architecture globale et l'environnement technique mobilisé. Ces éléments constituent la base de l'analyse détaillée menée dans le chapitre suivant.

@@ -1,0 +1,30 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Introduction}{\reset@font\mtcSfont 13}{section.2.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Objectifs du Sprint}{\reset@font\mtcSfont 13}{section.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Étude de l'existant}{\reset@font\mtcSfont 13}{section.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Analyse des solutions CRM existantes}{\reset@font\mtcSSfont 13}{subsection.2.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Critique de l'existant}{\reset@font\mtcSSfont 14}{subsection.2.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Identification des acteurs}{\reset@font\mtcSfont 15}{section.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Analyse des besoins fonctionnels}{\reset@font\mtcSfont 15}{section.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.1}Module Authentification et Sécurité}{\reset@font\mtcSSfont 15}{subsection.2.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.2}Module Leads (Prospects)}{\reset@font\mtcSSfont 16}{subsection.2.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.3}Module Accounts (Comptes Clients)}{\reset@font\mtcSSfont 16}{subsection.2.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.4}Module Contacts (Personnes)}{\reset@font\mtcSSfont 16}{subsection.2.5.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.5}Module Deals (Pipeline Commercial)}{\reset@font\mtcSSfont 16}{subsection.2.5.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.6}Module Quotes (Devis)}{\reset@font\mtcSSfont 17}{subsection.2.5.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.7}Module Tickets (Helpdesk)}{\reset@font\mtcSSfont 17}{subsection.2.5.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.8}Module Activities (Suivi Commercial)}{\reset@font\mtcSSfont 17}{subsection.2.5.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.9}Module Reporting et Audit}{\reset@font\mtcSSfont 17}{subsection.2.5.9}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.10}Module Portail Client}{\reset@font\mtcSSfont 17}{subsection.2.5.10}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.11}Module Application Mobile}{\reset@font\mtcSSfont 18}{subsection.2.5.11}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.12}Module Chatbot IA (RAG)}{\reset@font\mtcSSfont 18}{subsection.2.5.12}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Besoins non fonctionnels}{\reset@font\mtcSfont 18}{section.2.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.7}Modélisation UML --- Diagrammes de cas d'utilisation}{\reset@font\mtcSfont 19}{section.2.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.1}Diagramme de cas d'utilisation global}{\reset@font\mtcSSfont 19}{subsection.2.7.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.2}Cas d'utilisation --- Gestion des Leads}{\reset@font\mtcSSfont 21}{subsection.2.7.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.3}Cas d'utilisation --- Gestion des Tickets}{\reset@font\mtcSSfont 21}{subsection.2.7.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.4}Cas d'utilisation --- Portail Client}{\reset@font\mtcSSfont 22}{subsection.2.7.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.5}Cas d'utilisation --- Application Mobile}{\reset@font\mtcSSfont 24}{subsection.2.7.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.7.6}Cas d'utilisation --- Chatbot IA}{\reset@font\mtcSSfont 25}{subsection.2.7.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.8}Backlog produit}{\reset@font\mtcSfont 25}{section.2.8}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.9}Résultats du Sprint}{\reset@font\mtcSfont 26}{section.2.9}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.10}Conclusion}{\reset@font\mtcSfont 26}{section.2.10}}

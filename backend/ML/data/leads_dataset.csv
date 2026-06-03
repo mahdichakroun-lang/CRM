@@ -1,0 +1,1501 @@
+source,sector,estimated_value,days_in_pipeline,has_email,has_phone,activities_count,calls,emails_sent,meetings,converted
+website,Finance / Banque,19886,116,1,0,2,2,0,0,0
+trade_show,Tourisme,29266,99,1,1,3,0,3,0,1
+website,Commerce,109568,107,1,1,3,3,0,0,0
+website,Commerce,21558,47,0,0,3,3,0,0,0
+social_media,Éducation,26152,14,1,1,5,3,1,1,0
+email,Commerce,183113,6,1,1,2,2,0,0,1
+website,Tourisme,23970,114,1,1,0,0,0,0,0
+email,Commerce,15575,111,1,0,4,3,1,0,0
+referral,IT / Digital,26792,76,1,1,1,0,1,0,1
+email,Finance / Banque,26713,94,1,1,5,3,1,1,1
+email,Finance / Banque,32088,83,1,0,2,2,0,0,0
+referral,Commerce,28599,73,1,1,3,3,0,0,1
+referral,Commerce,35320,109,1,1,5,3,2,0,1
+email,Éducation,18947,120,1,0,3,3,0,0,0
+email,Tourisme,29669,106,1,0,6,0,2,4,0
+phone,Finance / Banque,24878,59,1,0,5,2,3,0,1
+email,Santé,31845,57,1,1,3,0,2,1,1
+email,Éducation,12436,15,1,0,4,1,3,0,0
+email,Finance / Banque,19677,3,1,1,3,0,3,0,1
+email,Industrie,78025,18,1,0,4,2,2,0,1
+website,Éducation,17975,88,1,0,2,2,0,0,0
+trade_show,Tourisme,33645,78,1,1,4,2,0,2,1
+referral,Santé,20546,20,1,0,4,2,2,0,1
+referral,Santé,45682,69,1,1,1,0,1,0,1
+email,IT / Digital,23080,109,1,1,4,0,0,4,1
+referral,Éducation,29474,90,1,1,3,0,3,0,1
+other,Santé,43136,22,1,1,4,2,2,0,1
+trade_show,Finance / Banque,18236,73,1,1,3,1,0,2,1
+social_media,IT / Digital,52012,60,0,0,1,1,0,0,0
+website,Industrie,15905,103,0,0,1,1,0,0,0
+social_media,Santé,39321,52,1,1,4,0,3,1,0
+phone,Éducation,24928,25,1,1,2,2,0,0,0
+referral,Éducation,14462,69,1,1,4,2,0,2,1
+email,Industrie,69110,3,0,0,3,2,1,0,1
+trade_show,Santé,36697,6,1,1,2,1,0,1,1
+social_media,Commerce,138556,74,1,0,4,2,2,0,0
+phone,Santé,8163,15,1,1,2,2,0,0,1
+website,IT / Digital,41078,100,1,0,5,0,4,1,1
+phone,Finance / Banque,34922,40,0,1,3,2,0,1,1
+website,Commerce,24813,56,0,1,4,1,0,3,0
+phone,Finance / Banque,74754,90,1,0,2,2,0,0,1
+email,IT / Digital,23264,54,1,1,4,3,1,0,1
+other,Finance / Banque,9526,90,1,1,1,1,0,0,0
+phone,Éducation,27228,10,1,1,5,0,2,3,1
+social_media,Commerce,66716,96,0,0,2,0,2,0,0
+email,Éducation,35783,77,0,1,5,2,1,2,0
+trade_show,Finance / Banque,16144,23,1,1,2,1,1,0,1
+phone,Commerce,57450,6,1,1,2,2,0,0,1
+referral,Immobilier,28557,87,1,1,5,0,4,1,1
+social_media,Immobilier,34779,116,1,1,3,0,0,3,0
+phone,Tourisme,65586,56,1,1,4,0,1,3,1
+trade_show,Commerce,21726,46,1,0,1,1,0,0,0
+social_media,IT / Digital,6345,83,0,1,4,1,3,0,0
+email,Immobilier,18406,93,0,0,1,1,0,0,0
+email,Éducation,12286,113,1,1,2,2,0,0,0
+email,Commerce,46581,27,1,1,4,3,0,1,1
+other,Immobilier,23253,104,1,1,3,2,1,0,0
+trade_show,Commerce,27530,20,1,1,4,0,4,0,1
+website,Commerce,31207,76,1,1,3,1,2,0,1
+website,Santé,6780,96,1,1,7,2,0,5,1
+social_media,Industrie,16432,23,0,1,4,2,2,0,0
+website,Immobilier,35745,27,0,0,1,1,0,0,0
+phone,Santé,24556,95,1,1,3,1,1,1,1
+website,Finance / Banque,8595,68,1,0,3,0,2,1,0
+website,Commerce,28176,30,1,1,4,1,1,2,1
+website,Éducation,34637,65,1,0,3,0,3,0,0
+phone,Commerce,48228,85,1,1,2,2,0,0,1
+trade_show,Industrie,36257,109,1,0,4,2,0,2,1
+website,Finance / Banque,11701,106,1,1,2,1,1,0,0
+phone,Éducation,11942,44,0,0,2,2,0,0,0
+phone,Industrie,39377,106,1,0,3,2,1,0,0
+referral,Immobilier,32425,30,1,0,1,1,0,0,1
+phone,Finance / Banque,20594,43,1,0,6,2,1,3,1
+trade_show,Commerce,37985,32,1,1,1,0,1,0,1
+phone,Tourisme,62247,84,1,1,2,2,0,0,1
+phone,Tourisme,9885,119,1,0,5,1,3,1,0
+phone,Éducation,37931,10,0,0,1,0,1,0,0
+trade_show,Commerce,33372,19,1,0,4,3,1,0,1
+email,Tourisme,37031,46,1,0,4,0,2,2,1
+phone,Industrie,24167,104,1,1,5,2,0,3,1
+trade_show,Industrie,23528,71,1,0,5,1,2,2,1
+other,Tourisme,36042,29,1,1,5,2,0,3,1
+trade_show,Santé,106135,16,1,0,0,0,0,0,1
+trade_show,Industrie,28816,119,1,0,1,1,0,0,0
+phone,Tourisme,45441,35,1,1,3,2,0,1,1
+social_media,Santé,35447,5,1,1,4,3,1,0,1
+phone,Immobilier,26410,41,1,1,3,3,0,0,1
+social_media,Commerce,29604,64,1,0,4,2,2,0,0
+phone,Éducation,15595,49,1,0,2,1,1,0,0
+other,Immobilier,32376,83,1,0,4,1,0,3,0
+referral,Industrie,26922,57,1,1,3,1,2,0,1
+email,Tourisme,22645,20,1,0,0,0,0,0,0
+other,Immobilier,29399,71,1,1,4,1,3,0,0
+trade_show,Santé,21377,96,1,0,6,0,0,6,1
+phone,Commerce,21913,107,1,1,0,0,0,0,0
+referral,Santé,8422,91,1,1,3,1,2,0,1
+social_media,Tourisme,24257,119,1,1,4,1,3,0,0
+phone,Finance / Banque,17654,62,1,1,6,2,1,3,1
+social_media,IT / Digital,17596,63,1,1,2,2,0,0,1
+email,Santé,53012,67,1,0,3,3,0,0,1
+website,Santé,15695,33,1,0,5,1,2,2,1
+website,Immobilier,49099,95,1,0,3,1,2,0,0
+social_media,Tourisme,9908,74,1,1,2,1,1,0,0
+website,Finance / Banque,14275,48,1,0,2,1,0,1,0
+website,Immobilier,18961,27,0,0,1,1,0,0,0
+trade_show,Santé,18090,85,0,0,2,2,0,0,1
+social_media,Immobilier,26558,4,1,1,4,2,2,0,1
+referral,Santé,17897,16,1,1,2,2,0,0,1
+referral,IT / Digital,10194,92,1,1,1,1,0,0,1
+referral,Éducation,5407,72,1,1,5,0,2,3,1
+phone,Finance / Banque,14243,78,1,1,5,3,2,0,1
+website,Tourisme,101695,81,1,1,1,1,0,0,1
+website,Immobilier,31670,14,1,0,3,0,0,3,1
+social_media,Finance / Banque,19946,99,1,1,1,1,0,0,0
+phone,Tourisme,31322,33,1,0,6,1,3,2,1
+website,Éducation,13744,56,1,1,4,1,3,0,0
+website,Finance / Banque,53924,78,1,1,5,0,3,2,1
+other,Immobilier,55451,96,1,1,2,1,1,0,0
+website,Éducation,20570,37,1,0,1,0,1,0,0
+social_media,Santé,81409,70,1,1,7,1,4,2,1
+website,Santé,13131,61,1,1,6,0,3,3,1
+referral,IT / Digital,63486,34,1,1,3,1,2,0,1
+phone,Éducation,29870,13,1,0,1,0,1,0,0
+social_media,Finance / Banque,14614,118,1,0,4,2,2,0,0
+email,IT / Digital,78175,118,0,1,1,1,0,0,0
+phone,Santé,134942,86,1,1,4,2,2,0,1
+social_media,Tourisme,57203,36,1,0,3,1,2,0,0
+social_media,Industrie,14776,66,1,1,4,1,3,0,0
+referral,Finance / Banque,17060,34,1,1,1,0,1,0,1
+social_media,Santé,49947,24,1,1,4,2,2,0,1
+phone,Santé,3901,62,1,1,3,1,2,0,1
+email,Industrie,97295,108,1,0,2,1,1,0,0
+website,Finance / Banque,8202,20,1,1,4,3,1,0,1
+social_media,Éducation,43002,68,0,1,2,0,2,0,0
+website,Immobilier,50092,115,1,1,6,1,2,3,1
+social_media,IT / Digital,53118,6,1,0,2,2,0,0,1
+website,Tourisme,16893,99,0,0,1,1,0,0,0
+website,IT / Digital,184207,81,1,1,4,2,0,2,1
+referral,Commerce,60545,22,1,0,3,3,0,0,1
+website,Industrie,79866,109,1,0,4,3,1,0,0
+referral,Tourisme,79611,96,0,1,2,2,0,0,1
+referral,Commerce,36482,113,1,1,3,0,1,2,1
+website,Commerce,34883,94,0,0,1,1,0,0,0
+website,Finance / Banque,26197,32,1,0,3,3,0,0,1
+social_media,Commerce,82185,119,1,0,2,2,0,0,0
+email,Tourisme,93318,34,1,1,4,1,2,1,1
+website,Immobilier,21860,88,1,1,3,3,0,0,1
+social_media,Commerce,10014,97,1,1,3,2,1,0,0
+phone,Immobilier,33164,31,0,0,3,2,1,0,0
+referral,Éducation,10887,99,1,1,3,3,0,0,1
+referral,Éducation,112324,112,0,1,6,3,2,1,1
+email,IT / Digital,9160,16,1,1,2,2,0,0,1
+other,Santé,18842,58,1,1,4,0,0,4,1
+website,Immobilier,42082,18,1,1,3,0,3,0,1
+website,Commerce,13476,117,1,0,7,2,1,4,0
+referral,Immobilier,20872,15,1,0,7,1,4,2,1
+email,Éducation,104634,79,1,1,2,1,1,0,1
+referral,Finance / Banque,24384,120,0,0,4,3,1,0,1
+website,Tourisme,93109,57,0,1,1,1,0,0,0
+referral,Éducation,18415,98,1,1,8,1,3,4,1
+social_media,Commerce,29230,94,1,1,4,0,2,2,0
+other,IT / Digital,31577,112,1,0,1,1,0,0,0
+email,Immobilier,86173,103,1,1,6,0,3,3,1
+email,Finance / Banque,58535,76,1,1,2,2,0,0,1
+email,Commerce,55534,32,1,0,0,0,0,0,0
+referral,IT / Digital,12108,74,1,1,6,2,3,1,1
+social_media,Commerce,45553,29,1,0,3,3,0,0,0
+phone,Commerce,28755,36,1,0,2,1,0,1,0
+email,Éducation,56019,92,1,0,7,0,2,5,1
+referral,Immobilier,47141,81,1,1,3,0,2,1,1
+email,Immobilier,33045,99,1,1,4,3,1,0,0
+website,Éducation,50834,52,1,0,2,2,0,0,0
+phone,Tourisme,9028,8,1,0,0,0,0,0,0
+other,IT / Digital,25229,17,1,1,6,3,2,1,1
+email,Commerce,9034,3,1,1,4,1,1,2,1
+website,Éducation,17969,114,0,1,0,0,0,0,0
+trade_show,IT / Digital,11060,40,1,0,3,1,0,2,1
+social_media,Finance / Banque,14659,119,1,0,3,3,0,0,0
+website,IT / Digital,15390,99,1,1,4,2,2,0,1
+social_media,Tourisme,30473,27,0,1,0,0,0,0,0
+social_media,Santé,23201,80,1,1,5,3,2,0,0
+referral,Tourisme,43271,59,1,1,4,0,2,2,1
+email,Finance / Banque,63208,104,1,1,4,3,1,0,1
+social_media,Industrie,10376,44,1,0,1,1,0,0,0
+email,Industrie,26896,62,1,1,3,0,0,3,1
+phone,Finance / Banque,12381,38,1,1,1,1,0,0,1
+phone,Finance / Banque,36463,108,1,0,6,3,3,0,1
+phone,Santé,50052,24,1,1,2,0,2,0,1
+phone,Tourisme,15689,49,1,0,3,2,1,0,0
+website,Santé,105827,82,0,0,5,0,4,1,1
+phone,Industrie,23973,95,1,0,5,0,2,3,1
+website,Tourisme,151328,53,0,0,4,0,1,3,1
+phone,Commerce,14533,89,1,1,2,2,0,0,1
+phone,IT / Digital,9650,11,1,1,1,1,0,0,1
+other,IT / Digital,159777,6,0,1,4,2,0,2,1
+phone,Immobilier,5835,90,1,0,3,1,0,2,1
+phone,Tourisme,33942,90,1,1,2,2,0,0,1
+website,Commerce,24410,74,1,1,3,3,0,0,0
+email,Finance / Banque,68884,84,1,0,3,0,3,0,1
+referral,IT / Digital,45323,85,1,1,4,3,1,0,1
+website,Éducation,24900,18,1,1,5,1,1,3,1
+phone,Industrie,200000,61,0,1,3,0,3,0,1
+referral,Santé,44433,53,0,0,2,1,1,0,1
+social_media,Commerce,21035,25,1,1,2,2,0,0,0
+trade_show,Industrie,21621,14,1,0,4,1,3,0,1
+trade_show,Tourisme,21507,36,1,0,4,1,2,1,1
+trade_show,Industrie,11186,97,1,1,0,0,0,0,0
+social_media,Industrie,62536,42,1,1,5,3,0,2,1
+other,Commerce,54295,91,1,1,2,2,0,0,0
+social_media,Finance / Banque,25434,100,1,1,3,3,0,0,0
+referral,Finance / Banque,50166,92,1,1,1,0,1,0,1
+email,Industrie,4018,44,1,0,2,1,1,0,0
+social_media,Commerce,10832,4,1,0,0,0,0,0,0
+phone,Finance / Banque,11552,101,1,1,1,1,0,0,1
+website,Immobilier,10707,14,1,1,4,0,4,0,1
+website,IT / Digital,46639,116,1,0,5,2,1,2,1
+website,Tourisme,19717,9,1,1,4,0,3,1,1
+email,Industrie,32096,99,1,1,3,1,1,1,0
+website,Tourisme,93570,7,1,1,4,3,1,0,1
+social_media,Finance / Banque,28107,117,1,0,2,0,0,2,0
+phone,Industrie,18396,48,1,1,8,0,1,7,1
+referral,IT / Digital,49756,9,1,1,3,1,0,2,1
+other,Commerce,9136,24,1,0,3,0,3,0,0
+referral,Éducation,32614,119,1,0,3,1,0,2,0
+website,Santé,59874,56,1,1,5,0,1,4,1
+email,Tourisme,18398,63,1,1,1,1,0,0,0
+social_media,Santé,37383,29,1,1,1,1,0,0,0
+referral,Santé,28218,65,1,1,2,2,0,0,1
+phone,Finance / Banque,37796,20,1,0,6,0,2,4,1
+other,IT / Digital,8486,88,1,0,0,0,0,0,0
+trade_show,Éducation,54371,10,1,0,0,0,0,0,1
+website,Tourisme,46846,56,1,1,4,2,2,0,1
+referral,Commerce,11925,73,1,1,3,0,3,0,1
+email,Santé,55721,51,1,0,1,1,0,0,0
+email,Santé,23872,76,1,0,5,1,0,4,1
+trade_show,Santé,17719,93,1,1,1,1,0,0,1
+social_media,Santé,42130,54,1,1,3,3,0,0,1
+email,Éducation,15962,8,1,0,3,0,3,0,0
+other,Tourisme,25702,4,1,1,3,3,0,0,0
+website,Finance / Banque,24789,32,1,0,3,2,1,0,1
+referral,Éducation,66323,116,1,0,3,1,2,0,1
+trade_show,Santé,14557,120,1,0,4,1,0,3,1
+social_media,Immobilier,18510,83,1,1,4,2,2,0,0
+website,IT / Digital,19116,5,1,1,1,1,0,0,1
+referral,Éducation,7070,29,1,1,3,2,1,0,1
+email,Éducation,20854,7,1,0,5,2,0,3,0
+website,IT / Digital,18486,58,1,0,2,2,0,0,1
+social_media,Tourisme,30895,12,0,1,4,2,1,1,0
+website,Éducation,17892,12,1,1,3,0,3,0,1
+email,Immobilier,41054,72,1,1,1,1,0,0,1
+website,Finance / Banque,19565,8,1,0,3,0,1,2,1
+website,IT / Digital,36817,23,1,0,1,0,1,0,0
+other,Finance / Banque,76428,13,1,0,3,2,0,1,1
+email,Industrie,35737,39,1,1,3,1,1,1,1
+other,Immobilier,70122,97,1,0,0,0,0,0,0
+social_media,Santé,22816,26,1,1,4,3,1,0,1
+referral,Tourisme,39674,65,1,1,1,0,1,0,1
+phone,Santé,29042,39,1,1,2,2,0,0,1
+social_media,Commerce,18430,20,1,1,5,0,1,4,1
+social_media,Tourisme,24299,42,1,0,3,3,0,0,0
+website,Tourisme,43385,14,1,1,3,0,2,1,1
+phone,Commerce,12786,76,1,0,3,0,3,0,0
+referral,Éducation,36924,57,1,1,6,1,4,1,1
+referral,Santé,78259,52,1,1,3,0,0,3,1
+social_media,Immobilier,17138,39,1,1,3,2,0,1,1
+email,Tourisme,10779,25,1,1,5,1,1,3,1
+email,Immobilier,29646,89,0,1,4,3,1,0,0
+trade_show,Immobilier,20665,48,1,0,2,0,2,0,1
+trade_show,Santé,81022,8,1,0,2,2,0,0,1
+email,IT / Digital,53097,77,1,0,4,3,1,0,1
+phone,Tourisme,45115,14,1,1,2,2,0,0,1
+social_media,IT / Digital,62503,25,1,0,3,1,0,2,1
+email,IT / Digital,36590,14,1,0,4,1,3,0,1
+trade_show,Commerce,42356,26,0,1,3,0,3,0,1
+social_media,Santé,22721,38,0,1,2,2,0,0,0
+phone,Immobilier,42072,37,1,0,6,0,3,3,1
+social_media,Tourisme,15306,60,1,1,2,0,2,0,0
+email,Industrie,6325,112,0,0,4,2,2,0,0
+social_media,Immobilier,31059,59,1,1,5,1,0,4,1
+trade_show,IT / Digital,40863,105,1,1,2,1,1,0,1
+social_media,Immobilier,60734,78,1,0,4,3,0,1,1
+website,Industrie,17721,101,1,0,4,2,2,0,0
+website,IT / Digital,5887,117,0,1,6,2,1,3,1
+social_media,IT / Digital,19621,65,1,1,1,1,0,0,0
+trade_show,Industrie,18523,63,1,0,6,1,2,3,1
+phone,Immobilier,26124,113,1,0,0,0,0,0,0
+website,Finance / Banque,10604,12,1,0,4,2,2,0,1
+website,Immobilier,38502,49,1,1,3,2,0,1,0
+website,Commerce,48781,94,1,1,4,2,2,0,1
+website,IT / Digital,32223,17,1,1,5,2,3,0,1
+website,IT / Digital,55001,73,1,1,4,3,1,0,1
+social_media,Finance / Banque,23424,80,1,0,1,1,0,0,0
+email,IT / Digital,32709,12,1,1,4,2,2,0,1
+other,Commerce,39767,51,1,1,1,1,0,0,0
+phone,Industrie,38295,82,1,1,3,0,0,3,1
+social_media,Éducation,24360,40,1,0,3,1,0,2,0
+trade_show,IT / Digital,6210,39,1,1,2,0,2,0,1
+website,Tourisme,41258,83,1,0,4,3,1,0,1
+phone,Finance / Banque,22803,56,1,0,5,2,1,2,1
+phone,Commerce,22470,36,0,1,3,2,1,0,1
+phone,IT / Digital,66308,96,1,1,1,1,0,0,1
+social_media,Santé,125520,99,1,1,7,2,3,2,1
+website,Immobilier,20955,93,1,1,2,2,0,0,0
+website,Éducation,39615,66,1,1,6,2,1,3,1
+referral,Immobilier,23682,85,1,0,0,0,0,0,1
+website,Tourisme,48283,81,0,1,2,2,0,0,0
+social_media,Tourisme,16513,38,1,1,3,1,2,0,0
+referral,Immobilier,15788,86,1,1,7,2,2,3,1
+website,Immobilier,19439,108,1,0,3,2,0,1,0
+other,Immobilier,27712,81,1,1,3,1,0,2,1
+other,Industrie,89468,108,1,0,2,2,0,0,0
+social_media,Finance / Banque,52285,68,1,1,4,2,2,0,1
+referral,Finance / Banque,56538,120,1,0,2,2,0,0,1
+referral,Finance / Banque,44259,24,0,0,4,0,1,3,1
+referral,Commerce,32038,73,1,0,4,2,2,0,1
+website,Santé,57942,89,1,0,1,1,0,0,1
+website,Tourisme,200000,51,1,1,1,1,0,0,1
+trade_show,Immobilier,30493,101,1,1,1,1,0,0,0
+email,Éducation,41960,43,1,1,0,0,0,0,0
+phone,Commerce,47200,85,1,0,0,0,0,0,1
+website,Tourisme,93866,67,1,1,4,1,2,1,1
+email,Tourisme,5682,11,1,1,2,1,1,0,1
+social_media,IT / Digital,17865,108,1,1,8,0,3,5,1
+website,Santé,10926,81,1,0,0,0,0,0,0
+website,IT / Digital,22078,63,1,1,3,2,1,0,1
+phone,Finance / Banque,38239,6,1,0,4,3,1,0,1
+email,Santé,11577,120,1,0,1,1,0,0,0
+referral,Tourisme,29884,114,0,1,2,0,2,0,0
+website,Finance / Banque,14067,18,1,1,1,1,0,0,1
+referral,Tourisme,19972,101,1,0,2,2,0,0,0
+website,Tourisme,17921,28,1,1,3,2,1,0,0
+website,Tourisme,23764,64,1,1,2,2,0,0,0
+phone,IT / Digital,12041,40,1,1,2,2,0,0,1
+website,Santé,22335,42,0,0,2,1,0,1,0
+other,Industrie,11651,28,1,1,1,1,0,0,0
+website,Commerce,53210,92,1,1,0,0,0,0,0
+email,Commerce,11306,12,1,1,1,1,0,0,0
+website,Tourisme,31096,12,0,1,4,1,0,3,0
+email,Commerce,10963,84,1,1,2,0,0,2,1
+email,Immobilier,12677,26,1,0,0,0,0,0,0
+website,IT / Digital,52913,25,1,1,4,2,1,1,1
+trade_show,Immobilier,16303,48,1,1,4,0,2,2,1
+phone,Industrie,29677,9,1,0,1,0,1,0,1
+website,Immobilier,7312,44,0,0,4,3,1,0,0
+social_media,Industrie,9573,111,1,1,2,1,0,1,0
+other,Santé,104144,22,1,1,3,0,3,0,1
+trade_show,Santé,77544,31,1,0,1,1,0,0,1
+email,Éducation,8839,111,1,0,2,0,2,0,0
+website,Santé,26748,21,1,1,2,1,1,0,1
+phone,Industrie,20709,104,1,1,1,1,0,0,0
+website,Éducation,16786,118,0,0,1,1,0,0,0
+social_media,Santé,26967,79,0,0,3,0,3,0,0
+website,Industrie,48291,94,1,0,1,1,0,0,0
+website,Industrie,26923,60,1,0,4,3,1,0,0
+website,Tourisme,112184,69,1,1,2,0,2,0,1
+website,Tourisme,62685,54,1,1,3,1,2,0,1
+referral,Industrie,48132,61,1,0,5,1,0,4,1
+referral,IT / Digital,23824,71,1,1,1,1,0,0,1
+website,Commerce,27912,107,1,1,7,2,1,4,1
+referral,IT / Digital,34296,37,1,1,3,0,3,0,1
+website,Finance / Banque,10438,38,1,1,3,2,0,1,1
+other,Santé,19202,117,1,0,7,2,3,2,0
+referral,Éducation,31027,87,0,1,2,2,0,0,1
+phone,Finance / Banque,34056,70,0,0,1,1,0,0,1
+website,Santé,28135,78,1,1,5,3,2,0,1
+website,Finance / Banque,18715,31,0,1,3,3,0,0,1
+other,Immobilier,19547,9,1,1,2,2,0,0,0
+phone,Commerce,24301,60,1,0,1,1,0,0,0
+referral,Finance / Banque,19397,62,1,0,2,0,1,1,1
+email,Santé,24524,27,1,0,3,3,0,0,0
+website,Immobilier,17033,89,1,0,3,2,1,0,0
+social_media,Commerce,37732,15,1,1,1,1,0,0,0
+website,Industrie,11623,61,1,0,4,1,3,0,0
+other,Immobilier,31133,90,1,1,2,2,0,0,0
+referral,Finance / Banque,17088,18,1,0,2,1,1,0,1
+website,Santé,18738,118,1,1,2,2,0,0,0
+website,Industrie,7423,26,1,0,6,3,0,3,1
+referral,Commerce,48072,36,1,0,4,0,3,1,1
+website,Tourisme,90572,47,1,1,3,3,0,0,1
+referral,Éducation,9803,95,0,1,5,0,3,2,1
+phone,Tourisme,53610,19,1,0,5,0,0,5,1
+website,Santé,16484,52,1,1,3,3,0,0,1
+referral,Immobilier,61557,53,0,0,3,0,3,0,1
+trade_show,Tourisme,12030,100,1,1,5,0,4,1,1
+referral,Commerce,16345,6,1,1,2,2,0,0,1
+social_media,Tourisme,9578,40,1,0,4,1,2,1,0
+phone,IT / Digital,3000,8,1,1,4,2,2,0,1
+website,Santé,49945,55,1,0,2,2,0,0,1
+phone,Tourisme,7774,116,0,1,3,1,2,0,0
+website,Immobilier,29473,8,1,0,2,2,0,0,0
+website,Finance / Banque,12318,91,1,1,7,3,0,4,1
+trade_show,Tourisme,103315,55,1,0,1,1,0,0,1
+website,Tourisme,15325,91,1,1,2,1,1,0,0
+other,Santé,18627,39,1,1,2,2,0,0,0
+referral,Tourisme,14027,41,1,1,2,1,1,0,1
+social_media,Commerce,41538,91,1,1,3,2,0,1,0
+social_media,Industrie,30978,99,1,0,3,3,0,0,0
+email,Commerce,46691,28,1,1,5,3,1,1,1
+email,Immobilier,30145,117,1,1,3,2,1,0,0
+referral,Finance / Banque,87707,99,1,1,1,1,0,0,1
+email,Commerce,12121,67,1,1,4,2,1,1,1
+phone,Tourisme,50482,49,1,1,2,0,1,1,1
+email,Tourisme,42839,108,1,0,3,3,0,0,0
+referral,Tourisme,16961,72,1,0,5,0,4,1,1
+website,Santé,29412,28,1,0,5,1,0,4,1
+referral,Commerce,39011,66,0,1,2,1,1,0,1
+referral,Immobilier,32426,23,0,0,4,3,1,0,1
+website,Commerce,63694,47,0,1,6,0,3,3,1
+website,Finance / Banque,18786,36,1,1,0,0,0,0,1
+referral,IT / Digital,48386,7,0,0,3,0,1,2,1
+other,IT / Digital,23876,91,1,0,2,0,1,1,0
+email,Éducation,75741,45,0,0,6,1,1,4,1
+trade_show,Éducation,27080,108,1,0,4,0,0,4,1
+phone,Éducation,47252,60,1,1,2,2,0,0,1
+social_media,Commerce,36801,76,1,0,3,0,0,3,0
+phone,Immobilier,30774,87,0,0,4,0,1,3,1
+website,Éducation,81620,101,1,1,2,1,1,0,0
+referral,Immobilier,19233,104,1,1,5,1,4,0,1
+phone,IT / Digital,17863,9,1,1,5,1,2,2,1
+phone,Finance / Banque,128117,115,1,1,2,1,1,0,1
+other,Tourisme,24612,22,1,0,1,1,0,0,0
+referral,Immobilier,129620,18,0,0,3,2,1,0,1
+website,Éducation,48627,49,1,1,2,0,0,2,1
+email,Immobilier,20697,68,1,1,1,1,0,0,0
+website,Éducation,80660,117,1,1,4,3,0,1,1
+website,Santé,9059,89,1,0,2,0,2,0,0
+trade_show,Commerce,61982,47,1,0,2,2,0,0,1
+social_media,Tourisme,67501,9,1,1,4,0,4,0,1
+trade_show,Commerce,36946,31,1,1,7,0,0,7,1
+trade_show,Tourisme,14972,6,1,1,4,2,2,0,1
+email,Santé,37898,7,0,1,3,0,2,1,0
+social_media,Finance / Banque,12567,70,1,0,5,1,2,2,1
+email,IT / Digital,62312,11,1,0,1,1,0,0,1
+website,IT / Digital,10586,34,1,1,5,2,1,2,1
+website,Industrie,47723,42,1,1,7,2,0,5,1
+phone,Commerce,118969,77,1,1,0,0,0,0,1
+website,Éducation,39067,51,1,0,6,0,0,6,0
+website,Finance / Banque,25431,5,1,1,3,1,0,2,1
+referral,IT / Digital,20373,99,1,1,2,0,2,0,1
+social_media,Tourisme,57272,80,0,0,2,0,0,2,0
+referral,Tourisme,5648,18,1,1,2,2,0,0,1
+email,Commerce,10207,75,0,1,2,2,0,0,0
+trade_show,Industrie,26775,86,1,1,4,1,3,0,1
+other,IT / Digital,24430,91,1,1,5,2,2,1,1
+website,Finance / Banque,54644,69,1,1,5,1,3,1,1
+website,Immobilier,39824,112,1,0,2,1,1,0,0
+email,Immobilier,20114,83,1,0,2,2,0,0,0
+trade_show,Éducation,6822,83,1,1,4,3,1,0,1
+website,Santé,19631,17,1,1,2,2,0,0,1
+social_media,Éducation,27391,107,1,0,2,0,2,0,0
+website,Industrie,16213,7,0,1,2,2,0,0,0
+website,Santé,30838,82,0,1,1,1,0,0,0
+referral,Tourisme,19057,28,0,1,2,0,2,0,0
+website,Industrie,48063,68,1,1,2,2,0,0,1
+website,Commerce,18386,96,1,1,6,1,1,4,1
+email,IT / Digital,18346,70,1,0,3,3,0,0,1
+email,Industrie,34458,113,1,1,0,0,0,0,0
+referral,Santé,187113,88,1,0,2,2,0,0,1
+website,Industrie,11941,9,1,1,1,0,1,0,0
+referral,Éducation,15657,3,1,1,1,1,0,0,1
+social_media,IT / Digital,27259,31,1,0,2,2,0,0,0
+website,Immobilier,15323,42,1,1,4,3,1,0,1
+phone,Industrie,43166,39,1,0,4,2,2,0,1
+referral,Industrie,11095,101,0,1,4,0,1,3,1
+website,Santé,23781,96,0,0,5,0,1,4,0
+website,Éducation,21646,84,1,0,2,2,0,0,0
+phone,Finance / Banque,24287,72,1,1,3,2,1,0,1
+social_media,Santé,13522,101,1,0,6,2,4,0,0
+other,Industrie,33395,94,1,0,3,1,0,2,0
+website,Éducation,9140,15,1,1,0,0,0,0,0
+referral,Éducation,26362,120,0,1,4,3,1,0,0
+website,Commerce,74393,95,1,1,3,1,2,0,0
+social_media,Éducation,15948,93,1,1,3,2,1,0,0
+website,IT / Digital,25587,49,1,1,6,2,4,0,1
+referral,Santé,59546,19,1,0,2,2,0,0,1
+referral,Santé,50675,45,1,1,3,3,0,0,1
+social_media,Éducation,12039,101,1,1,3,0,1,2,0
+phone,Commerce,21647,75,1,1,3,3,0,0,1
+referral,Tourisme,24992,93,0,0,4,0,3,1,0
+phone,Tourisme,48347,33,1,1,2,2,0,0,1
+referral,Santé,27689,52,1,1,3,0,1,2,1
+website,Immobilier,20299,87,1,0,5,0,0,5,1
+website,Éducation,18511,91,1,0,3,0,0,3,0
+referral,Finance / Banque,21562,36,1,1,3,1,0,2,1
+social_media,Santé,18130,117,1,1,4,0,2,2,0
+website,Tourisme,42102,99,1,1,2,2,0,0,0
+referral,Finance / Banque,50209,77,1,1,3,1,0,2,1
+trade_show,Commerce,25734,49,1,0,4,0,2,2,1
+phone,IT / Digital,50197,22,1,1,0,0,0,0,1
+email,Tourisme,49363,84,1,1,5,2,2,1,1
+phone,Santé,29100,106,1,1,3,0,2,1,1
+referral,Tourisme,16032,79,1,1,2,0,1,1,1
+phone,Éducation,31272,64,0,1,4,3,1,0,0
+social_media,Immobilier,9824,99,1,1,4,3,1,0,0
+website,Immobilier,74276,73,1,1,1,1,0,0,1
+other,Éducation,40421,80,1,0,4,0,1,3,0
+website,Tourisme,30589,38,1,0,4,3,1,0,0
+phone,IT / Digital,21881,5,1,1,1,1,0,0,1
+email,Immobilier,45250,45,0,1,3,3,0,0,1
+trade_show,Tourisme,47376,28,1,1,2,1,1,0,1
+referral,Éducation,31067,28,1,0,4,3,1,0,1
+phone,Immobilier,42274,86,1,1,4,2,0,2,1
+social_media,Finance / Banque,46043,107,0,1,5,3,0,2,0
+other,Santé,69188,37,1,0,1,1,0,0,0
+phone,IT / Digital,34347,30,1,0,3,0,3,0,1
+social_media,Industrie,85146,37,1,0,4,1,1,2,1
+referral,Finance / Banque,17792,77,1,1,1,1,0,0,1
+email,Santé,11908,81,1,0,3,3,0,0,0
+referral,IT / Digital,47125,33,1,1,1,1,0,0,1
+website,Tourisme,36688,112,1,1,1,0,1,0,0
+social_media,Éducation,73808,3,1,0,5,1,4,0,1
+email,Santé,31464,32,1,1,4,0,3,1,1
+email,IT / Digital,22923,111,1,1,2,2,0,0,1
+email,Immobilier,4547,87,1,1,2,2,0,0,1
+social_media,Éducation,23630,3,1,0,4,2,1,1,0
+email,IT / Digital,18160,39,1,1,4,0,4,0,1
+referral,Industrie,59426,48,1,1,3,2,1,0,1
+website,Santé,7486,12,1,1,2,2,0,0,1
+website,Santé,25649,64,1,1,4,3,1,0,1
+phone,Éducation,12838,16,1,1,5,1,2,2,1
+social_media,IT / Digital,51954,70,1,1,1,1,0,0,1
+website,Commerce,9279,110,1,0,2,2,0,0,0
+phone,Immobilier,22498,6,1,1,2,1,1,0,1
+email,Santé,14486,28,1,0,5,2,3,0,1
+phone,IT / Digital,35696,43,1,0,5,2,1,2,1
+phone,Finance / Banque,49944,100,0,1,2,2,0,0,1
+website,Commerce,64336,30,1,1,6,2,2,2,1
+phone,Immobilier,12639,46,1,0,4,1,1,2,1
+social_media,Santé,27562,68,0,0,7,3,3,1,0
+phone,Éducation,27856,9,1,1,3,1,1,1,1
+website,Commerce,56933,78,1,1,5,1,0,4,1
+phone,Immobilier,11331,100,1,1,3,0,1,2,1
+phone,IT / Digital,46833,100,1,1,2,2,0,0,1
+trade_show,Commerce,48637,48,1,1,3,1,2,0,1
+trade_show,IT / Digital,50193,68,1,1,4,3,1,0,1
+email,Commerce,21509,12,1,0,4,0,3,1,0
+referral,Industrie,9093,52,1,1,3,3,0,0,1
+referral,Commerce,23100,7,1,1,1,0,1,0,1
+other,Immobilier,76345,9,0,1,4,1,3,0,1
+referral,Tourisme,17124,27,1,1,2,2,0,0,1
+email,Éducation,59881,76,1,0,0,0,0,0,0
+social_media,Immobilier,46180,6,1,0,1,1,0,0,0
+website,Commerce,32643,48,1,0,4,2,2,0,0
+email,Tourisme,16367,15,1,1,5,3,1,1,1
+website,Immobilier,21650,81,0,1,4,2,2,0,0
+phone,Éducation,20480,83,0,1,2,2,0,0,0
+website,Immobilier,59696,22,1,1,4,0,1,3,1
+trade_show,Finance / Banque,12360,42,1,0,2,1,1,0,1
+email,Finance / Banque,26195,97,0,0,4,1,1,2,0
+email,Immobilier,25628,85,1,0,3,3,0,0,0
+email,Immobilier,69388,98,1,1,3,0,3,0,1
+email,Finance / Banque,37769,34,0,1,3,3,0,0,0
+email,Commerce,23819,18,1,1,4,3,1,0,1
+referral,Commerce,36803,64,1,0,3,3,0,0,1
+referral,Industrie,6651,38,0,1,4,0,0,4,1
+website,Industrie,35866,75,1,1,5,0,4,1,1
+social_media,Immobilier,20761,32,1,0,3,2,1,0,0
+phone,Industrie,26236,28,0,1,1,1,0,0,0
+website,Commerce,10390,78,0,1,5,0,3,2,1
+website,Éducation,32675,65,1,0,1,0,1,0,0
+website,Finance / Banque,57753,86,0,1,3,1,2,0,1
+website,Industrie,42358,102,1,0,1,1,0,0,0
+social_media,Immobilier,36192,56,1,1,2,2,0,0,0
+social_media,Immobilier,46779,104,0,0,4,2,2,0,0
+trade_show,Immobilier,12018,41,1,1,4,3,1,0,1
+email,Éducation,27538,104,1,0,5,0,1,4,0
+social_media,Commerce,30344,53,0,1,3,0,0,3,0
+website,Santé,30917,101,1,1,2,2,0,0,0
+other,Éducation,64679,14,1,1,1,1,0,0,0
+other,Commerce,46325,113,0,1,2,1,1,0,0
+phone,Finance / Banque,7850,41,1,1,4,2,2,0,1
+website,Commerce,52266,102,1,1,3,0,3,0,1
+social_media,Commerce,10516,99,1,0,4,2,1,1,0
+phone,Finance / Banque,16286,45,1,0,2,0,2,0,1
+website,IT / Digital,135237,92,1,0,4,3,0,1,1
+website,Santé,8754,82,1,0,2,1,1,0,0
+referral,Commerce,10301,119,1,1,4,2,2,0,1
+referral,Immobilier,28810,26,1,0,1,1,0,0,1
+email,Industrie,33177,59,1,0,2,1,1,0,0
+website,Industrie,14020,109,1,1,3,1,2,0,0
+email,Finance / Banque,39427,116,0,1,2,1,1,0,0
+referral,Immobilier,7409,42,1,1,4,2,1,1,1
+trade_show,Tourisme,31484,32,0,1,3,3,0,0,0
+website,IT / Digital,24628,112,1,0,2,0,0,2,0
+social_media,Tourisme,39772,74,0,1,4,3,1,0,0
+referral,Commerce,16677,24,1,1,2,1,1,0,1
+referral,Éducation,11276,78,0,1,2,1,1,0,1
+website,IT / Digital,14590,103,0,0,3,0,3,0,0
+website,Éducation,68103,116,1,0,5,3,2,0,0
+social_media,Éducation,33522,87,0,1,1,0,1,0,0
+website,Tourisme,34340,21,1,1,3,3,0,0,0
+referral,IT / Digital,75863,32,1,0,4,2,2,0,1
+website,Finance / Banque,17091,4,1,1,4,0,1,3,1
+phone,Tourisme,81357,8,1,1,4,3,1,0,1
+phone,Industrie,145161,20,1,1,2,0,1,1,1
+website,Éducation,77677,59,1,0,3,1,1,1,0
+email,Éducation,8062,49,1,1,3,3,0,0,0
+website,Éducation,16410,86,1,1,6,0,1,5,1
+website,Commerce,21455,67,1,0,4,2,0,2,1
+social_media,Industrie,3000,40,0,1,5,0,2,3,0
+email,Immobilier,30921,68,0,1,2,1,1,0,0
+phone,IT / Digital,19584,50,1,1,2,2,0,0,1
+social_media,Santé,7654,41,1,0,7,2,2,3,0
+email,Tourisme,33316,38,1,1,3,3,0,0,1
+website,IT / Digital,28652,84,1,1,5,3,0,2,1
+phone,Tourisme,69895,55,1,0,3,0,0,3,1
+phone,Commerce,11272,24,1,1,3,3,0,0,1
+email,Finance / Banque,12215,56,1,1,4,3,0,1,1
+email,Industrie,17598,77,1,0,6,2,4,0,0
+social_media,Santé,36305,72,1,0,3,3,0,0,0
+social_media,Éducation,28011,119,1,0,3,3,0,0,0
+email,Immobilier,9822,45,1,0,4,2,2,0,0
+social_media,Éducation,17463,49,1,1,1,1,0,0,0
+referral,Santé,43783,100,1,1,5,3,2,0,1
+website,Finance / Banque,19199,76,1,1,5,2,3,0,1
+other,Tourisme,27107,61,1,0,2,1,1,0,0
+website,Immobilier,16820,79,0,1,2,1,1,0,0
+website,Commerce,13822,63,1,1,6,1,4,1,1
+referral,Industrie,30014,110,1,1,2,1,1,0,1
+website,Santé,70396,93,1,1,4,0,1,3,1
+email,Santé,6946,76,0,1,3,3,0,0,0
+referral,Éducation,15014,54,0,1,2,2,0,0,0
+referral,Santé,11854,23,1,1,0,0,0,0,1
+website,Tourisme,13984,69,1,1,2,0,0,2,1
+email,Éducation,16875,103,1,1,3,1,1,1,0
+other,Éducation,13548,16,1,1,5,3,2,0,0
+phone,Immobilier,25458,45,1,0,4,0,0,4,1
+trade_show,Industrie,52029,77,1,0,5,0,0,5,1
+trade_show,Finance / Banque,24670,92,1,1,2,1,0,1,1
+social_media,Industrie,29284,15,1,1,4,2,2,0,0
+website,Immobilier,46531,50,1,0,2,0,0,2,1
+website,Immobilier,10289,57,1,0,3,1,2,0,0
+phone,Finance / Banque,26001,108,1,1,6,1,0,5,1
+website,Santé,10733,34,1,0,3,0,3,0,1
+email,Tourisme,20092,107,1,1,2,0,2,0,0
+trade_show,Tourisme,22833,26,1,0,3,2,1,0,1
+website,Tourisme,17365,29,1,1,1,1,0,0,0
+website,Commerce,60878,4,1,0,4,3,1,0,1
+phone,Éducation,25474,37,1,1,1,1,0,0,0
+referral,IT / Digital,26336,47,1,0,4,2,0,2,1
+trade_show,IT / Digital,39918,28,1,0,5,3,2,0,1
+email,Santé,34487,95,1,0,3,0,2,1,0
+website,Éducation,35220,6,1,0,2,2,0,0,0
+website,Santé,21012,117,1,0,3,3,0,0,0
+phone,Industrie,10187,63,1,1,1,1,0,0,1
+trade_show,IT / Digital,21062,42,1,1,4,3,1,0,1
+referral,IT / Digital,7030,30,1,0,4,3,1,0,1
+phone,Immobilier,109143,28,1,1,4,3,1,0,1
+referral,Éducation,41625,30,1,0,3,3,0,0,1
+website,Santé,57070,20,1,0,3,0,0,3,1
+website,Éducation,51999,14,1,1,6,1,2,3,1
+phone,Industrie,11441,68,1,1,2,0,0,2,1
+social_media,Finance / Banque,49445,91,0,1,1,0,0,1,0
+referral,Éducation,54805,34,1,0,3,1,2,0,1
+website,Immobilier,13820,40,1,1,2,2,0,0,1
+other,Industrie,44319,106,1,0,3,1,1,1,0
+website,IT / Digital,9261,54,1,1,3,0,3,0,1
+website,Commerce,18643,20,1,1,4,3,1,0,1
+referral,Éducation,33401,26,1,0,2,0,2,0,1
+website,Immobilier,31436,37,1,1,1,1,0,0,0
+referral,Immobilier,11045,114,1,0,1,0,1,0,1
+phone,Finance / Banque,53349,21,0,1,2,2,0,0,1
+phone,Industrie,59977,31,1,1,3,2,1,0,1
+website,IT / Digital,17995,117,0,1,0,0,0,0,0
+trade_show,Commerce,14355,22,1,1,3,2,1,0,1
+phone,Commerce,18058,61,1,1,3,0,1,2,1
+phone,Tourisme,17208,33,1,1,5,1,2,2,1
+other,Santé,20121,14,1,1,8,1,1,6,1
+email,Santé,35003,32,1,0,0,0,0,0,0
+referral,Commerce,31799,112,1,1,2,0,2,0,1
+referral,Éducation,42652,78,1,0,1,1,0,0,1
+website,Commerce,38855,111,1,1,2,1,1,0,0
+social_media,Tourisme,28373,101,1,1,2,2,0,0,0
+referral,Finance / Banque,9708,53,1,0,3,1,2,0,1
+email,IT / Digital,11600,9,1,1,5,2,3,0,1
+phone,IT / Digital,27371,67,1,1,6,2,0,4,1
+social_media,Éducation,20080,29,0,1,3,0,3,0,0
+other,Industrie,80276,63,1,0,3,0,1,2,0
+website,Industrie,23240,26,1,1,6,0,3,3,1
+referral,Commerce,39807,62,1,1,3,1,2,0,1
+phone,IT / Digital,14722,51,1,0,0,0,0,0,1
+email,Industrie,29032,19,1,0,2,1,1,0,0
+email,Finance / Banque,13393,100,1,1,2,1,1,0,0
+phone,Éducation,27089,111,1,1,3,3,0,0,0
+trade_show,Industrie,11284,105,1,0,5,0,1,4,1
+phone,Finance / Banque,25674,112,1,0,1,0,0,1,0
+social_media,Éducation,19943,90,1,1,2,0,0,2,0
+phone,Éducation,21484,94,1,1,6,1,2,3,1
+website,IT / Digital,20854,36,0,0,1,1,0,0,0
+social_media,Commerce,21350,35,1,1,1,0,1,0,0
+social_media,Éducation,24345,3,0,1,4,1,0,3,0
+website,IT / Digital,14760,95,1,1,1,1,0,0,0
+other,Santé,120618,58,1,1,2,2,0,0,1
+referral,Tourisme,59866,83,1,0,2,0,0,2,1
+website,Éducation,49445,22,1,1,0,0,0,0,1
+other,Commerce,26585,42,1,1,1,0,1,0,0
+social_media,Immobilier,35768,80,1,0,2,1,1,0,0
+email,Immobilier,59428,61,1,0,3,1,2,0,1
+social_media,Commerce,30064,6,1,1,4,0,0,4,1
+website,Industrie,20853,106,1,1,3,0,2,1,0
+social_media,Santé,26901,34,1,0,6,0,3,3,1
+social_media,Commerce,31517,104,1,0,3,0,2,1,0
+website,Industrie,26384,85,1,1,3,3,0,0,1
+phone,Tourisme,11616,67,0,0,4,2,2,0,1
+email,Santé,68541,79,1,1,2,2,0,0,1
+other,Immobilier,8428,12,1,0,4,3,0,1,0
+referral,Finance / Banque,11991,39,1,1,5,2,2,1,1
+website,Tourisme,41713,85,1,1,1,0,1,0,0
+social_media,Finance / Banque,27519,86,1,1,4,0,0,4,1
+website,Santé,21611,46,1,0,4,2,2,0,1
+referral,Finance / Banque,58714,89,1,1,3,2,1,0,1
+website,Éducation,47632,87,1,0,2,0,1,1,1
+email,Finance / Banque,24628,76,1,0,4,2,2,0,0
+social_media,Industrie,49170,95,1,1,2,2,0,0,0
+trade_show,Immobilier,19708,42,1,0,4,2,2,0,1
+phone,Immobilier,27210,76,1,1,3,2,1,0,1
+referral,Santé,66259,17,1,1,4,2,2,0,1
+website,Industrie,99940,7,1,1,1,1,0,0,1
+website,Finance / Banque,33284,115,1,0,0,0,0,0,0
+phone,Immobilier,33146,85,1,1,3,0,1,2,1
+trade_show,Commerce,48698,99,1,0,5,0,0,5,1
+referral,Commerce,23020,4,1,1,5,0,3,2,1
+social_media,Industrie,78209,45,1,0,3,2,0,1,0
+website,Santé,20707,43,1,0,2,2,0,0,0
+other,Éducation,15327,43,1,0,2,1,1,0,0
+phone,Industrie,44482,44,0,0,5,0,2,3,1
+other,Éducation,28843,63,1,0,2,1,1,0,0
+website,Immobilier,30361,63,1,1,3,1,0,2,1
+trade_show,Éducation,64003,110,1,1,3,2,1,0,1
+trade_show,Tourisme,40016,16,1,0,2,2,0,0,1
+referral,Immobilier,4952,113,0,1,1,1,0,0,1
+social_media,Finance / Banque,34324,57,1,1,3,3,0,0,0
+phone,IT / Digital,19537,10,1,0,5,3,0,2,1
+other,Commerce,39259,13,1,1,4,2,2,0,1
+website,Commerce,16186,29,1,0,1,1,0,0,0
+referral,Santé,17779,66,0,0,3,2,0,1,1
+website,Santé,6839,23,1,1,2,2,0,0,1
+trade_show,IT / Digital,23613,48,1,1,0,0,0,0,1
+website,IT / Digital,28414,30,1,0,3,3,0,0,0
+email,IT / Digital,9718,63,1,0,2,0,0,2,1
+email,IT / Digital,11398,98,1,1,4,3,1,0,1
+website,Industrie,19435,99,1,1,3,1,1,1,0
+referral,Éducation,22024,37,0,1,2,0,2,0,0
+website,Immobilier,56481,85,0,0,1,1,0,0,0
+email,IT / Digital,9472,40,1,0,4,3,1,0,1
+other,Éducation,27237,9,1,1,3,0,3,0,1
+email,Finance / Banque,70102,71,1,1,3,1,1,1,1
+referral,Commerce,15510,28,1,0,4,0,1,3,1
+social_media,Industrie,15178,119,1,1,3,2,1,0,0
+referral,Finance / Banque,79101,36,1,1,4,0,1,3,1
+other,Immobilier,48483,28,1,1,6,3,0,3,1
+website,Finance / Banque,26289,60,1,1,2,2,0,0,1
+website,Éducation,14300,78,1,1,2,2,0,0,0
+other,IT / Digital,16609,37,1,1,4,2,2,0,1
+social_media,IT / Digital,17099,73,1,1,3,2,1,0,0
+social_media,Immobilier,20224,112,1,1,3,2,1,0,0
+website,Tourisme,108715,11,1,0,1,1,0,0,1
+phone,Finance / Banque,36088,107,1,0,4,2,0,2,1
+email,IT / Digital,64729,113,0,1,5,0,2,3,1
+website,Tourisme,16479,60,1,1,2,1,1,0,0
+referral,Santé,44044,108,1,1,3,1,2,0,1
+website,Tourisme,61229,37,1,0,4,3,1,0,1
+email,Immobilier,34544,118,1,1,2,1,1,0,0
+social_media,Santé,24828,40,1,1,3,3,0,0,0
+email,IT / Digital,23436,5,1,1,4,1,0,3,1
+trade_show,Éducation,6865,109,1,1,2,0,1,1,1
+referral,Immobilier,40030,49,1,1,5,0,4,1,1
+email,Éducation,24696,37,0,1,3,2,0,1,0
+social_media,Commerce,121221,37,1,0,2,2,0,0,0
+website,Santé,22360,5,1,0,5,3,1,1,1
+email,IT / Digital,18525,20,0,1,0,0,0,0,0
+website,Immobilier,54731,75,1,1,3,0,0,3,1
+website,Éducation,90463,60,1,1,1,1,0,0,1
+referral,Tourisme,50108,120,0,1,5,3,1,1,1
+email,Finance / Banque,53127,3,0,1,2,0,2,0,1
+other,Industrie,33366,111,1,1,2,1,0,1,0
+phone,Tourisme,7713,83,1,1,3,0,0,3,1
+email,Industrie,36821,90,1,1,6,2,1,3,1
+social_media,Éducation,10315,117,0,0,2,2,0,0,0
+website,Immobilier,46533,51,1,1,3,3,0,0,1
+referral,Éducation,24697,115,1,1,2,2,0,0,0
+website,Santé,63485,113,1,1,3,0,3,0,1
+website,Éducation,36748,42,0,1,2,0,2,0,0
+trade_show,Éducation,10240,100,1,1,4,3,1,0,1
+website,Immobilier,38308,100,1,1,6,3,0,3,1
+website,Industrie,34534,116,1,0,1,1,0,0,0
+website,Santé,59932,66,1,0,1,1,0,0,0
+email,Finance / Banque,19702,33,1,1,3,1,2,0,1
+social_media,Finance / Banque,25068,59,1,0,3,1,2,0,0
+website,IT / Digital,12307,95,1,1,3,0,0,3,1
+phone,IT / Digital,44645,33,1,0,3,1,1,1,1
+phone,Éducation,24881,59,1,1,5,2,3,0,1
+email,Tourisme,48342,116,1,1,7,0,2,5,1
+other,IT / Digital,28573,70,1,1,5,3,2,0,1
+website,IT / Digital,34229,98,0,1,4,3,1,0,0
+email,IT / Digital,17810,24,1,1,6,2,1,3,1
+trade_show,Santé,19145,21,0,0,2,0,2,0,1
+other,Industrie,9256,98,1,1,3,0,0,3,0
+website,Tourisme,18811,11,1,1,2,0,2,0,1
+social_media,Tourisme,10129,37,1,0,1,0,1,0,0
+referral,Industrie,12130,114,1,0,3,0,2,1,1
+referral,Éducation,24606,91,0,1,7,0,1,6,0
+website,Immobilier,22802,62,1,0,1,1,0,0,0
+trade_show,Tourisme,26262,47,1,0,5,0,3,2,1
+email,Finance / Banque,16761,114,1,0,6,2,2,2,0
+website,IT / Digital,27402,43,0,1,3,0,0,3,1
+phone,Tourisme,31019,43,1,1,6,2,2,2,1
+website,Santé,14490,9,0,1,4,2,1,1,1
+phone,Commerce,32742,106,0,0,1,0,1,0,0
+referral,IT / Digital,16925,94,1,0,0,0,0,0,1
+email,Finance / Banque,8143,12,1,0,4,1,2,1,1
+website,Tourisme,24828,64,1,1,2,2,0,0,0
+website,Immobilier,48337,46,1,0,3,3,0,0,1
+other,Industrie,13049,26,1,1,2,0,2,0,0
+other,Industrie,21731,100,0,1,4,3,1,0,0
+social_media,Tourisme,69190,40,0,1,2,2,0,0,0
+social_media,Commerce,139929,26,1,1,4,1,0,3,1
+phone,Santé,61590,76,1,0,3,3,0,0,1
+referral,Immobilier,13649,32,1,0,4,2,2,0,1
+email,IT / Digital,11729,64,1,1,4,2,0,2,1
+email,Industrie,20896,50,1,1,3,3,0,0,1
+email,Immobilier,63410,22,1,1,4,1,3,0,1
+email,Éducation,38202,107,0,0,4,2,2,0,0
+email,IT / Digital,4592,80,0,0,1,1,0,0,0
+social_media,Industrie,14361,99,1,1,6,2,4,0,0
+phone,Éducation,17898,41,0,1,3,2,1,0,0
+website,Industrie,33824,90,1,1,6,0,4,2,1
+referral,Éducation,59451,26,1,0,0,0,0,0,1
+email,Éducation,25828,30,1,1,3,0,3,0,0
+website,Commerce,52402,111,1,1,2,1,0,1,1
+other,Industrie,23720,104,1,1,2,0,2,0,0
+referral,Immobilier,10995,24,1,1,2,2,0,0,1
+email,IT / Digital,25344,23,1,1,4,2,2,0,1
+other,Finance / Banque,85643,82,1,0,1,1,0,0,0
+website,Immobilier,12670,6,1,1,0,0,0,0,1
+referral,Éducation,21668,4,1,0,0,0,0,0,1
+social_media,Finance / Banque,83087,30,1,1,2,1,1,0,1
+email,IT / Digital,36969,86,1,1,2,2,0,0,1
+phone,Immobilier,27660,83,1,0,3,2,1,0,1
+social_media,Santé,41502,50,1,0,3,3,0,0,0
+referral,Industrie,31672,17,1,1,4,2,1,1,1
+phone,Éducation,95061,79,1,1,3,3,0,0,1
+social_media,Industrie,44260,101,1,0,1,0,1,0,0
+email,Tourisme,154708,108,1,1,2,1,1,0,0
+phone,Éducation,11870,31,1,0,1,1,0,0,0
+referral,IT / Digital,26423,87,1,1,3,2,1,0,1
+website,Éducation,74931,34,1,0,3,2,1,0,0
+email,Industrie,45876,114,1,1,5,3,1,1,1
+referral,IT / Digital,82004,85,1,0,2,0,0,2,1
+social_media,Immobilier,14459,92,1,0,1,1,0,0,0
+email,Industrie,24829,68,1,0,4,0,0,4,1
+social_media,Immobilier,51795,34,0,1,0,0,0,0,0
+website,Tourisme,47060,42,1,1,2,1,1,0,1
+referral,IT / Digital,31176,50,1,0,2,2,0,0,1
+social_media,Commerce,39155,51,1,1,4,1,0,3,0
+email,Commerce,9247,12,1,1,1,0,0,1,0
+website,Tourisme,14790,21,1,0,1,1,0,0,0
+trade_show,Finance / Banque,82689,65,1,1,2,0,2,0,1
+referral,Commerce,27762,104,1,1,4,3,1,0,1
+other,Éducation,27254,15,1,1,1,1,0,0,0
+referral,Tourisme,8025,120,1,1,1,1,0,0,1
+email,Santé,73711,13,1,0,3,1,2,0,1
+website,Santé,31538,24,1,0,3,0,1,2,1
+trade_show,Immobilier,63821,12,1,1,5,1,1,3,1
+referral,Tourisme,38111,81,1,1,6,2,0,4,1
+trade_show,Industrie,138366,117,1,1,1,1,0,0,1
+referral,Industrie,11098,17,1,1,1,1,0,0,1
+website,Commerce,61311,77,1,1,2,2,0,0,1
+website,Immobilier,30176,55,1,1,2,0,2,0,0
+referral,Immobilier,13490,66,1,0,4,0,3,1,1
+website,Finance / Banque,21957,103,1,0,1,1,0,0,0
+social_media,Éducation,22080,15,1,0,3,3,0,0,0
+other,Commerce,22751,7,1,1,1,1,0,0,0
+email,Industrie,10078,61,1,1,3,2,1,0,1
+social_media,IT / Digital,52200,54,0,1,2,2,0,0,0
+social_media,Éducation,15383,100,1,1,2,2,0,0,0
+website,Éducation,25695,73,1,1,5,2,2,1,1
+email,Éducation,27054,63,1,0,2,1,1,0,0
+other,Tourisme,3251,96,1,1,3,1,2,0,0
+phone,Éducation,59304,16,1,0,3,3,0,0,1
+other,Finance / Banque,15200,39,1,1,5,2,3,0,1
+website,Finance / Banque,44598,105,0,0,2,1,1,0,0
+phone,Industrie,38027,101,1,1,4,0,1,3,1
+referral,Éducation,16973,18,1,1,3,2,0,1,1
+website,Commerce,6142,80,1,1,1,1,0,0,0
+referral,Tourisme,5460,96,1,0,1,0,1,0,1
+trade_show,IT / Digital,37916,47,1,0,1,0,1,0,1
+website,Immobilier,12794,36,1,1,6,3,3,0,1
+referral,Industrie,151761,87,1,1,3,1,0,2,1
+website,Finance / Banque,19150,75,1,1,4,0,3,1,1
+email,IT / Digital,31490,66,1,1,1,1,0,0,1
+phone,IT / Digital,25455,32,1,0,0,0,0,0,1
+referral,Commerce,17951,114,1,0,4,1,3,0,1
+email,Finance / Banque,55212,37,1,1,2,1,0,1,1
+phone,Santé,29371,27,1,1,2,1,1,0,1
+referral,Santé,14237,47,1,1,3,2,1,0,1
+email,Tourisme,33734,15,1,0,2,2,0,0,0
+email,Industrie,80179,45,1,1,3,0,2,1,1
+referral,Finance / Banque,24733,15,1,0,5,1,0,4,1
+email,Santé,5373,111,1,0,5,3,0,2,0
+phone,Finance / Banque,24063,46,1,1,3,2,1,0,1
+referral,Industrie,21745,45,1,1,2,0,2,0,1
+social_media,Finance / Banque,7524,92,1,1,0,0,0,0,0
+email,Industrie,200000,58,1,1,2,2,0,0,1
+social_media,Finance / Banque,60750,20,1,0,2,2,0,0,1
+other,Commerce,50413,47,1,1,3,2,1,0,1
+referral,Immobilier,14775,52,1,1,3,1,0,2,1
+other,Finance / Banque,91756,81,1,0,1,1,0,0,0
+website,IT / Digital,28711,96,0,1,3,0,1,2,0
+other,Tourisme,24602,68,1,0,6,3,3,0,0
+email,Finance / Banque,28344,3,1,0,5,3,0,2,1
+website,IT / Digital,90131,108,1,0,4,1,3,0,1
+trade_show,Immobilier,14891,116,1,1,2,0,2,0,1
+website,Éducation,31476,18,1,0,3,2,1,0,0
+trade_show,IT / Digital,9537,95,1,0,6,2,3,1,1
+other,Finance / Banque,17828,18,1,0,2,2,0,0,0
+referral,Immobilier,52075,23,1,1,3,0,2,1,1
+email,Santé,66394,87,1,0,3,1,2,0,1
+social_media,Industrie,75414,20,0,1,2,2,0,0,0
+email,Immobilier,106359,99,1,1,5,1,4,0,1
+referral,Industrie,20874,27,1,0,1,1,0,0,1
+social_media,Industrie,13184,117,1,1,0,0,0,0,0
+social_media,IT / Digital,15995,51,0,1,5,1,1,3,1
+email,Immobilier,11457,114,1,1,2,0,2,0,0
+website,Santé,7153,7,1,1,2,2,0,0,1
+email,Tourisme,16695,66,1,0,1,1,0,0,0
+email,Immobilier,51861,41,1,1,6,3,0,3,1
+email,Commerce,23545,10,1,1,5,1,2,2,1
+social_media,Industrie,34089,7,1,1,2,1,1,0,0
+phone,Finance / Banque,32317,12,1,0,2,2,0,0,1
+social_media,Tourisme,26627,57,1,1,0,0,0,0,0
+referral,IT / Digital,24435,66,1,0,4,3,1,0,1
+trade_show,Éducation,14919,72,1,1,1,1,0,0,0
+phone,Immobilier,101911,29,1,1,1,1,0,0,1
+social_media,Commerce,45532,21,1,1,4,1,0,3,1
+email,Commerce,37938,5,1,1,2,2,0,0,0
+phone,Commerce,11457,57,1,1,2,2,0,0,1
+phone,Finance / Banque,57701,85,1,1,3,1,0,2,1
+social_media,Tourisme,26205,39,0,1,2,2,0,0,0
+other,Éducation,16185,83,1,1,2,0,0,2,0
+email,Finance / Banque,18709,107,0,1,2,2,0,0,0
+referral,Santé,17804,55,1,1,1,1,0,0,1
+phone,Santé,29263,79,0,1,3,2,1,0,1
+referral,Industrie,38694,104,1,1,3,1,2,0,1
+phone,Commerce,55045,31,1,1,2,2,0,0,1
+website,Tourisme,20183,95,1,0,2,0,1,1,0
+website,Finance / Banque,15200,111,1,0,4,0,3,1,0
+social_media,Commerce,16600,32,1,0,3,2,1,0,0
+other,Tourisme,177143,34,1,0,1,1,0,0,0
+referral,Santé,15323,119,1,1,3,3,0,0,1
+other,Santé,23342,95,0,1,3,3,0,0,0
+website,Industrie,112785,49,0,1,2,0,0,2,1
+other,Tourisme,13305,3,1,1,0,0,0,0,0
+website,Santé,64165,3,1,1,2,2,0,0,1
+website,IT / Digital,9469,21,1,0,3,0,0,3,1
+referral,IT / Digital,8608,24,0,1,5,1,4,0,1
+social_media,Santé,18751,93,1,0,3,3,0,0,0
+phone,Industrie,82611,94,1,1,6,1,1,4,1
+email,Santé,34656,94,0,1,4,2,0,2,0
+referral,Éducation,11157,52,0,0,4,1,1,2,1
+phone,Santé,14126,18,1,1,1,1,0,0,1
+phone,Éducation,23264,47,0,0,2,1,1,0,0
+website,Commerce,44646,99,1,1,2,2,0,0,0
+social_media,Éducation,29288,27,1,0,0,0,0,0,0
+website,Santé,45425,38,1,1,3,2,1,0,1
+phone,Immobilier,16544,66,1,1,4,1,2,1,1
+social_media,Tourisme,88257,87,1,1,5,2,3,0,1
+trade_show,Immobilier,14914,29,1,0,5,3,2,0,1
+trade_show,Finance / Banque,41659,101,1,1,3,0,1,2,1
+email,Commerce,56679,64,1,0,3,1,1,1,0
+referral,Tourisme,105903,108,1,0,2,2,0,0,1
+referral,Finance / Banque,45443,64,1,0,3,0,2,1,1
+social_media,Industrie,64160,104,1,0,4,2,2,0,0
+phone,IT / Digital,10262,33,1,1,1,1,0,0,1
+trade_show,Éducation,15630,39,1,0,0,0,0,0,0
+social_media,Santé,55284,81,1,0,1,1,0,0,0
+referral,Éducation,15109,78,1,1,5,1,4,0,1
+phone,Santé,9409,40,1,1,3,0,3,0,1
+email,Industrie,6515,119,1,1,4,3,1,0,0
+email,IT / Digital,22031,34,1,1,2,1,1,0,1
+referral,Immobilier,12855,107,1,0,3,1,1,1,1
+phone,Finance / Banque,19604,81,1,0,4,2,2,0,1
+email,Tourisme,11629,15,1,0,4,2,2,0,0
+website,Santé,26791,120,1,1,5,2,1,2,1
+website,Santé,19176,22,1,1,3,1,0,2,1
+website,Commerce,12216,52,1,1,2,2,0,0,0
+website,Santé,7481,83,1,0,2,2,0,0,0
+email,Immobilier,18524,90,1,0,4,2,2,0,0
+trade_show,Éducation,41197,22,0,0,1,1,0,0,1
+trade_show,Industrie,15919,5,0,1,3,0,2,1,1
+website,Finance / Banque,48078,90,1,1,6,0,0,6,1
+referral,Industrie,9019,99,1,1,1,1,0,0,1
+social_media,IT / Digital,19125,45,0,1,2,2,0,0,0
+social_media,Finance / Banque,28691,90,1,1,1,1,0,0,0
+referral,Éducation,36530,30,0,0,2,2,0,0,0
+website,IT / Digital,4496,20,1,0,1,0,1,0,1
+social_media,Industrie,35578,116,1,1,6,2,3,1,0
+website,Tourisme,37471,52,0,1,2,2,0,0,0
+social_media,Finance / Banque,53304,41,1,1,3,1,1,1,1
+email,Éducation,33243,110,1,1,1,1,0,0,0
+referral,Santé,23122,107,0,1,2,2,0,0,1
+website,Industrie,23241,3,1,1,4,3,1,0,1
+phone,Commerce,23335,5,1,0,2,0,2,0,0
+referral,Industrie,11073,28,1,1,2,2,0,0,1
+email,Commerce,48961,104,1,1,1,1,0,0,0
+trade_show,Commerce,40867,41,1,0,5,0,0,5,1
+website,Immobilier,15545,79,1,0,1,1,0,0,0
+website,Commerce,37565,62,1,1,3,1,2,0,1
+social_media,IT / Digital,10718,54,1,0,1,1,0,0,0
+phone,Commerce,9400,89,1,0,5,2,2,1,1
+email,Immobilier,21384,60,1,1,4,0,1,3,1
+phone,Commerce,21665,114,1,0,3,1,0,2,0
+referral,Tourisme,97137,112,1,1,6,0,0,6,1
+referral,Industrie,53034,40,1,0,3,0,3,0,1
+trade_show,Santé,9561,86,1,0,3,3,0,0,1
+referral,Éducation,62663,42,0,1,4,3,0,1,1
+referral,Santé,17746,75,1,0,4,3,1,0,1
+website,Immobilier,109716,68,1,1,5,0,2,3,1
+email,Industrie,32742,67,1,0,3,3,0,0,0
+phone,Immobilier,21478,79,1,0,2,2,0,0,1
+phone,Industrie,26669,57,1,1,0,0,0,0,0
+website,IT / Digital,7012,94,1,1,2,2,0,0,0
+trade_show,IT / Digital,24880,11,1,1,2,0,1,1,1
+email,Immobilier,74477,67,0,1,6,0,2,4,1
+other,IT / Digital,30183,111,1,1,1,0,0,1,0
+referral,IT / Digital,20749,119,1,0,2,2,0,0,1
+email,Immobilier,28676,6,1,1,1,1,0,0,1
+social_media,Santé,30844,3,1,1,2,0,0,2,1
+referral,IT / Digital,17204,47,1,0,2,1,1,0,1
+phone,Éducation,28993,120,1,0,3,3,0,0,0
+website,Tourisme,22529,66,1,0,2,2,0,0,0
+other,Commerce,17678,99,1,0,0,0,0,0,0
+website,Finance / Banque,23072,43,1,1,4,1,1,2,1
+phone,Santé,8219,87,1,0,3,3,0,0,1
+email,Finance / Banque,49834,38,1,1,2,2,0,0,1
+social_media,Industrie,44416,77,1,1,3,0,2,1,1
+website,IT / Digital,77013,120,0,1,7,1,1,5,1
+referral,Éducation,21343,47,1,1,2,0,2,0,1
+email,Finance / Banque,11841,104,1,0,1,1,0,0,0
+website,Finance / Banque,29049,49,1,0,5,0,3,2,1
+email,IT / Digital,173924,77,1,0,3,3,0,0,1
+referral,Santé,14250,4,1,1,1,1,0,0,1
+website,Finance / Banque,80128,103,1,0,4,3,1,0,1
+website,Immobilier,21704,48,0,1,4,3,0,1,1
+phone,Industrie,21814,66,1,0,1,0,0,1,0
+social_media,Commerce,16506,15,0,0,4,1,3,0,0
+website,Tourisme,42107,110,1,0,1,1,0,0,0
+website,IT / Digital,68449,103,1,1,6,3,0,3,1
+website,Éducation,16359,66,1,0,6,0,4,2,0
+email,Éducation,19702,109,1,1,2,0,2,0,0
+referral,Industrie,24012,45,1,0,3,2,0,1,1
+trade_show,Commerce,46240,39,1,1,4,1,3,0,1
+website,Commerce,10224,111,1,0,4,3,1,0,0
+website,Finance / Banque,34780,32,1,1,1,1,0,0,1
+email,Commerce,43572,40,1,1,1,1,0,0,0
+phone,Santé,7947,51,1,1,2,0,0,2,1
+website,Santé,15801,109,1,1,6,2,2,2,1
+referral,Immobilier,29607,105,1,1,9,3,0,6,1
+email,Santé,18382,47,1,0,0,0,0,0,0
+social_media,Immobilier,29400,18,1,1,5,2,3,0,1
+phone,Finance / Banque,20484,40,1,0,1,1,0,0,1
+other,Finance / Banque,9747,19,1,1,0,0,0,0,0
+social_media,IT / Digital,10092,47,1,0,4,0,3,1,0
+email,Santé,32226,56,1,1,2,0,0,2,1
+email,Éducation,20802,23,1,1,6,0,4,2,1
+phone,Commerce,41558,7,1,1,4,2,2,0,1
+referral,Tourisme,13009,48,1,0,1,1,0,0,1
+website,Industrie,31077,69,1,0,1,1,0,0,0
+phone,Immobilier,13517,114,1,1,7,2,2,3,1
+social_media,Finance / Banque,32648,100,1,0,5,0,0,5,0
+email,Santé,34552,112,1,1,5,1,3,1,1
+website,Immobilier,48780,94,1,1,4,1,0,3,1
+referral,Industrie,62546,49,0,0,4,2,0,2,1
+phone,Immobilier,33724,10,1,1,1,0,1,0,1
+website,Immobilier,36170,8,1,0,3,1,2,0,1
+email,Commerce,104266,31,1,1,4,2,2,0,1
+website,Éducation,61264,97,1,1,2,1,1,0,0
+email,Finance / Banque,5840,80,1,1,4,0,2,2,1
+website,Immobilier,42596,84,1,0,3,1,2,0,1
+other,Tourisme,16028,81,1,1,1,1,0,0,0
+referral,IT / Digital,89838,19,0,1,5,3,1,1,1
+website,Tourisme,49769,96,1,1,5,1,0,4,1
+social_media,Tourisme,16829,37,1,1,5,0,3,2,1
+other,Éducation,16428,27,1,0,2,0,2,0,0
+referral,IT / Digital,47428,116,1,0,3,3,0,0,1
+website,Commerce,47900,102,0,1,6,1,3,2,1
+trade_show,Commerce,14323,59,1,0,4,0,3,1,1
+social_media,Éducation,44005,120,1,1,2,1,1,0,0
+website,Commerce,28011,100,1,0,5,3,2,0,0
+email,Immobilier,32745,81,0,0,2,2,0,0,0
+email,Tourisme,22021,57,1,0,1,1,0,0,0
+referral,Finance / Banque,172883,23,1,0,8,0,0,8,1
+referral,Santé,56534,96,1,1,4,2,2,0,1
+website,Tourisme,10298,16,1,1,2,0,2,0,1
+website,Tourisme,42711,34,0,1,5,1,3,1,1
+email,Immobilier,32904,48,1,1,2,1,0,1,0
+email,IT / Digital,69454,119,1,1,2,2,0,0,1
+website,Tourisme,10959,21,1,1,2,2,0,0,1
+referral,Immobilier,23397,116,1,1,1,1,0,0,1
+email,Commerce,12501,8,0,1,4,3,1,0,1
+social_media,Santé,15662,4,1,1,2,2,0,0,0
+social_media,Éducation,61405,80,1,1,1,1,0,0,0
+email,Tourisme,32833,79,1,0,4,1,1,2,0
+website,Industrie,62637,13,1,1,5,1,3,1,1
+website,IT / Digital,165799,110,1,0,2,1,0,1,1
+email,Industrie,19657,92,0,0,4,0,1,3,0
+trade_show,Immobilier,11830,97,1,1,5,2,1,2,1
+other,Immobilier,17167,22,1,0,3,1,1,1,0
+referral,Commerce,20568,8,1,0,2,2,0,0,1
+email,Santé,39140,73,1,0,3,3,0,0,0
+phone,Finance / Banque,27992,8,1,1,7,3,0,4,1
+website,Industrie,13320,109,0,0,0,0,0,0,0
+website,Finance / Banque,32837,113,1,1,1,1,0,0,0
+social_media,Immobilier,15708,66,1,1,3,2,1,0,0
+trade_show,Éducation,31277,108,1,1,3,2,1,0,0
+social_media,Commerce,84415,25,1,1,3,3,0,0,1
+website,Commerce,42701,46,1,1,2,1,1,0,1
+website,Industrie,5492,59,0,1,2,2,0,0,0
+website,Immobilier,119638,18,1,1,3,1,2,0,1
+referral,Commerce,32168,72,1,0,3,2,1,0,1
+website,Santé,28235,33,1,1,3,2,1,0,1
+social_media,Santé,25218,86,1,1,1,1,0,0,0
+website,Immobilier,22974,73,1,1,3,3,0,0,0
+email,Industrie,35041,35,1,1,3,0,3,0,0
+referral,Immobilier,14167,41,1,0,1,1,0,0,1
+email,Industrie,22920,73,1,0,5,1,0,4,1
+referral,Immobilier,31857,113,1,1,0,0,0,0,1
+social_media,Éducation,51946,99,1,1,3,3,0,0,0
+social_media,Industrie,19668,72,1,0,3,2,1,0,0
+website,Immobilier,29946,9,1,1,6,1,2,3,1
+social_media,Éducation,38355,91,0,1,3,0,3,0,0
+social_media,Immobilier,5687,21,0,1,4,3,1,0,0
+social_media,Éducation,17605,85,1,1,2,1,0,1,0
+email,Commerce,7305,33,1,0,4,2,2,0,0
+email,Finance / Banque,23587,46,1,1,2,1,1,0,0
+referral,Éducation,11633,5,1,0,5,3,2,0,1
+phone,IT / Digital,50004,109,1,1,3,3,0,0,1
+website,Finance / Banque,36674,38,1,1,7,3,1,3,1
+email,Industrie,54907,9,1,1,1,1,0,0,1
+social_media,Éducation,7943,49,1,1,4,1,2,1,0
+trade_show,Tourisme,17945,99,1,1,2,0,2,0,0
+phone,Commerce,123352,105,1,1,1,0,1,0,1
+website,IT / Digital,8215,52,0,0,1,0,1,0,0
+social_media,Industrie,19253,86,1,0,1,1,0,0,0
+social_media,IT / Digital,39985,72,1,1,2,1,1,0,0
+referral,IT / Digital,60808,13,1,0,3,0,3,0,1
+email,Finance / Banque,13126,75,1,1,0,0,0,0,0
+website,Éducation,63168,34,0,0,2,0,2,0,0
+email,Tourisme,60009,62,1,1,2,0,0,2,1
+phone,Santé,25679,20,1,1,3,1,0,2,1
+referral,Immobilier,32534,14,1,0,4,3,1,0,1
+phone,Tourisme,5337,106,0,1,0,0,0,0,0
+other,Tourisme,39117,15,1,0,2,2,0,0,0
+referral,Santé,52008,44,1,0,3,2,1,0,1
+website,Éducation,26728,113,1,1,1,1,0,0,0
+trade_show,Tourisme,19547,67,1,0,3,0,3,0,1
+trade_show,Tourisme,73310,11,1,0,4,0,1,3,1
+email,Finance / Banque,30531,90,1,1,0,0,0,0,0
+referral,Éducation,48364,33,1,1,4,3,1,0,1
+email,Commerce,83980,26,1,1,2,1,1,0,1
+phone,Tourisme,21479,80,0,0,3,1,2,0,0
+website,Industrie,15042,37,1,1,8,3,4,1,1
+website,IT / Digital,26516,37,1,0,2,1,1,0,1
+phone,Finance / Banque,199902,3,0,0,1,1,0,0,1
+social_media,Commerce,21422,40,1,0,3,1,1,1,0
+referral,Commerce,102698,24,1,1,1,0,1,0,1
+referral,Éducation,51717,107,1,1,5,2,0,3,1
+social_media,Immobilier,43813,80,1,0,3,1,2,0,0
+social_media,Tourisme,69168,24,1,0,2,2,0,0,0
+trade_show,Immobilier,35464,33,1,0,2,0,1,1,1
+phone,Commerce,23303,114,1,0,1,1,0,0,0
+social_media,Industrie,18361,13,1,1,4,1,3,0,1
+referral,Éducation,19924,3,0,1,2,2,0,0,1
+website,Commerce,33265,72,1,1,3,2,0,1,1
+website,Finance / Banque,50760,112,1,1,4,3,1,0,1
+social_media,Industrie,19821,48,1,1,1,1,0,0,0
+trade_show,Finance / Banque,9007,16,1,1,2,2,0,0,1
+phone,Santé,12395,90,1,0,3,2,1,0,1
+website,Tourisme,8256,31,1,0,1,1,0,0,0
+phone,IT / Digital,44791,101,1,1,0,0,0,0,1
+referral,Immobilier,54161,74,1,0,3,0,2,1,1
+email,Tourisme,135610,89,1,1,2,1,0,1,1
+social_media,Immobilier,37846,18,1,0,2,2,0,0,0
+phone,Industrie,94239,55,0,1,2,1,0,1,1
+email,Commerce,23417,21,1,1,3,1,0,2,1
+phone,Santé,44475,13,0,0,0,0,0,0,1
+website,Finance / Banque,10854,30,1,1,3,2,1,0,1
+website,Santé,13574,82,1,1,5,2,0,3,1
+email,Tourisme,43806,91,1,1,5,0,0,5,1
+trade_show,Industrie,20928,27,1,1,3,1,2,0,1
+email,Commerce,38906,10,1,1,3,1,0,2,1
+website,Finance / Banque,37398,94,1,1,3,2,1,0,1
+email,Éducation,10526,107,1,0,4,1,0,3,0
+email,Industrie,27792,79,1,1,2,2,0,0,0
+other,Commerce,148894,38,0,1,5,1,3,1,0
+email,IT / Digital,6859,62,1,1,5,0,4,1,1
+social_media,Industrie,50362,80,1,0,3,3,0,0,0
+website,Industrie,111008,115,1,1,4,2,2,0,1
+email,Santé,27758,84,1,1,4,2,2,0,1
+email,Finance / Banque,42670,45,1,1,5,3,2,0,1
+email,Commerce,58098,83,1,1,3,2,1,0,1
+social_media,Tourisme,35860,19,1,0,3,3,0,0,0
+trade_show,Immobilier,12975,43,1,1,0,0,0,0,1
+website,Immobilier,56379,73,1,0,2,0,0,2,1
+email,Industrie,102299,40,1,0,2,2,0,0,0
+phone,Tourisme,45472,24,1,0,4,0,3,1,1
+website,Immobilier,9587,57,1,1,5,1,4,0,1
+other,Industrie,50537,77,1,1,2,2,0,0,1
+website,Industrie,22418,101,1,1,4,3,0,1,0
+phone,Industrie,22891,81,1,1,3,1,2,0,1
+phone,Immobilier,5546,36,1,0,2,2,0,0,1
+website,IT / Digital,14903,57,1,1,6,2,0,4,1
+email,Santé,52243,111,0,0,4,1,0,3,1
+social_media,Finance / Banque,16503,6,0,1,3,3,0,0,0
+trade_show,Tourisme,25450,14,1,1,4,3,1,0,1
+other,Finance / Banque,38165,5,1,0,5,0,0,5,1
+email,Industrie,14504,32,1,1,4,1,1,2,1
+trade_show,Santé,131456,50,1,1,2,0,2,0,1
+website,Finance / Banque,7051,73,1,1,3,0,2,1,1
+phone,Commerce,19951,83,1,0,4,1,0,3,1
+phone,Finance / Banque,59531,57,1,0,3,1,2,0,1
+other,Commerce,69191,12,1,0,1,1,0,0,0
+referral,Commerce,18123,14,1,0,2,0,1,1,1
+other,Immobilier,43226,106,1,1,4,0,0,4,1
+phone,Industrie,58972,48,1,1,3,0,3,0,1
+website,Commerce,5982,54,1,1,3,0,2,1,1
+referral,Commerce,33619,114,1,0,1,0,1,0,0
+website,Finance / Banque,17102,57,1,1,4,0,0,4,1
+website,Tourisme,45172,110,1,1,4,0,3,1,1
+referral,Commerce,22891,56,1,0,3,0,2,1,1
+social_media,Commerce,81435,13,1,1,1,1,0,0,0
+website,Finance / Banque,33454,86,1,0,3,2,1,0,0
+trade_show,Immobilier,14947,94,0,1,5,1,1,3,1
+email,Tourisme,13517,67,1,1,3,3,0,0,0
+website,Industrie,20028,10,0,0,3,0,3,0,0
+referral,Santé,73228,113,1,1,5,0,0,5,1
+website,Commerce,10559,84,1,1,2,0,1,1,0
+trade_show,Industrie,15007,51,1,1,0,0,0,0,1
+website,Tourisme,74896,21,1,1,7,2,2,3,1
+website,Santé,11814,120,1,0,4,1,0,3,1
+trade_show,Santé,11729,79,0,1,3,0,3,0,1
+trade_show,Commerce,47780,48,1,0,2,2,0,0,1
+email,Industrie,57488,115,0,0,3,1,2,0,0
+website,Commerce,26322,20,1,0,2,1,1,0,0
+email,Éducation,33697,11,0,1,1,1,0,0,0
+trade_show,Tourisme,21935,29,1,1,4,1,1,2,1
+referral,IT / Digital,6726,94,1,1,2,1,1,0,1
+phone,Finance / Banque,34731,36,1,1,1,1,0,0,1
+website,Santé,21564,52,1,0,1,1,0,0,0
+email,Santé,34222,41,1,1,3,3,0,0,1
+referral,Immobilier,59953,27,1,1,5,3,1,1,1
+phone,IT / Digital,30639,86,1,0,3,1,2,0,1
+phone,Industrie,16458,31,1,1,4,1,3,0,1
+other,Éducation,47688,75,0,0,3,1,2,0,0
+referral,Éducation,32467,56,0,1,4,1,2,1,1
+phone,IT / Digital,12634,95,1,1,4,2,2,0,1
+social_media,Commerce,7966,3,1,1,2,2,0,0,0
+website,Éducation,33713,29,1,0,4,1,2,1,0
+social_media,Santé,19893,24,1,1,5,0,4,1,1
+website,Santé,66159,28,0,1,1,1,0,0,1
+email,Santé,15219,33,1,1,3,0,2,1,1
+social_media,Immobilier,33264,21,1,0,3,3,0,0,0
+website,Santé,11747,107,1,0,4,1,3,0,0
+website,Immobilier,29476,71,1,0,1,1,0,0,0
+website,Industrie,10117,76,1,1,2,0,2,0,1
+email,IT / Digital,19621,53,1,1,3,2,0,1,1
+website,Santé,14260,97,1,1,3,3,0,0,0
+other,Industrie,20205,88,0,0,1,1,0,0,0
+social_media,Tourisme,14154,84,1,1,1,1,0,0,0
+phone,Finance / Banque,31752,35,0,0,1,1,0,0,0
+referral,Industrie,111327,67,1,1,3,1,2,0,1
+trade_show,Industrie,11189,12,1,0,2,1,1,0,1
+email,Industrie,26765,66,1,1,1,1,0,0,0
+referral,Santé,35893,99,1,1,6,0,2,4,1
+other,Industrie,12959,111,1,0,1,1,0,0,0
+email,Immobilier,16950,56,1,1,3,3,0,0,0
+social_media,Immobilier,30220,91,1,0,3,0,2,1,0
+phone,IT / Digital,23844,30,1,1,3,1,2,0,1
+website,Commerce,25679,104,0,1,5,3,2,0,0
+referral,Commerce,18989,50,1,1,7,3,0,4,1
+phone,Tourisme,48722,80,1,0,3,0,2,1,1
+phone,Finance / Banque,12777,18,1,1,3,2,1,0,1
+email,Finance / Banque,9087,62,1,0,4,2,0,2,1
+phone,Immobilier,23773,75,1,1,4,1,3,0,1
+website,Commerce,8864,31,1,0,5,3,0,2,1
+other,Commerce,25998,103,1,1,2,0,1,1,0
+other,Immobilier,19562,7,1,1,1,0,1,0,0
+website,IT / Digital,7482,47,1,0,1,1,0,0,1
+phone,Industrie,11208,94,1,1,5,3,2,0,1
+website,Finance / Banque,24685,37,1,1,2,0,1,1,1
+email,IT / Digital,11204,69,0,1,3,1,2,0,0
+email,Finance / Banque,40427,38,1,1,3,1,2,0,1
+email,IT / Digital,34930,29,1,1,1,0,0,1,1
+other,Éducation,28222,111,1,0,2,1,1,0,0
+trade_show,Santé,43938,6,0,1,0,0,0,0,1
+email,Tourisme,10071,64,1,0,4,3,0,1,0
+email,Commerce,35443,64,1,1,5,3,2,0,1
+other,Finance / Banque,41259,75,0,0,3,3,0,0,1
+email,Tourisme,24559,109,1,1,3,0,1,2,0
+website,Tourisme,23841,8,0,0,4,3,1,0,0
+phone,IT / Digital,25085,120,1,0,4,2,2,0,1
+website,Industrie,14867,22,1,0,3,0,0,3,0
+other,Éducation,36909,37,1,1,1,0,1,0,0
+social_media,Éducation,29141,71,0,1,5,2,2,1,0
+social_media,Tourisme,37846,88,0,1,2,2,0,0,0
+phone,Santé,24142,53,1,0,5,3,0,2,1
+trade_show,Finance / Banque,14729,44,1,1,4,1,3,0,1
+referral,IT / Digital,10795,42,1,0,3,1,1,1,1
+website,Santé,28496,31,1,1,4,0,0,4,1
+other,Immobilier,17255,101,1,0,0,0,0,0,0
+social_media,Industrie,38241,104,0,1,2,2,0,0,0
+trade_show,Santé,13938,34,1,1,1,1,0,0,1
+other,Tourisme,92241,10,1,0,2,2,0,0,0
+email,Commerce,26890,100,1,0,2,0,0,2,0
+other,Commerce,10237,68,0,1,1,0,1,0,0
+website,Tourisme,7784,103,1,1,5,2,3,0,0
+website,Industrie,17675,29,0,1,4,2,2,0,0
+website,Immobilier,13442,63,0,0,6,0,2,4,1
+website,Industrie,23886,46,1,1,4,1,3,0,1
+referral,Tourisme,61769,50,1,1,3,3,0,0,1
+website,Immobilier,35666,86,0,1,4,0,1,3,1
+trade_show,IT / Digital,86817,25,0,0,5,0,4,1,1
+email,IT / Digital,6727,111,1,1,3,3,0,0,0
+social_media,Commerce,28856,88,1,1,2,2,0,0,0
+website,Éducation,12284,54,1,0,2,2,0,0,0
+referral,Santé,6819,68,0,0,1,1,0,0,1
+trade_show,Éducation,20214,30,1,1,3,2,1,0,1
+website,IT / Digital,48091,73,1,0,3,3,0,0,1
+email,Finance / Banque,30164,21,1,0,4,3,1,0,1
+trade_show,Éducation,29598,105,0,1,3,2,0,1,0
+phone,Finance / Banque,49545,106,1,1,3,1,1,1,1
+website,Commerce,18579,91,1,0,1,1,0,0,0
+phone,IT / Digital,19521,62,1,1,3,0,2,1,1
+website,IT / Digital,89691,27,1,1,3,2,1,0,1
+social_media,IT / Digital,23200,81,1,1,3,1,1,1,1
+website,Industrie,30022,53,1,1,3,2,1,0,1
+email,IT / Digital,23849,61,1,1,2,1,1,0,1
+referral,Immobilier,27974,103,1,0,2,1,1,0,0
+referral,Finance / Banque,15424,89,0,0,2,2,0,0,1
+website,Commerce,30537,21,0,1,2,2,0,0,0
+phone,Santé,21754,43,0,0,3,1,0,2,1
+email,Commerce,29931,95,1,1,3,0,1,2,0
+social_media,Commerce,14652,3,1,1,1,1,0,0,0
+referral,Industrie,37910,79,0,0,2,0,2,0,1
+website,IT / Digital,31109,45,1,1,2,2,0,0,1
+email,Santé,8969,117,1,1,3,3,0,0,1
+email,Industrie,70627,16,1,0,5,0,4,1,1
+email,Commerce,32291,51,0,1,1,1,0,0,0
+trade_show,Tourisme,29018,28,0,1,5,2,3,0,1
+referral,IT / Digital,20745,92,1,1,4,3,0,1,1
+referral,Finance / Banque,84143,82,1,1,2,2,0,0,1
+social_media,Immobilier,66072,57,1,0,1,1,0,0,0
+phone,Finance / Banque,12080,110,1,1,3,0,0,3,1
+social_media,IT / Digital,13567,96,1,1,0,0,0,0,0
+email,Commerce,34680,55,1,0,3,0,2,1,0
+website,Commerce,14942,29,0,0,6,1,1,4,0
+website,Tourisme,12040,25,1,0,4,1,1,2,0
+trade_show,Immobilier,14705,25,1,1,3,1,2,0,1
+referral,Finance / Banque,108638,74,1,0,1,0,1,0,1
+other,Éducation,41920,76,1,1,4,1,1,2,1
+website,Santé,16684,72,1,1,4,3,1,0,1
+website,Éducation,9697,13,1,0,4,1,1,2,1
+referral,Finance / Banque,27344,56,1,1,2,2,0,0,1
+email,Tourisme,37871,107,1,1,0,0,0,0,0
+phone,IT / Digital,65455,97,1,1,3,2,1,0,1
+email,IT / Digital,14986,71,1,1,3,2,0,1,1
+referral,Industrie,18780,70,1,0,4,2,0,2,1
+other,Commerce,16474,45,1,1,3,0,1,2,0
+other,Immobilier,16283,38,1,0,8,3,2,3,0
+social_media,Finance / Banque,10824,10,1,1,2,1,1,0,1
+website,Industrie,28915,36,1,1,3,2,1,0,0
+social_media,Industrie,30907,29,1,1,3,1,0,2,0
+phone,IT / Digital,27352,13,0,0,3,1,0,2,1
+phone,Immobilier,7111,112,1,1,3,2,1,0,1
+referral,IT / Digital,19988,55,1,0,2,0,1,1,1
+referral,Santé,33356,47,0,0,2,2,0,0,1
+email,Commerce,128705,105,1,1,2,0,1,1,0
+email,Tourisme,32405,111,1,1,7,3,2,2,0
+referral,Industrie,50278,81,1,1,4,2,2,0,1
+trade_show,Finance / Banque,43438,73,1,0,4,0,3,1,1
+email,Éducation,48177,120,1,0,6,0,2,4,0
+social_media,Éducation,29597,58,1,1,1,1,0,0,0
+referral,Immobilier,24845,97,1,0,0,0,0,0,0
+social_media,Tourisme,57570,52,1,1,1,1,0,0,0
+other,Éducation,23078,58,1,0,3,2,1,0,0
+referral,Industrie,22030,3,1,1,4,3,1,0,1
+social_media,Tourisme,23552,26,1,1,1,1,0,0,0
+other,Tourisme,8904,114,1,0,4,3,1,0,0
+email,Immobilier,99260,55,0,1,2,0,1,1,0
+phone,Commerce,23798,31,1,1,5,1,1,3,1
+website,Santé,82485,12,1,0,6,3,0,3,1
+referral,Santé,36858,75,1,0,2,2,0,0,1
+social_media,IT / Digital,45379,107,1,1,4,3,1,0,1
+social_media,Commerce,33707,96,1,1,3,3,0,0,0
+social_media,Santé,61889,96,1,1,7,2,1,4,1
+website,Éducation,14172,5,1,1,2,2,0,0,0
+email,Tourisme,37849,77,1,0,4,1,0,3,0
+referral,IT / Digital,24039,34,0,1,2,2,0,0,1
+website,Éducation,73912,35,1,1,5,0,3,2,1
+website,Santé,19317,115,1,1,3,3,0,0,0
+phone,Industrie,21766,74,1,0,5,0,1,4,1
+email,Santé,17183,24,1,1,3,1,2,0,1
+referral,Industrie,22995,3,1,0,3,1,0,2,1
+website,IT / Digital,45289,77,1,1,1,0,1,0,1
+email,Santé,57871,3,1,0,3,1,2,0,1
+website,Santé,33718,89,1,1,5,1,0,4,1
+website,IT / Digital,24988,29,1,0,2,0,2,0,1
+social_media,Finance / Banque,38275,99,1,1,4,1,3,0,1
+phone,Tourisme,56204,4,1,0,3,0,2,1,1
+referral,Finance / Banque,45080,57,1,1,3,3,0,0,1
+trade_show,Commerce,31180,16,1,1,4,1,1,2,1
+website,IT / Digital,25235,93,1,0,2,0,2,0,0
+website,Industrie,35901,49,1,1,5,1,2,2,1
+referral,Éducation,36768,16,1,1,2,0,2,0,1
+website,Finance / Banque,35599,79,1,1,4,1,1,2,1
+phone,Éducation,44996,108,1,1,1,1,0,0,0
+website,Santé,37641,116,0,0,3,3,0,0,0
+website,Industrie,152333,97,0,1,4,3,1,0,0
+phone,Éducation,21296,24,0,0,3,3,0,0,0
+email,Éducation,21138,75,1,1,4,2,2,0,0
+email,Immobilier,37489,33,1,1,3,2,1,0,0
+website,IT / Digital,13172,20,1,1,1,0,1,0,1
+referral,Industrie,12982,75,1,0,1,1,0,0,0
+trade_show,Éducation,24810,53,1,1,6,0,4,2,1
+social_media,IT / Digital,10989,113,1,0,5,2,1,2,0
+email,IT / Digital,45415,53,1,1,5,0,0,5,1
+website,Tourisme,111993,87,1,0,6,2,4,0,1
+other,Éducation,23227,106,1,0,2,2,0,0,0
+referral,Industrie,41536,34,1,0,1,1,0,0,1
+referral,Éducation,54410,22,1,0,3,1,1,1,1
+other,Commerce,62818,46,1,1,1,1,0,0,0
+referral,Commerce,15334,33,1,1,3,2,1,0,1
+email,Industrie,40142,48,0,0,2,2,0,0,0
+social_media,Éducation,15958,20,1,0,3,2,1,0,0
+website,Tourisme,13516,60,1,1,6,1,1,4,1
+referral,Commerce,93381,73,0,0,2,2,0,0,1
+website,Commerce,37150,86,1,1,2,2,0,0,0
+referral,Industrie,53620,51,1,1,1,1,0,0,1
+social_media,Immobilier,66568,58,1,1,3,3,0,0,1
+website,Finance / Banque,48754,83,1,0,1,1,0,0,1
+email,Industrie,43120,76,1,0,3,0,1,2,1
+social_media,IT / Digital,23353,29,1,1,2,0,2,0,1
+referral,Industrie,24931,14,1,0,2,1,1,0,1
+website,Immobilier,12186,101,1,0,2,2,0,0,0
+phone,Éducation,46516,59,1,0,3,1,2,0,1
+email,Immobilier,18781,61,1,0,2,1,0,1,0
+website,Commerce,46322,22,1,0,6,1,4,1,1
+social_media,Santé,21225,28,1,1,0,0,0,0,0
+website,Tourisme,24929,70,1,1,3,1,2,0,1
+referral,Immobilier,50521,12,1,0,2,2,0,0,1
+social_media,Finance / Banque,6699,77,1,1,3,1,2,0,0
+website,Santé,23928,75,1,0,2,2,0,0,1
+website,Tourisme,29797,101,0,1,7,2,0,5,0
+website,IT / Digital,20273,46,1,1,0,0,0,0,1
+email,Tourisme,32395,71,0,1,6,3,3,0,0
+referral,Éducation,39739,74,0,1,4,1,2,1,1
+referral,Éducation,12132,106,1,0,4,3,0,1,1
+email,Finance / Banque,36542,38,1,1,3,0,3,0,1
+referral,IT / Digital,12548,95,1,0,4,2,1,1,1
+other,Immobilier,23199,67,1,0,3,0,3,0,0
+referral,Immobilier,118058,95,1,0,1,0,1,0,1
+referral,IT / Digital,25000,96,1,0,4,3,1,0,1
+email,Industrie,14885,56,0,1,2,0,2,0,0
+website,Santé,68766,20,1,1,3,0,3,0,1
+website,IT / Digital,32826,59,1,0,4,1,0,3,1
+phone,Immobilier,89786,113,1,0,2,1,1,0,1
+social_media,Commerce,79156,101,1,1,2,2,0,0,0
+website,Immobilier,9575,52,1,0,4,2,1,1,0
+website,Tourisme,26321,31,1,1,0,0,0,0,0
+social_media,Commerce,56208,109,1,0,1,1,0,0,0
+trade_show,Santé,11130,94,0,0,4,2,2,0,1
+website,Commerce,43675,81,1,1,7,3,2,2,1
+website,Industrie,14383,81,1,1,4,0,0,4,1
+website,Santé,23487,55,0,0,2,1,1,0,0
+social_media,Immobilier,27938,100,1,0,1,1,0,0,0
+email,Finance / Banque,42243,58,1,0,2,2,0,0,1
+social_media,Santé,120793,54,1,1,1,1,0,0,1
+website,IT / Digital,19586,8,1,1,2,2,0,0,1
+trade_show,Tourisme,14548,117,0,1,4,1,1,2,0
+website,Immobilier,17709,78,0,0,6,0,2,4,1
+email,Santé,10182,107,0,1,5,1,4,0,0
+website,Commerce,21106,35,1,1,7,1,3,3,1
+trade_show,Santé,38952,114,1,1,2,2,0,0,1
+email,Immobilier,30992,102,1,1,2,2,0,0,0
+other,Industrie,62743,20,0,0,2,2,0,0,0
+referral,Industrie,33148,117,1,1,2,2,0,0,1
+referral,Santé,24413,41,0,1,3,3,0,0,1
+other,Industrie,37601,29,0,0,3,3,0,0,0
+social_media,IT / Digital,30538,11,1,1,1,1,0,0,1
+website,Industrie,57575,75,1,1,3,0,3,0,1
+social_media,Commerce,38511,21,1,0,3,2,1,0,0
+social_media,Tourisme,18733,94,0,0,2,1,0,1,0
+referral,Tourisme,7429,53,1,1,2,2,0,0,1
+phone,Finance / Banque,21522,4,1,1,0,0,0,0,1
+website,Immobilier,29366,27,0,0,5,0,0,5,1
+email,Finance / Banque,12625,118,1,1,0,0,0,0,0
+phone,Éducation,19629,110,1,1,0,0,0,0,0
+website,Industrie,54552,68,1,0,3,3,0,0,1
+trade_show,Finance / Banque,30997,39,1,0,1,0,1,0,1
+website,Immobilier,28695,80,1,1,6,1,2,3,1
